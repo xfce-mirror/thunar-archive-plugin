@@ -1,5 +1,15 @@
 2006-03-26	Benedikt Meurer <benny@xfce.org>
 
+	* configure.in.in: Set version to 0.1.0.
+	* NEWS: Update for 0.1.0.
+	* thunar-archive-plugin/tap-provider.c(tap_provider_get_file_actions):
+	  Add mnemonics for the actions.
+	* po/thunar-archive-plugin.pot: Merge new strings.
+	* po/de.po: Update german translations.
+	* README: Update content.
+
+2006-03-26	Benedikt Meurer <benny@xfce.org>
+
 	* Initial import.
 
 # vi:set ts=8 sw=8 noet ai nocindent:

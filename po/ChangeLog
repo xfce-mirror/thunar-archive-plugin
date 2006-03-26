@@ -1,0 +1,6 @@
+2006-03-26	Benedikt Meurer <benny@xfce.org>
+
+	* thunar-archive-plugin.pot: Merge new strings.
+	* de.po: Update german translations.
+
+# vi:set ts=8 sw=8 noet ai nocindent:

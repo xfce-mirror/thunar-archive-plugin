@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-01 19:12+0100\n"
+"POT-Creation-Date: 2006-03-26 16:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,45 +17,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#. display an error dialog
-#: thunar-archive-plugin/tap-provider.c:301
-#: thunar-archive-plugin/tap-provider.c:341
+#. try to run the command
+#: thunar-archive-plugin/tap-provider.c:305
+#: thunar-archive-plugin/tap-provider.c:343
 msgid "Failed to extract files"
 msgstr ""
 
-#. display an error dialog
-#: thunar-archive-plugin/tap-provider.c:395
+#. try to run the command
+#: thunar-archive-plugin/tap-provider.c:387
 msgid "Failed to create archive"
 msgstr ""
 
 #. append the "Extract Here" action
-#: thunar-archive-plugin/tap-provider.c:443
-msgid "Extract Here"
+#: thunar-archive-plugin/tap-provider.c:433
+msgid "Extract _Here"
 msgstr ""
 
-#: thunar-archive-plugin/tap-provider.c:444
+#: thunar-archive-plugin/tap-provider.c:435
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] ""
 msgstr[1] ""
 
 #. append the "Extract To..." action
-#: thunar-archive-plugin/tap-provider.c:457
-msgid "Extract To..."
+#: thunar-archive-plugin/tap-provider.c:448
+msgid "_Extract To..."
 msgstr ""
 
-#: thunar-archive-plugin/tap-provider.c:458
+#: thunar-archive-plugin/tap-provider.c:450
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] ""
 msgstr[1] ""
 
 #. append the "Create Archive..." action
-#: thunar-archive-plugin/tap-provider.c:474
-msgid "Create Archive..."
+#: thunar-archive-plugin/tap-provider.c:466
+msgid "Cr_eate Archive..."
 msgstr ""
 
-#: thunar-archive-plugin/tap-provider.c:475
+#: thunar-archive-plugin/tap-provider.c:468
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] ""

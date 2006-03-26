@@ -430,7 +430,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       if (G_LIKELY (can_write))
         {
           /* append the "Extract Here" action */
-          action = gtk_action_new ("Tap::extract-here", _("Extract Here"),
+          action = gtk_action_new ("Tap::extract-here", _("Extract _Here"),
                                    dngettext (GETTEXT_PACKAGE,
                                               "Extract the selected archive in the current folder",
                                               "Extract the selected archives in the current folder",
@@ -445,7 +445,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
         }
 
       /* append the "Extract To..." action */
-      action = gtk_action_new ("Tap::extract-to", _("Extract To..."),
+      action = gtk_action_new ("Tap::extract-to", _("_Extract To..."),
                                dngettext (GETTEXT_PACKAGE,
                                           "Extract the selected archive",
                                           "Extract the selected archives",
@@ -463,7 +463,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   if (G_LIKELY (n_files > 1 || !all_archives))
     {
       /* append the "Create Archive..." action */
-      action = gtk_action_new ("Tap::create-archive", _("Create Archive..."),
+      action = gtk_action_new ("Tap::create-archive", _("Cr_eate Archive..."),
                                dngettext (GETTEXT_PACKAGE,
                                           "Create an archive with the selected object",
                                           "Create an archive with the selected objects",

@@ -1,0 +1,4 @@
+0.1.0
+=====
+- Initial release of the archive plugin with support for creating and
+  extracting archives using File Roller.
