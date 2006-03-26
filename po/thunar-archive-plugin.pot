@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-01 19:12+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. display an error dialog
+#: thunar-archive-plugin/tap-provider.c:301
+#: thunar-archive-plugin/tap-provider.c:341
+msgid "Failed to extract files"
+msgstr ""
+
+#. display an error dialog
+#: thunar-archive-plugin/tap-provider.c:395
+msgid "Failed to create archive"
+msgstr ""
+
+#. append the "Extract Here" action
+#: thunar-archive-plugin/tap-provider.c:443
+msgid "Extract Here"
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:444
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] ""
+msgstr[1] ""
+
+#. append the "Extract To..." action
+#: thunar-archive-plugin/tap-provider.c:457
+msgid "Extract To..."
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:458
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] ""
+msgstr[1] ""
+
+#. append the "Create Archive..." action
+#: thunar-archive-plugin/tap-provider.c:474
+msgid "Create Archive..."
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:475
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] ""
+msgstr[1] ""
