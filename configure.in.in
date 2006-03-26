@@ -11,9 +11,9 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([tap_version_major], [0])
 m4_define([tap_version_minor], [1])
-m4_define([tap_version_micro], [0])
+m4_define([tap_version_micro], [1])
 m4_define([tap_version_build], [r@REVISION@])
-m4_define([tap_version_tag], [])
+m4_define([tap_version_tag], [svn])
 m4_define([tap_version], [tap_version_major().tap_version_minor().tap_version_micro()ifelse(tap_version_tag(), [], [], [tap_version_tag()-tap_version_build()])])
 
 dnl *******************************************

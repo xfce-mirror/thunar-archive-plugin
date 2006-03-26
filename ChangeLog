@@ -1,5 +1,9 @@
 2006-03-26	Benedikt Meurer <benny@xfce.org>
 
+	* configure.in.in: Bump version to 0.1.1svn.
+
+2006-03-26	Benedikt Meurer <benny@xfce.org>
+
 	* configure.in.in: Set version to 0.1.0.
 	* NEWS: Update for 0.1.0.
 	* thunar-archive-plugin/tap-provider.c(tap_provider_get_file_actions):
