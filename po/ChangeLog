@@ -1,3 +1,8 @@
+2006-03-27	Benedikt Meurer <benny@xfce.org>
+
+	* LINGUAS: Add 'hu' here.
+	* de.po, hu.po: Update version.
+
 2006-03-26	Benedikt Meurer <benny@xfce.org>
 
 	* thunar-archive-plugin.pot: Merge new strings.

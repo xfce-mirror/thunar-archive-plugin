@@ -1,3 +1,9 @@
+2006-03-27	Benedikt Meurer <benny@xfce.org>
+
+	* po/LINGUAS: Add 'hu' here.
+	* po/de.po, po/hu.po: Update version.
+	* THANKS, Makefile.am: Add THANKS file.
+
 2006-03-26	Benedikt Meurer <benny@xfce.org>
 
 	* configure.in.in: Bump version to 0.1.1svn.
