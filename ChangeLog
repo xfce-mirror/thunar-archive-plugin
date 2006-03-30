@@ -1,3 +1,14 @@
+2006-03-30	Benedikt Meurer <benny@xfce.org>
+
+	* THANKS, po/LINGUAS, po/ru.po: Add russian translations, thanks to
+	  Andrey Fedoseev <andrey.fedoseev@gmail.com>.
+	* configure.in.in, thunar-archive-plugin/Makefile.am: Check for
+	  thunar-vfs (which depends on libexo).
+	* thunar-archive-plugin/tap-provider.c: Schedule a "changed" event
+	  after the file-roller command is done, so the folder in which the
+	  archive operation was performed is refreshed immediatly without
+	  having to wait for FAM/Gamin. Bug #1626.
+
 2006-03-27	Benedikt Meurer <benny@xfce.org>
 
 	* po/LINGUAS: Add 'hu' here.

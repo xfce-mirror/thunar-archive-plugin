@@ -26,7 +26,7 @@
 #include <unistd.h>
 #endif
 
-#include <exo/exo.h>
+#include <thunar-vfs/thunar-vfs.h>
 
 #include <thunar-archive-plugin/tap-provider.h>
 
@@ -39,13 +39,22 @@
 
 
 
-static void   tap_provider_class_init         (TapProviderClass         *klass);
-static void   tap_provider_menu_provider_init (ThunarxMenuProviderIface *iface);
-static void   tap_provider_init               (TapProvider              *tap_provider);
-static void   tap_provider_finalize           (GObject                  *object);
-static GList *tap_provider_get_file_actions   (ThunarxMenuProvider      *menu_provider,
-                                               GtkWidget                *window,
-                                               GList                    *files);
+static void   tap_provider_class_init           (TapProviderClass         *klass);
+static void   tap_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
+static void   tap_provider_init                 (TapProvider              *tap_provider);
+static void   tap_provider_finalize             (GObject                  *object);
+static GList *tap_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
+                                                 GtkWidget                *window,
+                                                 GList                    *files);
+static void   tap_provider_execute              (TapProvider              *tap_provider,
+                                                 GtkWidget                *window,
+                                                 const gchar              *working_directory,
+                                                 const gchar              *command,
+                                                 const gchar              *error_message);
+static void   tap_provider_child_watch          (GPid                      pid,
+                                                 gint                      status,
+                                                 gpointer                  user_data);
+static void   tap_provider_child_watch_destroy  (gpointer                  user_data);
 
 
 
@@ -56,9 +65,17 @@ struct _TapProviderClass
 
 struct _TapProvider
 {
-  GObject __parent__;
+  GObject         __parent__;
 
   GtkIconFactory *icon_factory;
+
+  /* child watch support for the last spawn command,
+   * which allows us to refresh the folder contents
+   * after the command terminates (i.e. the archive
+   * is created).
+   */
+  gchar          *child_watch_path;
+  gint            child_watch_id;
 };
 
 
@@ -91,6 +108,7 @@ static const char *TAP_MIME_TYPES[] = {
 };
 
 static GQuark tap_action_files_quark;
+static GQuark tap_action_provider_quark;
 
 
 
@@ -106,8 +124,9 @@ tap_provider_class_init (TapProviderClass *klass)
 {
   GObjectClass *gobject_class;
 
-  /* determine the "tap-action-files" quark */
+  /* determine the "tap-action-files" and "tap-action-provider" quarks */
   tap_action_files_quark = g_quark_from_string ("tap-action-files");
+  tap_action_provider_quark = g_quark_from_string ("tap-action-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = tap_provider_finalize;
@@ -141,6 +160,10 @@ tap_provider_init (TapProvider *tap_provider)
   gtk_icon_factory_add (tap_provider->icon_factory, "thunar-archive-plugin", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
+
+  /* initialize the child watch support */
+  tap_provider->child_watch_path = NULL;
+  tap_provider->child_watch_id = -1;
 }
 
 
@@ -149,6 +172,18 @@ static void
 tap_provider_finalize (GObject *object)
 {
   TapProvider *tap_provider = TAP_PROVIDER (object);
+  GSource     *source;
+
+  /* give up maintaince of any pending child watch */
+  if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
+    {
+      /* reset the callback function to g_spawn_close_pid() so the plugin can be
+       * safely unloaded and the child will still not become a zombie afterwards.
+       * This also resets the child_watch_id and child_watch_path properties.
+       */
+      source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
+      g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
+    }
   
   /* release our icon factory */
   gtk_icon_factory_remove_default (tap_provider->icon_factory);
@@ -235,51 +270,24 @@ tap_files_to_string (GList *files)
 
 
 static void
-tap_execute (GtkWidget   *window,
-             const gchar *command_line,
-             const gchar *error_message)
-{
-  GtkWidget *dialog;
-  GdkScreen *screen;
-  GError    *error = NULL;
-
-  /* determine the screen on which to run the command */
-  screen = gtk_widget_get_screen (window);
-  if (G_UNLIKELY (screen == NULL))
-    return;
-
-  /* try to run the command */
-  if (!gdk_spawn_command_line_on_screen (screen, command_line, &error))
-    {
-      /* display an error dialog */
-      dialog = gtk_message_dialog_new (GTK_WINDOW (window),
-                                       GTK_DIALOG_DESTROY_WITH_PARENT
-                                       | GTK_DIALOG_MODAL,
-                                       GTK_MESSAGE_ERROR,
-                                       GTK_BUTTONS_CLOSE,
-                                       "%s.", error_message);
-      gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
-      gtk_dialog_run (GTK_DIALOG (dialog));
-      gtk_widget_destroy (dialog);
-      g_error_free (error);
-    }
-}
-
-
-
-static void
 tap_extract_here (GtkAction *action,
                   GtkWidget *window)
 {
-  GList *files;
-  gchar *files_string;
-  gchar *command;
-  gchar *dirname;
-  gchar *uri;
+  TapProvider *tap_provider;
+  GList       *files;
+  gchar       *files_string;
+  gchar       *command;
+  gchar       *dirname;
+  gchar       *uri;
 
   /* determine the files associated with the action */
   files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
   if (G_UNLIKELY (files == NULL))
+    return;
+
+  /* determine the provider associated with the action */
+  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  if (G_UNLIKELY (tap_provider == NULL))
     return;
 
   /* determine the parent URI of the first selected file */
@@ -302,7 +310,7 @@ tap_extract_here (GtkAction *action,
   command = g_strdup_printf ("file-roller --extract-to=\"%s\" --force %s", dirname, files_string);
 
   /* try to run the command */
-  tap_execute (window, command, _("Failed to extract files"));
+  tap_provider_execute (tap_provider, window, dirname, command, _("Failed to extract files"));
 
   /* cleanup */
   g_free (files_string);
@@ -316,6 +324,7 @@ static void
 tap_extract_to (GtkAction *action,
                 GtkWidget *window)
 {
+  TapProvider *tap_provider;
   const gchar *default_dir;
   GList       *files;
   gchar       *files_string;
@@ -324,6 +333,11 @@ tap_extract_to (GtkAction *action,
   /* determine the files associated with the action */
   files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
   if (G_UNLIKELY (files == NULL))
+    return;
+
+  /* determine the provider associated with the action */
+  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  if (G_UNLIKELY (tap_provider == NULL))
     return;
 
   /* generate the files list string */
@@ -340,7 +354,7 @@ tap_extract_to (GtkAction *action,
   command = g_strdup_printf ("file-roller --default-dir=\"%s\" --extract %s", default_dir, files_string);
 
   /* try to run the command */
-  tap_execute (window, command, _("Failed to extract files"));
+  tap_provider_execute (tap_provider, window, default_dir, command, _("Failed to extract files"));
 
   /* cleanup */
   g_free (files_string);
@@ -353,15 +367,21 @@ static void
 tap_create_archive (GtkAction *action,
                     GtkWidget *window)
 {
-  GList *files;
-  gchar *files_string;
-  gchar *command;
-  gchar *dirname;
-  gchar *uri;
+  TapProvider *tap_provider;
+  GList       *files;
+  gchar       *files_string;
+  gchar       *command;
+  gchar       *dirname;
+  gchar       *uri;
 
   /* determine the files associated with the action */
   files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
   if (G_UNLIKELY (files == NULL))
+    return;
+
+  /* determine the provider associated with the action */
+  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  if (G_UNLIKELY (tap_provider == NULL))
     return;
 
   /* determine the parent URI of the first selected file */
@@ -384,7 +404,7 @@ tap_create_archive (GtkAction *action,
   command = g_strdup_printf ("file-roller --default-dir=\"%s\" --add %s", dirname, files_string);
 
   /* try to run the command */
-  tap_execute (window, command, _("Failed to create archive"));
+  tap_provider_execute (tap_provider, window, dirname, command, _("Failed to create archive"));
 
   /* cleanup */
   g_free (files_string);
@@ -399,13 +419,14 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
-  GtkAction *action;
-  GClosure  *closure;
-  gboolean   all_archives = TRUE;
-  gboolean   can_write = TRUE;
-  GList     *actions = NULL;
-  GList     *lp;
-  gint       n_files = 0;
+  TapProvider *tap_provider = TAP_PROVIDER (menu_provider);
+  GtkAction   *action;
+  GClosure    *closure;
+  gboolean     all_archives = TRUE;
+  gboolean     can_write = TRUE;
+  GList       *actions = NULL;
+  GList       *lp;
+  gint         n_files = 0;
 
   /* verify that atleast one file is given */
   if (G_UNLIKELY (files == NULL))
@@ -439,6 +460,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
           g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                    thunarx_file_info_list_copy (files),
                                    (GDestroyNotify) thunarx_file_info_list_free);
+          g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+                                   g_object_ref (G_OBJECT (tap_provider)),
+                                   (GDestroyNotify) g_object_unref);
           closure = g_cclosure_new_object (G_CALLBACK (tap_extract_here), G_OBJECT (window));
           g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
           actions = g_list_append (actions, action);
@@ -454,6 +478,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
+      g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+                               g_object_ref (G_OBJECT (tap_provider)),
+                               (GDestroyNotify) g_object_unref);
       closure = g_cclosure_new_object (G_CALLBACK (tap_extract_to), G_OBJECT (window));
       g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
       actions = g_list_append (actions, action);
@@ -472,6 +499,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
+      g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+                               g_object_ref (G_OBJECT (tap_provider)),
+                               (GDestroyNotify) g_object_unref);
       closure = g_cclosure_new_object (G_CALLBACK (tap_create_archive), G_OBJECT (window));
       g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
       actions = g_list_append (actions, action);
@@ -480,6 +510,124 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   return actions;
 }
 
+
+
+static void
+tap_provider_execute (TapProvider *tap_provider,
+                      GtkWidget   *window,
+                      const gchar *working_directory,
+                      const gchar *command_line,
+                      const gchar *error_message)
+{
+  GtkWidget *dialog;
+  GdkScreen *screen;
+  gboolean   succeed;
+  GSource   *source;
+  GError    *error = NULL;
+  gchar    **argv;
+  gint       pid;
+
+  /* determine the screen on which to run the command */
+  screen = gtk_widget_get_screen (window);
+  if (G_UNLIKELY (screen == NULL))
+    return;
+
+  /* try to parse the command line */
+  succeed = g_shell_parse_argv (command_line, NULL, &argv, &error);
+  if (G_LIKELY (succeed))
+    {
+      /* try to run the command */
+      succeed = gdk_spawn_on_screen (screen, working_directory, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, &pid, &error);
+      if (G_LIKELY (succeed))
+        {
+          /* check if we already have a child watch */
+          if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
+            {
+              /* reset the callback function to g_spawn_close_pid() so the plugin can be
+               * safely unloaded and the child will still not become a zombie afterwards.
+               */
+              source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
+              g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
+            }
+
+          /* schedule the new child watch */
+          tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
+                                                                 tap_provider, tap_provider_child_watch_destroy);
+
+          
+          /* remember the working directory for the child watch */
+          tap_provider->child_watch_path = g_strdup (working_directory);
+        }
+    }
+
+  /* check if we failed */
+  if (G_UNLIKELY (!succeed))
+    {
+      /* display an error dialog */
+      dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+                                       GTK_DIALOG_DESTROY_WITH_PARENT
+                                       | GTK_DIALOG_MODAL,
+                                       GTK_MESSAGE_ERROR,
+                                       GTK_BUTTONS_CLOSE,
+                                       "%s.", error_message);
+      gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
+      gtk_dialog_run (GTK_DIALOG (dialog));
+      gtk_widget_destroy (dialog);
+      g_error_free (error);
+    }
+
+  /* cleanup */
+  g_strfreev (argv);
+}
+
+
+
+static void
+tap_provider_child_watch (GPid     pid,
+                          gint     status,
+                          gpointer user_data)
+{
+  ThunarVfsMonitor  *monitor;
+  ThunarVfsPath     *path;
+  TapProvider       *tap_provider = TAP_PROVIDER (user_data);
+
+  GDK_THREADS_ENTER ();
+
+  /* verify that we still have a valid child_watch_path */
+  if (G_LIKELY (tap_provider->child_watch_path != NULL))
+    {
+      /* determine the corresponding ThunarVfsPath */
+      path = thunar_vfs_path_new (tap_provider->child_watch_path, NULL);
+      if (G_LIKELY (path != NULL))
+        {
+          /* schedule a changed notification on the path */
+          monitor = thunar_vfs_monitor_get_default ();
+          thunar_vfs_monitor_feed (monitor, THUNAR_VFS_MONITOR_EVENT_CHANGED, path);
+          g_object_unref (G_OBJECT (monitor));
+
+          /* release the ThunarVfsPath */
+          thunar_vfs_path_unref (path);
+        }
+    }
+
+  /* need to cleanup */
+  g_spawn_close_pid (pid);
+
+  GDK_THREADS_LEAVE ();
+}
+
+
+
+static void
+tap_provider_child_watch_destroy (gpointer user_data)
+{
+  TapProvider *tap_provider = TAP_PROVIDER (user_data);
+
+  /* reset child watch id and path */
+  g_free (tap_provider->child_watch_path);
+  tap_provider->child_watch_path = NULL;
+  tap_provider->child_watch_id = -1;
+}
 
 
 

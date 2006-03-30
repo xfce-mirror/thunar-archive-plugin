@@ -1,3 +1,9 @@
+2006-03-30	Benedikt Meurer <benny@xfce.org>
+
+	* LINGUAS: Add 'ru' here.
+	* ru.po: Add russian translations, thanks to Andrey Fedoseev
+	  <andrey.fedoseev@gmail.com>.
+
 2006-03-27	Benedikt Meurer <benny@xfce.org>
 
 	* LINGUAS: Add 'hu' here.

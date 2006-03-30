@@ -18,9 +18,9 @@ thunar_archive_plugin_la_SOURCES =					\
 	thunar-archive-plugin.c
 
 thunar_archive_plugin_la_CFLAGS =					\
-	$(EXO_CFLAGS)							\
 	$(PLATFORM_CFLAGS)						\
-	$(THUNARX_CFLAGS)
+	$(THUNARX_CFLAGS)						\
+	$(THUNAR_VFS_CFLAGS)
 
 thunar_archive_plugin_la_LDFLAGS =					\
 	-avoid-version							\
