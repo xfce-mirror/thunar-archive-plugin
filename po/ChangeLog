@@ -1,5 +1,7 @@
 2006-04-08	Daichi Kawahata <daichi@xfce.org>
 
+	* el.po: Added Greek translations by Stavros Giannouris
+	  <stavrosg2002@freemail.gr>.
 	* LINGUAS, pl.po: Added Polish translations by Piotr Malinski
 	  <admin@rk.edu.pl>.
 
