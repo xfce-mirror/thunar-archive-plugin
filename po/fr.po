@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin-0.1.1svn\n"
+"Project-Id-Version: thunar-archive-plugin-0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-26 16:09+0200\n"
+"POT-Creation-Date: 2006-04-16 18:14+0200\n"
 "PO-Revision-Date: 2006-04-02 14:10+0100\n"
 "Last-Translator: Stephane Roy <sroy@j2n.net>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. try to run the command
-#: thunar-archive-plugin/tap-provider.c:305
-#: thunar-archive-plugin/tap-provider.c:343
+#: thunar-archive-plugin/tap-provider.c:313
+#: thunar-archive-plugin/tap-provider.c:357
 msgid "Failed to extract files"
 msgstr "Échec à l'extraction des fichiers"
 
 #. try to run the command
-#: thunar-archive-plugin/tap-provider.c:387
+#: thunar-archive-plugin/tap-provider.c:407
 msgid "Failed to create archive"
 msgstr "Échec à la création de l'archive"
 
 #. append the "Extract Here" action
-#: thunar-archive-plugin/tap-provider.c:433
+#: thunar-archive-plugin/tap-provider.c:454
 msgid "Extract _Here"
 msgstr "Extraire _ici"
 
-#: thunar-archive-plugin/tap-provider.c:435
+#: thunar-archive-plugin/tap-provider.c:456
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Extraire de l'archive sélectionnée dans le dossier courant"
 msgstr[1] "Extraire des l'archives sélectionnées dans le dossier courant"
 
 #. append the "Extract To..." action
-#: thunar-archive-plugin/tap-provider.c:448
+#: thunar-archive-plugin/tap-provider.c:472
 msgid "_Extract To..."
 msgstr "_Extraire vers..."
 
-#: thunar-archive-plugin/tap-provider.c:450
+#: thunar-archive-plugin/tap-provider.c:474
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Extraire de l'archive sélectionnée"
 msgstr[1] "Extraire des l'archives sélectionnée"
 
 #. append the "Create Archive..." action
-#: thunar-archive-plugin/tap-provider.c:466
+#: thunar-archive-plugin/tap-provider.c:493
 msgid "Cr_eate Archive..."
 msgstr "Cré_er une archive..."
 
-#: thunar-archive-plugin/tap-provider.c:468
+#: thunar-archive-plugin/tap-provider.c:495
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Créer une archive avec les objets sélectionnés"

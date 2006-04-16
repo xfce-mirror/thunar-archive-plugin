@@ -1,3 +1,10 @@
+2006-04-16	Benedikt Meurer <benny@xfce.org>
+
+	* === Released 0.1.2 ===
+	* NEWS, configure.in.in: Bump version.
+	* THANKS: Add missing translator credits.
+	* po/*.po: Update project version.
+
 2006-03-30	Benedikt Meurer <benny@xfce.org>
 
 	* THANKS, po/LINGUAS, po/ru.po: Add russian translations, thanks to

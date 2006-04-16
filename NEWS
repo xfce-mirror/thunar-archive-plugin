@@ -1,3 +1,13 @@
+0.1.2
+=====
+- When extracting an archive into the current folder, or creating an archive in
+  the current folder, the file manager view is reloaded properly now once the
+  file-roller command terminates, no matter if Thunar was build with or without
+  FAM/Gamin.
+- New translations: Stavros Giannouris (el), Stephane Roy (fr), Szervác
+  Attila (hu), Daichi Kawahata (ja), Piotr Malinski (pl), Andrey Fedoseev (ru),
+  Hydonsingore Cia (zh_TW)
+
 0.1.0
 =====
 - Initial release of the archive plugin with support for creating and
