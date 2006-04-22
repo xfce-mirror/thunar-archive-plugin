@@ -1,0 +1,62 @@
+# Catalan translations for thunar-archive-plugin package.
+# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
+# This file is distributed under the same license as the
+# thunar-archive-plugin package.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-archive-plugin-0.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-26 16:09+0200\n"
+"PO-Revision-Date: 2006-04-17 17:50+0100\n"
+"Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
+"Language-Team: catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. try to run the command
+#: thunar-archive-plugin/tap-provider.c:305
+#: thunar-archive-plugin/tap-provider.c:343
+msgid "Failed to extract files"
+msgstr "No s'han pogut extreure els fitxers"
+
+#. try to run the command
+#: thunar-archive-plugin/tap-provider.c:387
+msgid "Failed to create archive"
+msgstr "No s'ha pogut crear l'arxiu"
+
+#. append the "Extract Here" action
+#: thunar-archive-plugin/tap-provider.c:433
+msgid "Extract _Here"
+msgstr "Extreu _aquí"
+
+#: thunar-archive-plugin/tap-provider.c:435
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Extreu l'arxiu seleccionat al directori actual"
+msgstr[1] "Extreu els arxius seleccionats al directori actual"
+
+#. append the "Extract To..." action
+#: thunar-archive-plugin/tap-provider.c:448
+msgid "_Extract To..."
+msgstr "_Extreu a…"
+
+#: thunar-archive-plugin/tap-provider.c:450
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Extreu l'arxiu seleccionat"
+msgstr[1] "Extreu els arxius seleccionats"
+
+#. append the "Create Archive..." action
+#: thunar-archive-plugin/tap-provider.c:466
+msgid "Cr_eate Archive..."
+msgstr "Cr_ea un arxiu…"
+
+#: thunar-archive-plugin/tap-provider.c:468
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Crea un arxiu amb l'objecte seleccionat"
+msgstr[1] "Crea un arxiu amb els objectes seleccionats"

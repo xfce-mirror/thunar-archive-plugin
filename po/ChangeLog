@@ -1,5 +1,7 @@
 2006-04-22  Daichi Kawahata <daichi@xfce.org>
 
+	* LINGUAS, ca.po: Added Catalan translations by Carles Munoz
+	  Gorriz <carlesmu@internautas.org>.
 	* thunar-archive-plugin.pot, *.po: Updated.
 
 2006-04-16  Benedikt Meurer <benny@xfce.org>
