@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin-0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 18:14+0200\n"
+"POT-Creation-Date: 2006-03-26 16:09+0200\n"
 "PO-Revision-Date: 2006-03-27 02:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: hu\n"
@@ -19,42 +19,42 @@ msgstr ""
 "X-Poedit-Country: HUNGARY\n"
 
 #. try to run the command
-#: thunar-archive-plugin/tap-provider.c:313
-#: thunar-archive-plugin/tap-provider.c:357
+#: thunar-archive-plugin/tap-provider.c:305
+#: thunar-archive-plugin/tap-provider.c:343
 msgid "Failed to extract files"
 msgstr "Fájlok kibontása sikertelen"
 
 #. try to run the command
-#: thunar-archive-plugin/tap-provider.c:407
+#: thunar-archive-plugin/tap-provider.c:387
 msgid "Failed to create archive"
 msgstr "Archívum létrehozása sikertelen"
 
 #. append the "Extract Here" action
-#: thunar-archive-plugin/tap-provider.c:454
+#: thunar-archive-plugin/tap-provider.c:433
 msgid "Extract _Here"
 msgstr "Kibontás _ide"
 
-#: thunar-archive-plugin/tap-provider.c:456
+#: thunar-archive-plugin/tap-provider.c:435
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Kijelölt archívumok kibontása e mappába"
 
 #. append the "Extract To..." action
-#: thunar-archive-plugin/tap-provider.c:472
+#: thunar-archive-plugin/tap-provider.c:448
 msgid "_Extract To..."
 msgstr "_Kibontás..."
 
-#: thunar-archive-plugin/tap-provider.c:474
+#: thunar-archive-plugin/tap-provider.c:450
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Kijelölt archívumok kibontása"
 
 #. append the "Create Archive..." action
-#: thunar-archive-plugin/tap-provider.c:493
+#: thunar-archive-plugin/tap-provider.c:466
 msgid "Cr_eate Archive..."
 msgstr "Archívum _létrehozása..."
 
-#: thunar-archive-plugin/tap-provider.c:495
+#: thunar-archive-plugin/tap-provider.c:468
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Archívum létrehozása a kijelölt objektumokkal"
