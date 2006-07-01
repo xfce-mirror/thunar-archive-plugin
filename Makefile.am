@@ -1,7 +1,9 @@
 # $Id$
 
 SUBDIRS =								\
+	icons								\
 	po								\
+	scripts								\
 	thunar-archive-plugin
 
 AUTOMAKE_OPTIONS =							\

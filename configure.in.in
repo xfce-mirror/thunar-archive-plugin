@@ -141,7 +141,10 @@ AC_SUBST([PLATFORM_LDFLAGS])
 
 AC_OUTPUT([
 Makefile
+icons/Makefile
+icons/16x16/Makefile
 po/Makefile.in
+scripts/Makefile
 thunar-archive-plugin/Makefile
 ])
 

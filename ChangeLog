@@ -1,3 +1,19 @@
+2006-07-01	Benedikt Meurer <benny@xfce.org>
+
+	* thunar-archive-plugin/: Add support for other archive managers than
+	  file-roller, using the mime database and an additional .tap wrapper
+	  script.
+	* configure.in.in, icons/, thunar-archive-plugin/tap-provider.c,
+	  Makefile.am: Add icons for the extract and create actions, from
+	  the file-roller user interface.
+	* configure.in.in, scripts/, Makefile.am: Add wrapper scripts for
+	  file-roller and ark; xarchiver should ship the wrapper script as
+	  part of its distribution.
+	* README: Add documentation about the new framework.
+	* po/POTFILES.in: Add tap-backend.c here.
+	* po/*.po, po/thunar-archive-plugin.pot: Merge new strings.
+	* po/de.po: Update german translations.
+
 2006-06-19	Benedikt Meurer <benny@xfce.org>
 
 	* COPYING: This should be LGPL, as pointed out by Yves-Alexis

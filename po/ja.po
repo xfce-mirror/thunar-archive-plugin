@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-26 16:09+0200\n"
+"POT-Creation-Date: 2006-07-01 21:02+0200\n"
 "PO-Revision-Date: 2006-04-02 18:17+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -17,43 +17,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. try to run the command
-#: thunar-archive-plugin/tap-provider.c:305
-#: thunar-archive-plugin/tap-provider.c:343
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr ""
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr ""
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:289
+#: thunar-archive-plugin/tap-provider.c:323
 msgid "Failed to extract files"
 msgstr "ファイルを取り出すのに失敗しました"
 
-#. try to run the command
-#: thunar-archive-plugin/tap-provider.c:387
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:361
 msgid "Failed to create archive"
 msgstr "アーカイブの作成に失敗しました"
 
 #. append the "Extract Here" action
-#: thunar-archive-plugin/tap-provider.c:433
+#: thunar-archive-plugin/tap-provider.c:406
 msgid "Extract _Here"
 msgstr "ここで展開(_H)"
 
-#: thunar-archive-plugin/tap-provider.c:435
+#: thunar-archive-plugin/tap-provider.c:408
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "現在のフォルダで選択したアーカイブを展開します。"
 
 #. append the "Extract To..." action
-#: thunar-archive-plugin/tap-provider.c:448
+#: thunar-archive-plugin/tap-provider.c:424
 msgid "_Extract To..."
 msgstr "別の場所に展開(_E)..."
 
-#: thunar-archive-plugin/tap-provider.c:450
+#: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "選択したアーカイブを展開します。"
 
 #. append the "Create Archive..." action
-#: thunar-archive-plugin/tap-provider.c:466
+#: thunar-archive-plugin/tap-provider.c:445
 msgid "Cr_eate Archive..."
 msgstr "アーカイブを作成(_E)..."
 
-#: thunar-archive-plugin/tap-provider.c:468
+#: thunar-archive-plugin/tap-provider.c:447
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "選択したオブジェクトでアーカイブを作成します。"

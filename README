@@ -13,7 +13,28 @@ Required packages
 thunar-archive-plugin depends on the following packages:
 
  - Thunar 0.2.2 or above
- - file-roller 2.8 or above
+
+
+Supported archive managers
+==========================
+
+thunar-archive-plugin currently supports file-roller (the GNOME archive manager)
+and ark (the KDE archive manager), but support for additional archive managers
+can be easily added.
+
+To add support for a new archive manager, all you need to do is to install
+the .desktop file - with the list of supported mime types - for the archive
+manager to the $(datadir)/applications/ folder (as usual), and in addition,
+install a .tap file to $(libexecdir)/thunar-archive-plugin/, which provides
+a wrapper script that invokes the archive manager with the appropriate
+parameters for the actions "Create Archive", "Extract Here" and "Extract To".
+
+The .tap and .desktop files should have the same basename, otherwise the
+thunar-archive-plugin is not able to find the appropriate .tap file for an
+archive manager. For example, if the name of the .desktop file is ark.desktop,
+the .tap file must be named ark.tap.
+
+See the scripts/ directory for examples of how to create said .tap files.
 
 
 Installation

@@ -5,6 +5,7 @@ INCLUDES =								\
 	-I$(top_srcdir)							\
 	-DG_LOG_DOMAIN=\"thunar-archive-plugin\"			\
 	-DEXO_API_SUBJECT_TO_CHANGE					\
+	-DLIBEXECDIR=\"$(libexecdir)\"					\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
@@ -13,6 +14,8 @@ extensions_LTLIBRARIES =						\
 	thunar-archive-plugin.la
 
 thunar_archive_plugin_la_SOURCES =					\
+	tap-backend.c							\
+	tap-backend.h							\
 	tap-provider.c							\
 	tap-provider.h							\
 	thunar-archive-plugin.c

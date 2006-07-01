@@ -28,6 +28,7 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
+#include <thunar-archive-plugin/tap-backend.h>
 #include <thunar-archive-plugin/tap-provider.h>
 
 /* use access(2) with older GLib */
@@ -47,9 +48,13 @@ static GList *tap_provider_get_file_actions     (ThunarxMenuProvider      *menu_
                                                  GtkWidget                *window,
                                                  GList                    *files);
 static void   tap_provider_execute              (TapProvider              *tap_provider,
+                                                 GPid                    (*action) (const gchar *folder,
+                                                                                    GList       *files,
+                                                                                    GtkWidget   *window,
+                                                                                    GError     **error),
                                                  GtkWidget                *window,
-                                                 const gchar              *working_directory,
-                                                 const gchar              *command,
+                                                 const gchar              *folder,
+                                                 GList                    *files,
                                                  const gchar              *error_message);
 static void   tap_provider_child_watch          (GPid                      pid,
                                                  gint                      status,
@@ -152,12 +157,21 @@ tap_provider_init (TapProvider *tap_provider)
   tap_provider->icon_factory = gtk_icon_factory_new ();
   gtk_icon_factory_add_default (tap_provider->icon_factory);
 
-  /* add the "thunar-archive-plugin" stock icon */
+  /* add the "tap-add" stock icon */
   icon_set = gtk_icon_set_new ();
   icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "file-roller");
+  gtk_icon_source_set_icon_name (icon_source, "tap-add");
   gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tap_provider->icon_factory, "thunar-archive-plugin", icon_set);
+  gtk_icon_factory_add (tap_provider->icon_factory, "tap-add", icon_set);
+  gtk_icon_source_free (icon_source);
+  gtk_icon_set_unref (icon_set);
+
+  /* add the "tap-extract" stock icon */
+  icon_set = gtk_icon_set_new ();
+  icon_source = gtk_icon_source_new ();
+  gtk_icon_source_set_icon_name (icon_source, "tap-extract");
+  gtk_icon_set_add_source (icon_set, icon_source);
+  gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
 
@@ -239,44 +253,12 @@ tap_is_parent_writable (ThunarxFileInfo *file_info)
 
 
 
-static gchar*
-tap_files_to_string (GList *files)
-{
-  GString *string;
-  gchar   *filename;
-  gchar   *uri;
-  GList   *lp;
-
-  string = g_string_new ("");
-  for (lp = files; lp != NULL; lp = lp->next)
-    {
-      /* determine the filename of the file */
-      uri = thunarx_file_info_get_uri (lp->data);
-      filename = g_filename_from_uri (uri, NULL, NULL);
-      g_free (uri);
-
-      /* check if we have a valid filename */
-      if (G_LIKELY (filename != NULL))
-        {
-          /* append the filename to the string */
-          g_string_append_printf (string, " \"%s\"", filename);
-          g_free (filename);
-        }
-    }
-
-  return g_string_free (string, FALSE);
-}
-
-
-
 static void
 tap_extract_here (GtkAction *action,
                   GtkWidget *window)
 {
   TapProvider *tap_provider;
   GList       *files;
-  gchar       *files_string;
-  gchar       *command;
   gchar       *dirname;
   gchar       *uri;
 
@@ -303,19 +285,11 @@ tap_extract_here (GtkAction *action,
   if (G_UNLIKELY (dirname == NULL))
     return;
 
-  /* generate the files list string */
-  files_string = tap_files_to_string (files);
-
-  /* generate the command line */
-  command = g_strdup_printf ("file-roller --extract-to=\"%s\" --force %s", dirname, files_string);
-
-  /* try to run the command */
-  tap_provider_execute (tap_provider, window, dirname, command, _("Failed to extract files"));
+  /* execute the action */
+  tap_provider_execute (tap_provider, tap_backend_extract_here, window, dirname, files, _("Failed to extract files"));
 
   /* cleanup */
-  g_free (files_string);
   g_free (dirname);
-  g_free (command);
 }
 
 
@@ -327,8 +301,6 @@ tap_extract_to (GtkAction *action,
   TapProvider *tap_provider;
   const gchar *default_dir;
   GList       *files;
-  gchar       *files_string;
-  gchar       *command;
 
   /* determine the files associated with the action */
   files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
@@ -340,9 +312,6 @@ tap_extract_to (GtkAction *action,
   if (G_UNLIKELY (tap_provider == NULL))
     return;
 
-  /* generate the files list string */
-  files_string = tap_files_to_string (files);
-
   /* if $GTK_DEFAULT_FILECHOOSER_DIR is set, we use that as default
    * folder (i.e. Ubuntu), otherwise we just use $HOME.
    */
@@ -350,15 +319,8 @@ tap_extract_to (GtkAction *action,
   if (G_LIKELY (default_dir == NULL))
     default_dir = g_get_home_dir ();
 
-  /* generate the command line */
-  command = g_strdup_printf ("file-roller --default-dir=\"%s\" --extract %s", default_dir, files_string);
-
-  /* try to run the command */
-  tap_provider_execute (tap_provider, window, default_dir, command, _("Failed to extract files"));
-
-  /* cleanup */
-  g_free (files_string);
-  g_free (command);
+  /* execute the action */
+  tap_provider_execute (tap_provider, tap_backend_extract_to, window, default_dir, files, _("Failed to extract files"));
 }
 
 
@@ -369,8 +331,6 @@ tap_create_archive (GtkAction *action,
 {
   TapProvider *tap_provider;
   GList       *files;
-  gchar       *files_string;
-  gchar       *command;
   gchar       *dirname;
   gchar       *uri;
 
@@ -397,19 +357,11 @@ tap_create_archive (GtkAction *action,
   if (G_UNLIKELY (dirname == NULL))
     return;
 
-  /* generate the files list string */
-  files_string = tap_files_to_string (files);
-
-  /* generate the command line */
-  command = g_strdup_printf ("file-roller --default-dir=\"%s\" --add %s", dirname, files_string);
-
-  /* try to run the command */
-  tap_provider_execute (tap_provider, window, dirname, command, _("Failed to create archive"));
+  /* execute the action */
+  tap_provider_execute (tap_provider, tap_backend_create_archive, window, dirname, files, _("Failed to create archive"));
 
   /* cleanup */
-  g_free (files_string);
   g_free (dirname);
-  g_free (command);
 }
 
 
@@ -456,7 +408,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                               "Extract the selected archive in the current folder",
                                               "Extract the selected archives in the current folder",
                                               n_files),
-                                   "thunar-archive-plugin");
+                                   "tap-extract");
           g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                    thunarx_file_info_list_copy (files),
                                    (GDestroyNotify) thunarx_file_info_list_free);
@@ -474,7 +426,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                           "Extract the selected archive",
                                           "Extract the selected archives",
                                           n_files),
-                               "thunar-archive-plugin");
+                               "tap-extract");
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
@@ -495,7 +447,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                           "Create an archive with the selected object",
                                           "Create an archive with the selected objects",
                                           n_files),
-                               "thunar-archive-plugin");
+                               "tap-add");
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
@@ -514,54 +466,43 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 
 static void
 tap_provider_execute (TapProvider *tap_provider,
+                      GPid       (*action) (const gchar *folder,
+                                            GList       *files,
+                                            GtkWidget   *window,
+                                            GError     **error),
                       GtkWidget   *window,
-                      const gchar *working_directory,
-                      const gchar *command_line,
+                      const gchar *folder,
+                      GList       *files,
                       const gchar *error_message)
 {
   GtkWidget *dialog;
-  GdkScreen *screen;
-  gboolean   succeed;
   GSource   *source;
   GError    *error = NULL;
-  gchar    **argv;
-  gint       pid;
+  GPid       pid;
 
-  /* determine the screen on which to run the command */
-  screen = gtk_widget_get_screen (window);
-  if (G_UNLIKELY (screen == NULL))
-    return;
-
-  /* try to parse the command line */
-  succeed = g_shell_parse_argv (command_line, NULL, &argv, &error);
-  if (G_LIKELY (succeed))
+  /* try to execute the action */
+  pid = (*action) (folder, files, window, &error);
+  if (G_LIKELY (pid >= 0))
     {
-      /* try to run the command */
-      succeed = gdk_spawn_on_screen (screen, working_directory, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, &pid, &error);
-      if (G_LIKELY (succeed))
+      /* check if we already have a child watch */
+      if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
         {
-          /* check if we already have a child watch */
-          if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
-            {
-              /* reset the callback function to g_spawn_close_pid() so the plugin can be
-               * safely unloaded and the child will still not become a zombie afterwards.
-               */
-              source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
-              g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
-            }
-
-          /* schedule the new child watch */
-          tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
-                                                                 tap_provider, tap_provider_child_watch_destroy);
-
-          
-          /* remember the working directory for the child watch */
-          tap_provider->child_watch_path = g_strdup (working_directory);
+          /* reset the callback function to g_spawn_close_pid() so the plugin can be
+           * safely unloaded and the child will still not become a zombie afterwards.
+           */
+          source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
+          g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
         }
-    }
 
-  /* check if we failed */
-  if (G_UNLIKELY (!succeed))
+      /* schedule the new child watch */
+      tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
+                                                             tap_provider, tap_provider_child_watch_destroy);
+
+      
+      /* remember the working directory for the child watch */
+      tap_provider->child_watch_path = g_strdup (folder);
+    }
+  else if (error != NULL)
     {
       /* display an error dialog */
       dialog = gtk_message_dialog_new (GTK_WINDOW (window),
@@ -575,9 +516,6 @@ tap_provider_execute (TapProvider *tap_provider,
       gtk_widget_destroy (dialog);
       g_error_free (error);
     }
-
-  /* cleanup */
-  g_strfreev (argv);
 }
 
 
