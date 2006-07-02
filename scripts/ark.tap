@@ -30,15 +30,15 @@ folder=$1; shift;
 # check the action
 case $action in
 create)
-	exec ark --add $@
+	exec ark --add "$@"
 	;;
 
 extract-here)
-	exec ark --extract-to "$folder" $@
+	exec ark --extract-to "$folder" "$@"
 	;;
 
 extract-to)
-	exec ark --extract $@
+	exec ark --extract "$@"
 	;;
 
 *)

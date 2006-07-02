@@ -1,5 +1,9 @@
 2006-07-02	Benedikt Meurer <benny@xfce.org>
 
+	* scripts/*.tap: Handle filenames with spaces properly.
+
+2006-07-02	Benedikt Meurer <benny@xfce.org>
+
 	* thunar-archive-plugin/tap-provider.c(TAP_MIME_TYPES): That should
 	  have been 24 bytes, forgot the nul-byte.
 

@@ -30,15 +30,15 @@ folder=$1; shift;
 # check the action
 case $action in
 create)
-	exec file-roller "--default-dir=$folder" --add $@
+	exec file-roller "--default-dir=$folder" --add "$@"
 	;;
 
 extract-here)
-	exec file-roller "--extract-to=$folder" --force $@
+	exec file-roller "--extract-to=$folder" --force "$@"
 	;;
 
 extract-to)
-	exec file-roller "--default-dir=$folder" --extract $@
+	exec file-roller "--default-dir=$folder" --extract "$@"
 	;;
 
 *)
