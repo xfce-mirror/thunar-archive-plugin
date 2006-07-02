@@ -72,7 +72,12 @@ struct _TapProvider
 {
   GObject         __parent__;
 
+#if !GTK_CHECK_VERSION(2,9,0)
+  /* GTK+ 2.9.0 and above provide an icon-name property
+   * for GtkActions, so we don't need the icon factory.
+   */
   GtkIconFactory *icon_factory;
+#endif
 
   /* child watch support for the last spawn command,
    * which allows us to refresh the folder contents
@@ -85,7 +90,7 @@ struct _TapProvider
 
 
 
-static const char *TAP_MIME_TYPES[] = {
+static const gchar TAP_MIME_TYPES[][33] = {
   "application/x-ar",
   "application/x-arj",
   "application/x-bzip",
@@ -150,6 +155,7 @@ tap_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 static void
 tap_provider_init (TapProvider *tap_provider)
 {
+#if !GTK_CHECK_VERSION(2,9,0)
   GtkIconSource *icon_source;
   GtkIconSet    *icon_set;
 
@@ -174,6 +180,7 @@ tap_provider_init (TapProvider *tap_provider)
   gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
+#endif /* !GTK_CHECK_VERSION(2,9,0) */
 
   /* initialize the child watch support */
   tap_provider->child_watch_path = NULL;
@@ -199,9 +206,11 @@ tap_provider_finalize (GObject *object)
       g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
     }
   
+#if !GTK_CHECK_VERSION(2,9,0)
   /* release our icon factory */
   gtk_icon_factory_remove_default (tap_provider->icon_factory);
   g_object_unref (G_OBJECT (tap_provider->icon_factory));
+#endif
 
   (*G_OBJECT_CLASS (tap_provider_parent_class)->finalize) (object);
 }
@@ -403,12 +412,19 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       if (G_LIKELY (can_write))
         {
           /* append the "Extract Here" action */
-          action = gtk_action_new ("Tap::extract-here", _("Extract _Here"),
-                                   dngettext (GETTEXT_PACKAGE,
-                                              "Extract the selected archive in the current folder",
-                                              "Extract the selected archives in the current folder",
-                                              n_files),
-                                   "tap-extract");
+          action = g_object_new (GTK_TYPE_ACTION,
+                                 "name", "Tap::extract-here",
+                                 "label", _("Extract _Here"),
+#if !GTK_CHECK_VERSION(2,9,0)
+                                 "stock-id", "tap-extract",
+#else
+                                 "icon-name", "tap-extract",
+#endif
+                                 "tooltip", dngettext (GETTEXT_PACKAGE,
+                                                       "Extract the selected archive in the current folder",
+                                                       "Extract the selected archives in the current folder",
+                                                       n_files),
+                                 NULL);
           g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                    thunarx_file_info_list_copy (files),
                                    (GDestroyNotify) thunarx_file_info_list_free);
@@ -421,12 +437,19 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
         }
 
       /* append the "Extract To..." action */
-      action = gtk_action_new ("Tap::extract-to", _("_Extract To..."),
-                               dngettext (GETTEXT_PACKAGE,
-                                          "Extract the selected archive",
-                                          "Extract the selected archives",
-                                          n_files),
-                               "tap-extract");
+      action = g_object_new (GTK_TYPE_ACTION,
+                             "label", _("_Extract To..."),
+                             "name", "Tap::extract-to",
+#if !GTK_CHECK_VERSION(2,9,0)
+                             "stock-id", "tap-extract",
+#else
+                             "icon-name", "tap-extract",
+#endif
+                             "tooltip", dngettext (GETTEXT_PACKAGE,
+                                                   "Extract the selected archive",
+                                                   "Extract the selected archives",
+                                                   n_files),
+                             NULL);
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
@@ -442,12 +465,19 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   if (G_LIKELY (n_files > 1 || !all_archives))
     {
       /* append the "Create Archive..." action */
-      action = gtk_action_new ("Tap::create-archive", _("Cr_eate Archive..."),
-                               dngettext (GETTEXT_PACKAGE,
-                                          "Create an archive with the selected object",
-                                          "Create an archive with the selected objects",
-                                          n_files),
-                               "tap-add");
+      action = g_object_new (GTK_TYPE_ACTION,
+                             "label", _("Cr_eate Archive..."),
+                             "name", "Tap::create-archive",
+#if !GTK_CHECK_VERSION(2,9,0)
+                             "stock-id", "tap-add",
+#else
+                             "icon-name", "tap-add",
+#endif
+                             "tooltip", dngettext (GETTEXT_PACKAGE,
+                                                   "Create an archive with the selected object",
+                                                   "Create an archive with the selected objects",
+                                                   n_files),
+                             NULL);
       g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);

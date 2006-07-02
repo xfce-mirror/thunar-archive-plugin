@@ -1,3 +1,11 @@
+2006-07-02	Benedikt Meurer <benny@xfce.org>
+
+	* thunar-archive-plugin/tap-provider.c(TAP_MIME_TYPES): Avoid 21
+	  unneccesary relocations.
+	* thunar-archive-plugin/tap-provider.c: GTK+ 2.9.0 and above provides
+	  an icon-name property for GtkActions, so we don't need the icon
+	  factory there.
+
 2006-07-01	Benedikt Meurer <benny@xfce.org>
 
 	* thunar-archive-plugin/: Add support for other archive managers than
