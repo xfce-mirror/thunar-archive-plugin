@@ -90,7 +90,7 @@ struct _TapProvider
 
 
 
-static const gchar TAP_MIME_TYPES[][33] = {
+static const gchar TAP_MIME_TYPES[][34] = {
   "application/x-ar",
   "application/x-arj",
   "application/x-bzip",

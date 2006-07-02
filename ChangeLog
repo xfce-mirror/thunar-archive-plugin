@@ -1,5 +1,10 @@
 2006-07-02	Benedikt Meurer <benny@xfce.org>
 
+	* thunar-archive-plugin/tap-provider.c(TAP_MIME_TYPES): That should
+	  have been 24 bytes, forgot the nul-byte.
+
+2006-07-02	Benedikt Meurer <benny@xfce.org>
+
 	* thunar-archive-plugin/tap-provider.c(TAP_MIME_TYPES): Avoid 21
 	  unneccesary relocations.
 	* thunar-archive-plugin/tap-provider.c: GTK+ 2.9.0 and above provides
