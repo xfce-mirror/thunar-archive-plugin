@@ -6,6 +6,7 @@ wrapper_SCRIPTS =							\
 	file-roller.tap
 
 EXTRA_DIST =								\
-	$(wrapper_SCRIPTS)
+	$(wrapper_SCRIPTS)						\
+	template.tap
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

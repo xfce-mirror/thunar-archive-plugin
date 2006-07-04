@@ -1,10 +1,24 @@
+0.2.0
+=====
+- The plugin now supports a variety of archive managers through a generic
+  interface, that requires the archive manager to install a .desktop file
+  as usual, that lists the supported mime types, and a .tap file that acts
+  as a wrapper script to invoke the archive manager with the appropriate
+  parameters for the create, extract-here and extract-to actions.
+- Wrapper scripts for file-roller (the GNOME archive manager) and ark (the
+  KDE archive manager) have been added. Xarchiver, the Xfce archive manager,
+  will include an appropriate xarchiver.tap file in the next release.
+- Import the file-roller icons for the create and extract actions.
+- New translations: Carles Munoz (ca), Piarres Beobide (eu)
+- Updated translations: Benedikt Meurer (de), Szervác Attila (hu)
+
 0.1.2
 =====
 - When extracting an archive into the current folder, or creating an archive in
   the current folder, the file manager view is reloaded properly now once the
   file-roller command terminates, no matter if Thunar was build with or without
   FAM/Gamin.
-- New translations: Stavros Giannouris (el), Stephane Roy (fr), Szerv�c
+- New translations: Stavros Giannouris (el), Stephane Roy (fr), Szervác
   Attila (hu), Daichi Kawahata (ja), Piotr Malinski (pl), Andrey Fedoseev (ru),
   Hydonsingore Cia (zh_TW)
 

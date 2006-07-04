@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.1.2\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-01 21:02+0200\n"
 "PO-Revision-Date: 2006-04-02 18:17+0900\n"

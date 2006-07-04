@@ -1,3 +1,7 @@
+2006-07-04  Benedikt Meurer <benny@xfce.org>
+
+	* *.po: Update project version.
+
 2006-07-01 Benedikt Meurer <benny@xfce.org>
 
 	* POTFILES.in: Add tap-backend.c here.

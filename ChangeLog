@@ -1,3 +1,12 @@
+2006-07-04	Benedikt Meurer <benny@xfce.org>
+
+	* === Released 0.2.0 ===
+	* NEWS, configure.in.in: Bump version.
+	* THANKS: Add missing translator credits.
+	* scripts/template.tap, scripts/Makefile.am: Add template.tap to act
+	  as a template for new .tap files.
+	* po/*.po: Update project version.
+
 2006-07-02	Benedikt Meurer <benny@xfce.org>
 
 	* scripts/*.tap: Handle filenames with spaces properly.

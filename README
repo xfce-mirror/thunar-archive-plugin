@@ -34,7 +34,8 @@ thunar-archive-plugin is not able to find the appropriate .tap file for an
 archive manager. For example, if the name of the .desktop file is ark.desktop,
 the .tap file must be named ark.tap.
 
-See the scripts/ directory for examples of how to create said .tap files.
+See the scripts/ directory for examples of how to create said .tap files. The
+template.tap file should provide a good starting point.
 
 
 Installation
