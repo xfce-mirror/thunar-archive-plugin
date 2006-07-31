@@ -380,14 +380,18 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
-  TapProvider *tap_provider = TAP_PROVIDER (menu_provider);
-  GtkAction   *action;
-  GClosure    *closure;
-  gboolean     all_archives = TRUE;
-  gboolean     can_write = TRUE;
-  GList       *actions = NULL;
-  GList       *lp;
-  gint         n_files = 0;
+#if THUNAR_VFS_CHECK_VERSION(0,3,3)
+  ThunarVfsPathScheme scheme;
+  ThunarVfsInfo      *info;
+#endif
+  TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
+  GtkAction          *action;
+  GClosure           *closure;
+  gboolean            all_archives = TRUE;
+  gboolean            can_write = TRUE;
+  GList              *actions = NULL;
+  GList              *lp;
+  gint                n_files = 0;
 
   /* verify that atleast one file is given */
   if (G_UNLIKELY (files == NULL))
@@ -396,6 +400,17 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   /* check all supplied files */
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
     {
+#if THUNAR_VFS_CHECK_VERSION(0,3,3)
+      /* check if the file is a local file */
+      info = thunarx_file_info_get_vfs_info (lp->data);
+      scheme = thunar_vfs_path_get_scheme (info->path);
+      thunar_vfs_info_unref (info);
+
+      /* unable to handle non-local files */
+      if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+        return NULL;
+#endif
+
       /* check if this file is a supported archive */
       if (all_archives && !tap_is_archive (lp->data))
         all_archives = FALSE;
