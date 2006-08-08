@@ -20,7 +20,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr ""
+msgstr "Fitxategi kudeatzaile bat hautatu"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -28,13 +28,15 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
+"Mesedez hautatu zure fitxategi kudeatzaile gustokoena\n"
+"erabilgarri dauden aplikazioen beheko zerrendatik:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr ""
+msgstr "Ez da fitxategi kudeatzaile erabilgarririk aurkitu"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:289
