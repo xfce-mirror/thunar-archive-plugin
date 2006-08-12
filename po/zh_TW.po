@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-01 21:02+0200\n"
-"PO-Revision-Date: 2006-04-06 00:48+0800\n"
+"PO-Revision-Date: 2006-08-12 11:00+0800\n"
 "Last-Translator: Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr ""
+msgstr "請選擇壓所檔管理程式"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -28,13 +28,15 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
+"請由下面可用程式清單中選擇您所喜愛的壓縮檔管\n"
+"理程式："
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr ""
+msgstr "找不到合適的壓縮檔管理程式"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:289
