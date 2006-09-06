@@ -1,0 +1,82 @@
+# Esperanto translations for thunar-archive-plugin.
+# Copyright (C) 2006 Benedikt Meurer.
+# This file is distributed under the same license as the thunar-archive-plugin package.
+# Jarbas Araujo <jarbasaraujojr@yahoo.com.br>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-archive-plugin-0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-01 21:02+0200\n"
+"PO-Revision-Date: 2006-07-25 12:28+0100\n"
+"Last-Translator: Jarbas Araujo <jarbasaraujojr@yahoo.com.br>\n"
+"Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr "Elektu la dosiermanaĝilon"
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+"Bonvolu elekti vian preferatan dosiermanaĝilon\n"
+"el la subaj eblaj aplikaĵoj:"
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "Neniu uzebla dosiermanaĝilo estis trovata"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:289
+#: thunar-archive-plugin/tap-provider.c:323
+msgid "Failed to extract files"
+msgstr "Neeblas elmalfermi la dosierojn"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:361
+msgid "Failed to create archive"
+msgstr "Neeblas krei la dosieron"
+
+#. append the "Extract Here" action
+#: thunar-archive-plugin/tap-provider.c:406
+msgid "Extract _Here"
+msgstr "Elmalfermi Ĉ_i tie"
+
+#: thunar-archive-plugin/tap-provider.c:408
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Elmalfermi la elektitan dosieron en ĉi dosierujon"
+msgstr[1] "Elmalfermi la elektitajn dosierojn en ĉi dosierujon"
+
+#. append the "Extract To..." action
+#: thunar-archive-plugin/tap-provider.c:424
+msgid "_Extract To..."
+msgstr "_Elmalfermi al..."
+
+#: thunar-archive-plugin/tap-provider.c:426
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Elmalfermu la elektitan dosieron"
+msgstr[1] "Elmalfermu la elektitajn dosierojn"
+
+#. append the "Create Archive..." action
+#: thunar-archive-plugin/tap-provider.c:445
+msgid "Cr_eate Archive..."
+msgstr "_Kreu Dosieron..."
+
+#: thunar-archive-plugin/tap-provider.c:447
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Kreu dosieron kun la elektita objekto"
+msgstr[1] "Kreu dosieron kun la elektitaj objektoj"

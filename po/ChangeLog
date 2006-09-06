@@ -1,3 +1,8 @@
+2006-09-06  Sylvain Vedrenne <gnu_sylvain@xfce.org>
+
+	* LINGUAS, eo.po: Added Esperanto translations by Jarbas Araujo
+	Jarbas Araujo <jarbasaraujojr@yahoo.com.br>.
+
 2006-09-03  Jean-François Wauthy <pollux@xfce.org>
 
 	* pl.po: Updated Polish translations
