@@ -1,3 +1,8 @@
+2006-09-14  Benedikt Meurer <benny@xfce.org>
+
+	* thunar-archive-plugin.pot, *.po: Merge new strings.
+	* de.po: Update german translations.
+
 2006-09-06  Sylvain Vedrenne <gnu_sylvain@xfce.org>
 
 	* LINGUAS, eo.po: Added Esperanto translations by Jarbas Araujo

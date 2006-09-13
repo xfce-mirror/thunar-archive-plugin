@@ -31,8 +31,8 @@
 #include <thunar-archive-plugin/tap-backend.h>
 #include <thunar-archive-plugin/tap-provider.h>
 
-/* use access(2) with older GLib */
-#if GLIB_CHECK_VERSION(2,8,0)
+/* use g_access() on win32 */
+#if defined(G_OS_WIN32)
 #include <glib/gstdio.h>
 #else
 #define g_access(filename, mode) access((filename), (mode))
@@ -47,6 +47,12 @@ static void   tap_provider_finalize             (GObject                  *objec
 static GList *tap_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  GList                    *files);
+#if THUNARX_CHECK_VERSION(0,4,1)
+static GList *tap_provider_get_dnd_actions      (ThunarxMenuProvider      *menu_provider,
+                                                 GtkWidget                *window,
+                                                 ThunarxFileInfo          *folder,
+                                                 GList                    *files);
+#endif
 static void   tap_provider_execute              (TapProvider              *tap_provider,
                                                  GPid                    (*action) (const gchar *folder,
                                                                                     GList       *files,
@@ -118,6 +124,9 @@ static const gchar TAP_MIME_TYPES[][34] = {
 };
 
 static GQuark tap_action_files_quark;
+#if THUNARX_CHECK_VERSION(0,4,1)
+static GQuark tap_action_folder_quark;
+#endif
 static GQuark tap_action_provider_quark;
 
 
@@ -134,8 +143,11 @@ tap_provider_class_init (TapProviderClass *klass)
 {
   GObjectClass *gobject_class;
 
-  /* determine the "tap-action-files" and "tap-action-provider" quarks */
+  /* determine the "tap-action-files", "tap-action-folder" and "tap-action-provider" quarks */
   tap_action_files_quark = g_quark_from_string ("tap-action-files");
+#if THUNARX_CHECK_VERSION(0,4,1)
+  tap_action_folder_quark = g_quark_from_string ("tap-action-folder");
+#endif
   tap_action_provider_quark = g_quark_from_string ("tap-action-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
@@ -148,6 +160,9 @@ static void
 tap_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 {
   iface->get_file_actions = tap_provider_get_file_actions;
+#if THUNARX_CHECK_VERSION(0,4,1)
+  iface->get_dnd_actions = tap_provider_get_dnd_actions;
+#endif
 }
 
 
@@ -190,10 +205,6 @@ tap_provider_init (TapProvider *tap_provider)
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
 #endif /* !GTK_CHECK_VERSION(2,9,0) */
-
-  /* initialize the child watch support */
-  tap_provider->child_watch_path = NULL;
-  tap_provider->child_watch_id = -1;
 }
 
 
@@ -205,7 +216,7 @@ tap_provider_finalize (GObject *object)
   GSource     *source;
 
   /* give up maintaince of any pending child watch */
-  if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
+  if (G_UNLIKELY (tap_provider->child_watch_id != 0))
     {
       /* reset the callback function to g_spawn_close_pid() so the plugin can be
        * safely unloaded and the child will still not become a zombie afterwards.
@@ -275,10 +286,13 @@ static void
 tap_extract_here (GtkAction *action,
                   GtkWidget *window)
 {
-  TapProvider *tap_provider;
-  GList       *files;
-  gchar       *dirname;
-  gchar       *uri;
+#if THUNARX_CHECK_VERSION(0,4,1)
+  ThunarxFileInfo *folder;
+#endif
+  TapProvider     *tap_provider;
+  GList           *files;
+  gchar           *dirname;
+  gchar           *uri;
 
   /* determine the files associated with the action */
   files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
@@ -290,24 +304,40 @@ tap_extract_here (GtkAction *action,
   if (G_UNLIKELY (tap_provider == NULL))
     return;
 
-  /* determine the parent URI of the first selected file */
-  uri = thunarx_file_info_get_parent_uri (files->data);
-  if (G_UNLIKELY (uri == NULL))
-    return;
+#if THUNARX_CHECK_VERSION(0,4,1)
+  /* check if a folder was supplied (for the Drag'n'Drop action) */
+  folder = g_object_get_qdata (G_OBJECT (action), tap_action_folder_quark);
+  if (G_UNLIKELY (folder != NULL))
+    {
+      /* determine the URI of the supplied folder */
+      uri = thunarx_file_info_get_uri (folder);
+    }
+  else
+#endif
+    {
+      /* determine the parent URI of the first selected file */
+      uri = thunarx_file_info_get_parent_uri (files->data);
+    }
 
-  /* determine the directory of the first selected file */
-  dirname = g_filename_from_uri (uri, NULL, NULL);
-  g_free (uri);
+  /* verify that we have an URI */
+  if (G_LIKELY (uri != NULL))
+    {
+      /* determine the directory of the first selected file */
+      dirname = g_filename_from_uri (uri, NULL, NULL);
 
-  /* verify that we were able to determine a local path */
-  if (G_UNLIKELY (dirname == NULL))
-    return;
+      /* verify that we were able to determine a local path */
+      if (G_LIKELY (dirname != NULL))
+        {
+          /* execute the action */
+          tap_provider_execute (tap_provider, tap_backend_extract_here, window, dirname, files, _("Failed to extract files"));
 
-  /* execute the action */
-  tap_provider_execute (tap_provider, tap_backend_extract_here, window, dirname, files, _("Failed to extract files"));
+          /* release the dirname */
+          g_free (dirname);
+        }
 
-  /* cleanup */
-  g_free (dirname);
+      /* release the URI */
+      g_free (uri);
+    }
 }
 
 
@@ -389,10 +419,8 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
-#if THUNAR_VFS_CHECK_VERSION(0,3,3)
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
-#endif
   TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
   GtkAction          *action;
   GClosure           *closure;
@@ -402,14 +430,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   GList              *lp;
   gint                n_files = 0;
 
-  /* verify that atleast one file is given */
-  if (G_UNLIKELY (files == NULL))
-    return NULL;
-
   /* check all supplied files */
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
     {
-#if THUNAR_VFS_CHECK_VERSION(0,3,3)
       /* check if the file is a local file */
       info = thunarx_file_info_get_vfs_info (lp->data);
       scheme = thunar_vfs_path_get_scheme (info->path);
@@ -418,7 +441,6 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       /* unable to handle non-local files */
       if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
         return NULL;
-#endif
 
       /* check if this file is a supported archive */
       if (all_archives && !tap_is_archive (lp->data))
@@ -518,6 +540,81 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 
 
 
+#if THUNARX_CHECK_VERSION(0,4,1)
+static GList*
+tap_provider_get_dnd_actions (ThunarxMenuProvider *menu_provider,
+                              GtkWidget           *window,
+                              ThunarxFileInfo     *folder,
+                              GList               *files)
+{
+  ThunarVfsPathScheme scheme;
+  ThunarVfsInfo      *info;
+  TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
+  GtkAction          *action;
+  GClosure           *closure;
+  GList              *lp;
+  gint                n_files = 0;
+
+  /* check if the folder is a local folder */
+  info = thunarx_file_info_get_vfs_info (folder);
+  scheme = thunar_vfs_path_get_scheme (info->path);
+  thunar_vfs_info_unref (info);
+
+  /* unable to extract to non-local folders */
+  if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+    return NULL;
+
+  /* check all supplied files */
+  for (lp = files; lp != NULL; lp = lp->next, ++n_files)
+    {
+      /* check if the file is a local file */
+      info = thunarx_file_info_get_vfs_info (lp->data);
+      scheme = thunar_vfs_path_get_scheme (info->path);
+      thunar_vfs_info_unref (info);
+
+      /* unable to handle non-local files */
+      if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+        return NULL;
+
+      /* check if this file is a supported archive */
+      if (G_LIKELY (!tap_is_archive (lp->data)))
+        return NULL;
+    }
+
+  /* setup the "Extract here" action */
+  action = g_object_new (GTK_TYPE_ACTION,
+                         "name", "Tap::extract-here-dnd",
+                         /* TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action */
+                         "label", _("_Extract here"),
+#if !GTK_CHECK_VERSION(2,9,0)
+                         "stock-id", "tap-extract",
+#else
+                         "icon-name", "tap-extract",
+#endif
+                         "tooltip", dngettext (GETTEXT_PACKAGE,
+                                               "Extract the selected archive here",
+                                               "Extract the selected archives here",
+                                               n_files),
+                         NULL);
+  g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
+                           thunarx_file_info_list_copy (files),
+                           (GDestroyNotify) thunarx_file_info_list_free);
+  g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+                           g_object_ref (G_OBJECT (tap_provider)),
+                           (GDestroyNotify) g_object_unref);
+  g_object_set_qdata_full (G_OBJECT (action), tap_action_folder_quark,
+                           g_object_ref (G_OBJECT (folder)),
+                           (GDestroyNotify) g_object_unref);
+  closure = g_cclosure_new_object (G_CALLBACK (tap_extract_here), G_OBJECT (window));
+  g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
+
+  /* return a list with only the "Extract here" action */
+  return g_list_prepend (NULL, action);
+}
+#endif
+
+
+
 static void
 tap_provider_execute (TapProvider *tap_provider,
                       GPid       (*action) (const gchar *folder,
@@ -539,7 +636,7 @@ tap_provider_execute (TapProvider *tap_provider,
   if (G_LIKELY (pid >= 0))
     {
       /* check if we already have a child watch */
-      if (G_UNLIKELY (tap_provider->child_watch_id >= 0))
+      if (G_UNLIKELY (tap_provider->child_watch_id != 0))
         {
           /* reset the callback function to g_spawn_close_pid() so the plugin can be
            * safely unloaded and the child will still not become a zombie afterwards.
@@ -618,7 +715,7 @@ tap_provider_child_watch_destroy (gpointer user_data)
   /* reset child watch id and path */
   g_free (tap_provider->child_watch_path);
   tap_provider->child_watch_path = NULL;
-  tap_provider->child_watch_id = -1;
+  tap_provider->child_watch_id = 0;
 }
 
 

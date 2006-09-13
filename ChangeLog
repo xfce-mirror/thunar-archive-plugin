@@ -1,3 +1,14 @@
+2006-09-14	Benedikt Meurer <benny@xfce.org>
+
+	* README, configure.in.in, thunar-archive-plugin/tap-provider.c:
+	  Bump dependency to Thunar 0.4.0.
+	* thunar-archive-plugin/tap-provider.c: Add support for the new
+	  get_dnd_actions() method in Thunar 0.4.1svn, which installs
+	  an "Extract here" action into the Drag'n'Drop menu of the file
+	  manager when dropping supported archive files to a local folder.
+	* po/*.po, po/thunar-archive-plugin.pot: Merge new strings.
+	* po/de.po: Update german translations.
+
 2006-09-13	Benedikt Meurer <benny@xfce.org>
 
 	* README: Add note about update-desktop-database.

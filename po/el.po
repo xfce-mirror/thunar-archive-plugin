@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2006-09-14 01:24+0200\n"
 "PO-Revision-Date: 2006-08-04 22:06+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:84
+#: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
 msgstr "Επιλέξτε ένα διαχειριστή συμπιεσμένων αρχείων"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:108
+#: thunar-archive-plugin/tap-backend.c:108
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
@@ -31,48 +31,62 @@ msgstr ""
 "αρχείων που προτιμάτε από την παρακάτω λίστα:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:432
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
 msgid "No suitable archive manager found"
 msgstr "Δε βρέθηκε κανένας κατάλληλος διαχειριστής συμπιεσμένων αρχείων"
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:298
-#: ../thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
 msgstr "Η αποσυμπίεση των αρχείων απέτυχε"
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:370
+#: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
 msgstr "Η δημιουργία του συμπιεσμένου αρχείου απέτυχε"
 
-#: ../thunar-archive-plugin/tap-provider.c:432
+#: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
 msgstr "Αποσυμπίεση Ε_δώ"
 
-#: ../thunar-archive-plugin/tap-provider.c:439
+#: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο στον τρέχον φάκελο"
 msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία στον τρέχον φάκελο"
 
-#: ../thunar-archive-plugin/tap-provider.c:456
+#: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
 msgstr "Αποσυμπίεση σ_το..."
 
-#: ../thunar-archive-plugin/tap-provider.c:464
+#: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο"
 msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία"
 
-#: ../thunar-archive-plugin/tap-provider.c:484
+#: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
 msgstr "Δημιουργία Συ_μπιεσμένου Αρχείου..."
 
-#: ../thunar-archive-plugin/tap-provider.c:492
+#: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Δημιουργεί ένα συμπιεσμένο αρχείο με το επιλεγμένο αντικείμενο"
 msgstr[1] "Δημιουργεί ένα συμπιεσμένο αρχείο με τα επιλεγμένα αντικείμενα"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+#, fuzzy
+msgid "_Extract here"
+msgstr "Αποσυμπίεση Ε_δώ"
+
+#: thunar-archive-plugin/tap-provider.c:595
+#, fuzzy
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο"
+msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία"

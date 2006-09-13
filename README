@@ -12,7 +12,7 @@ Required packages
 
 thunar-archive-plugin depends on the following packages:
 
- - Thunar 0.2.2 or above
+ - Thunar 0.4.0 or above
 
 
 Supported archive managers

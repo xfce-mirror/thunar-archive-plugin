@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2006-09-14 01:24+0200\n"
 "PO-Revision-Date: 2006-03-26 22:00+0600\n"
 "Last-Translator: Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -19,63 +19,78 @@ msgstr ""
 "X-Generator: KBabel 1.11.2\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:84
+#: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
 msgstr ""
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:108
+#: thunar-archive-plugin/tap-backend.c:108
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:432
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
 msgid "No suitable archive manager found"
 msgstr ""
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:298
-#: ../thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
 msgstr "Не удалось извлечь файлы"
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:370
+#: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
 msgstr "Не удалось создать архив"
 
-#: ../thunar-archive-plugin/tap-provider.c:432
+#: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
 msgstr "Извлечь сюда"
 
-#: ../thunar-archive-plugin/tap-provider.c:439
+#: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Извлечь файлы из выбранного архива в текущую папку"
 msgstr[1] "Извлечь файлы из выбранных архивов в текущую папку"
 msgstr[2] "Извлечь файлы из выбранных архивов в текущую папку"
 
-#: ../thunar-archive-plugin/tap-provider.c:456
+#: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
 msgstr "Извлечь в..."
 
-#: ../thunar-archive-plugin/tap-provider.c:464
+#: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Извлечь файлы из выбранного архива"
 msgstr[1] "Извлечь файлы из выбранных архивов"
 msgstr[2] "Извлечь файлы из выбранных архивов"
 
-#: ../thunar-archive-plugin/tap-provider.c:484
+#: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
 msgstr "Создать архив..."
 
-#: ../thunar-archive-plugin/tap-provider.c:492
+#: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Поместить выбранный объект в архив"
 msgstr[1] "Поместить выбранные объекты в архив"
 msgstr[2] "Поместить выбранные объекты в архив"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+#, fuzzy
+msgid "_Extract here"
+msgstr "Извлечь сюда"
+
+#: thunar-archive-plugin/tap-provider.c:595
+#, fuzzy
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Извлечь файлы из выбранного архива"
+msgstr[1] "Извлечь файлы из выбранных архивов"
+msgstr[2] "Извлечь файлы из выбранных архивов"
