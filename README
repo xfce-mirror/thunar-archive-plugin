@@ -37,6 +37,17 @@ the .tap file must be named ark.tap.
 See the scripts/ directory for examples of how to create said .tap files. The
 template.tap file should provide a good starting point.
 
+Note that the thunar-archive-plugin takes the applications from the desktop
+database, so after installing new archive managers in $prefix (i.e. /usr or
+/usr/local), make sure to run
+
+ update-desktop-database $prefix/share/applications
+
+Most modern packagement systems will do this for you automatically, but if
+you are installing archive managers manually, you may need to run the above
+command first, otherwise you will get an error message telling you that no
+support archive managers were found on your system.
+
 
 Installation
 ============

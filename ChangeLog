@@ -1,3 +1,14 @@
+2006-09-13	Benedikt Meurer <benny@xfce.org>
+
+	* README: Add note about update-desktop-database.
+	* configure.in.in, Makefile.am: Place automake options into
+	  configure.in.in instead of Makefile.am.
+	* icons/16x16/tap-add.png, icons/16x16/tap-create.png,
+	  icons/16x16/Makefile.am, thunar-archive-plugin/tap-provider.c:
+	  Rename tap-add to tap-create.
+	* icons/16x16/, thunar-archive-plugin/tap-provider.c: Use tangoified
+	  icons and add a different icon for the extract-to action.
+
 2006-07-31	Benedikt Meurer <benny@xfce.org>
 
 	* thunar-archive-plugin/tap-provider.c(tap_provider_get_file_actions):

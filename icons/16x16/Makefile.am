@@ -2,8 +2,9 @@
 
 appsdir = $(datadir)/icons/hicolor/16x16/apps
 apps_DATA =								\
-	tap-add.png							\
-	tap-extract.png
+	tap-create.png							\
+	tap-extract.png							\
+	tap-extract-to.png
 
 EXTRA_DIST =								\
 	$(apps_DATA)

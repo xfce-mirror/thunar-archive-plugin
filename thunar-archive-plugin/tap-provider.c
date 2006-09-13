@@ -163,12 +163,12 @@ tap_provider_init (TapProvider *tap_provider)
   tap_provider->icon_factory = gtk_icon_factory_new ();
   gtk_icon_factory_add_default (tap_provider->icon_factory);
 
-  /* add the "tap-add" stock icon */
+  /* add the "tap-create" stock icon */
   icon_set = gtk_icon_set_new ();
   icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "tap-add");
+  gtk_icon_source_set_icon_name (icon_source, "tap-create");
   gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tap_provider->icon_factory, "tap-add", icon_set);
+  gtk_icon_factory_add (tap_provider->icon_factory, "tap-create", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
 
@@ -178,6 +178,15 @@ tap_provider_init (TapProvider *tap_provider)
   gtk_icon_source_set_icon_name (icon_source, "tap-extract");
   gtk_icon_set_add_source (icon_set, icon_source);
   gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract", icon_set);
+  gtk_icon_source_free (icon_source);
+  gtk_icon_set_unref (icon_set);
+
+  /* add the "tap-extract-to" stock icon */
+  icon_set = gtk_icon_set_new ();
+  icon_source = gtk_icon_source_new ();
+  gtk_icon_source_set_icon_name (icon_source, "tap-extract-to");
+  gtk_icon_set_add_source (icon_set, icon_source);
+  gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract-to", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
 #endif /* !GTK_CHECK_VERSION(2,9,0) */
@@ -456,9 +465,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                              "label", _("_Extract To..."),
                              "name", "Tap::extract-to",
 #if !GTK_CHECK_VERSION(2,9,0)
-                             "stock-id", "tap-extract",
+                             "stock-id", "tap-extract-to",
 #else
-                             "icon-name", "tap-extract",
+                             "icon-name", "tap-extract-to",
 #endif
                              "tooltip", dngettext (GETTEXT_PACKAGE,
                                                    "Extract the selected archive",
@@ -484,9 +493,9 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                              "label", _("Cr_eate Archive..."),
                              "name", "Tap::create-archive",
 #if !GTK_CHECK_VERSION(2,9,0)
-                             "stock-id", "tap-add",
+                             "stock-id", "tap-create",
 #else
-                             "icon-name", "tap-add",
+                             "icon-name", "tap-create",
 #endif
                              "tooltip", dngettext (GETTEXT_PACKAGE,
                                                    "Create an archive with the selected object",
