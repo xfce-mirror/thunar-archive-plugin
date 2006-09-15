@@ -1,21 +1,23 @@
+# translation of eu.po to librezale
 # Basque translations for thunar-archive-plugin package.
 # Copyright (C) 2006 Benedikt Meurer.
 # This file is distributed under the same license as
 #   the thunar-archive-plugin package.
-# Piarres Beobide <pi@beobide.net>, 2006.
 #
+# Piarres Beobide <pi@beobide.net>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.0\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-14 01:24+0200\n"
-"PO-Revision-Date:  2006-04-07 13:29+0100\n"
+"PO-Revision-Date: 2006-09-15 22:12+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Librezale <Librezale@librezale.org>\n"
+"Language-Team: librezale <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
@@ -81,13 +83,12 @@ msgstr[1] "Fitxategi bat sortu aukeratutako elementuekin"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
 msgstr "Hona A_tera"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Aukeratutako fitxategia atera"
-msgstr[1] "Aukeratutako fitxategiak atera"
+msgstr[0] "Aukeratutako fitxategia hona atera"
+msgstr[1] "Aukeratutako fitxategiak hona atera"
+
