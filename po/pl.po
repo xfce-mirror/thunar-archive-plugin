@@ -85,14 +85,12 @@ msgstr[2] "Stwórz archiwum z zaznaczonych obiektów"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
-msgstr "Rozpakuj _Tutaj"
+msgstr "_Rozpakuj Tutaj"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Rozpakuj zaznaczone archiwum"
-msgstr[1] "Rozpakuj zaznaczone archiwa"
-msgstr[2] "Rozpakuj zaznaczone archiwa"
+msgstr[0] "Rozpakuj zaznaczone archiwum tutaj"
+msgstr[1] "Rozpakuj zaznaczone archiwa tutaj"
+msgstr[2] "Rozpakuj zaznaczone archiwa tutaj"
