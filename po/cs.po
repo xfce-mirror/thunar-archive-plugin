@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.1svn-r01924\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-14 01:24+0200\n"
-"PO-Revision-Date: 2006-08-26 19:51+0100\n"
+"PO-Revision-Date: 2006-09-17 09:24+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -83,14 +83,13 @@ msgstr[2] "Vytvoří archiv z vybraných objektů"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
 msgstr "Rozbalit _zde"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Rozbalí vybraný archiv"
-msgstr[1] "Rozbalí vybrané archivy"
-msgstr[2] "Rozbalí vybrané archivy"
+msgstr[0] "Rozbalí vybraný archiv v tomto umístění"
+msgstr[1] "Rozbalí vybrané archivy v tomto umístění"
+msgstr[2] "Rozbalí vybrané archivy v tomto umístění"
+
