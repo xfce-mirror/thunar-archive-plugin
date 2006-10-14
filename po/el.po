@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-14 01:24+0200\n"
-"PO-Revision-Date: 2006-08-04 22:06+0200\n"
+"PO-Revision-Date: 2006-10-14 19:03+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -80,13 +80,12 @@ msgstr[1] "Δημιουργεί ένα συμπιεσμένο αρχείο με 
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
 msgstr "Αποσυμπίεση Ε_δώ"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο"
-msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία"
+msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο εδώ"
+msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία εδώ"
+
