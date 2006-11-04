@@ -1,3 +1,17 @@
+0.2.2
+=====
+- The dependency on Thunar was bumped to version 0.4.0.
+- The plugin now supports the Drag'n'Drop context menu introduced with Thunar
+  0.5.0, and installs an "Extract here" action when dropping supported
+  archive files to a local folder.
+- Use tangoified icons.
+- Updated translations: Benedikt Meurer (de), Stavros Giannouris (el), Piarres
+			Beobide (eu), Gerald Barre and Maximilian Schleiss (fr),
+			Piotr Maliński (pl), Hydonsingore Cia (zh_TW)
+- New translations: Michal Várady (cs), Jarbas Araujo (eo), Roberto Pariset
+		    (it), Stephan Arts (nl)
+
+
 0.2.0
 =====
 - The plugin now supports a variety of archive managers through a generic
@@ -12,6 +26,7 @@
 - New translations: Carles Munoz (ca), Piarres Beobide (eu)
 - Updated translations: Benedikt Meurer (de), Szervác Attila (hu)
 
+
 0.1.2
 =====
 - When extracting an archive into the current folder, or creating an archive in
@@ -21,6 +36,7 @@
 - New translations: Stavros Giannouris (el), Stephane Roy (fr), Szervác
   Attila (hu), Daichi Kawahata (ja), Piotr Malinski (pl), Andrey Fedoseev (ru),
   Hydonsingore Cia (zh_TW)
+
 
 0.1.0
 =====

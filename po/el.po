@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.0\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-14 01:24+0200\n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-10-14 19:03+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -88,4 +88,3 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο εδώ"
 msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία εδώ"
-

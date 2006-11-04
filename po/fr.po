@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin-0.2.0\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-14 01:24+0200\n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-09-17 21:11+0100\n"
 "Last-Translator: Gerald Barre <g.barre@free.fr>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -88,4 +88,3 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Extraire l'archive sélectionnée ici"
 msgstr[1] "Extraire les archives sélectionnées ici"
-

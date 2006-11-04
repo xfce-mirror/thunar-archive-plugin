@@ -5,9 +5,9 @@
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.0\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-14 01:24+0200\n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-03-26 22:00+0600\n"
 "Last-Translator: Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
 "Language-Team: Russian\n"
