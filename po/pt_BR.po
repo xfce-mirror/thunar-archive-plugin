@@ -1,0 +1,77 @@
+# Brazilian portuguese translation of the thunar-archive-plugin package.
+# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
+# This file is distributed under the same license as the thunar-archive-plugin package.
+# Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pt_BR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-01 21:02+0200\n"
+"PO-Revision-Date: 2006-11-14 22:19-0300\n"
+"Last-Translator: Gunther Furtado <gunzera0@yahoo.com.br>\n"
+"Language-Team: Xfce-i18n <xfce-i18n@xfce.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr "Selecionar gerenciador de arquivos compactados"
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+"Por favor, selecione o gerenciador de arquivos \n"
+"compactados da sua escolha da lista de \n"
+"aplicativos disponíveis abaixo:"
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "Nenhum gerenciador de arquivos compactados encontrado"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:289
+#: thunar-archive-plugin/tap-provider.c:323
+msgid "Failed to extract files"
+msgstr "A extração dos arquivos falhou"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:361
+msgid "Failed to create archive"
+msgstr "A criação dos arquivos compactados falhou"
+
+#. append the "Extract Here" action
+#: thunar-archive-plugin/tap-provider.c:406
+msgid "Extract _Here"
+msgstr "Extrair Aqui (_H)"
+
+#: thunar-archive-plugin/tap-provider.c:408
+msgid "Extract the selected archive in the current folder"
+msgstr "Extrair o arquivo selecionado no diretório atual"
+
+#. append the "Extract To..." action
+#: thunar-archive-plugin/tap-provider.c:424
+msgid "_Extract To..."
+msgstr "_Extrair Para..."
+
+#: thunar-archive-plugin/tap-provider.c:426
+msgid "Extract the selected archive"
+msgstr "Extrair o arquivo selecionado"
+
+#. append the "Create Archive..." action
+#: thunar-archive-plugin/tap-provider.c:445
+msgid "Cr_eate Archive..."
+msgstr "Criar Arquivo... (_e)"
+
+#: thunar-archive-plugin/tap-provider.c:447
+msgid "Create an archive with the selected object"
+msgstr "Criar um arquivo com os objetos selecionados"
+

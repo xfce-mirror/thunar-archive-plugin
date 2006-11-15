@@ -1,7 +1,7 @@
-# French translation for thunar-archive-plugin.
-# Copyright (C) 2006 Benedikt Meurer.
+# French translation of the thunar-archive-plugin package.
+# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
-# Stephane Roy <sroy@j2n.net>, 2006.
+# Stéphane Roy <sroy@j2n.net>, 2006.
 #
 msgid ""
 msgstr ""
@@ -28,7 +28,7 @@ msgid ""
 "from the list of available applications below:"
 msgstr ""
 "Choisir le gestionnaire d'archives préféré\n"
-"de la liste d'applications disponibles ci-dessous:"
+"de la liste d'applications disponibles ci-dessous :"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
