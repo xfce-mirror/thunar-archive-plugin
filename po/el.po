@@ -1,7 +1,7 @@
 # Greek translations for thunar-archive-plugin package.
 # Copyright (C) 2006 Benedikt Meurer.
 # This file is distributed under the same license as the thunar-archive-plugin package.
-# Stavros Giannouris <stavrosg2002@freemail.gr>, 2006.
+# Stavros Giannouris <stavrosg@serverhive.com>, 2006.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-10-14 19:03+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
+"Last-Translator: Stavros Giannouris <stavrosg@serverhive.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

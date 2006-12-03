@@ -8,7 +8,7 @@
 
 	* *.po: Update Project-Id-Version.
 
-2006-10-14  Stavros Giannouris <stavrosg2002@freemail.gr>
+2006-10-14  Stavros Giannouris <stavrosg@serverhive.com>
 
 	* el.po: Updated Greek translations
 
@@ -48,7 +48,7 @@
 
 	* eu.po: Basque trasnaltion update
 
-2006-08-04  Stavros Giannouris <stavrosg2002@freemail.gr>
+2006-08-04  Stavros Giannouris <stavrosg@serverhive.com>
 
 	* el.po: Updated Greek translation.
 
@@ -99,7 +99,7 @@
 2006-04-08 Daichi Kawahata <daichi@xfce.org>
 
 	* LINGUAS, el.po: Added Greek translations by Stavros Giannouris
-	  <stavrosg2002@freemail.gr>.
+	  <stavrosg@serverhive.com>.
 	* LINGUAS, pl.po: Added Polish translations by Piotr Malinski
 	  <admin@rk.edu.pl>.
 
