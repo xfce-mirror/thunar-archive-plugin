@@ -8,21 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-03 15:00+0100\n"
-"PO-Revision-Date: 2006-12-03 14:30+0100\n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
+"PO-Revision-Date: 2006-04-17 17:50+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
-"Language-Team: Catalan <xfce-i18n@xfce.org>\n"
+"Language-Team: catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Catalan\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Seleccioneu un gestor d'arxius"
+msgstr ""
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -30,15 +28,13 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Seleccioneu el vostre gestor d'arxius preferit\n"
-"de la següent llista d'aplicacions disponibles:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "No s'ha trobat cap gestor d'arxius disponible"
+msgstr ""
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
@@ -83,11 +79,13 @@ msgstr[1] "Crea un arxiu amb els objectes seleccionats"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
+#, fuzzy
 msgid "_Extract here"
-msgstr "_Extreu aquí"
+msgstr "Extreu _aquí"
 
 #: thunar-archive-plugin/tap-provider.c:595
+#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Extreu aquí l'arxiu seleccionat"
-msgstr[1] "Extreu aquí els arxius seleccionats"
+msgstr[0] "Extreu l'arxiu seleccionat"
+msgstr[1] "Extreu els arxius seleccionats"
