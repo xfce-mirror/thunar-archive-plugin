@@ -1,7 +1,7 @@
 # Hungarian translations for the thunar-archive-plugin.
 # Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
-# SZERVÑC Attila <sas@321.hu>, 2006.
+# SZERVÁC Attila <sas@321.hu>, 2006.
 #
 msgid ""
 msgstr ""
