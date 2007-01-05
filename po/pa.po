@@ -1,0 +1,92 @@
+# translation of pa.po to Punjabi
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: pa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
+"PO-Revision-Date: 2007-01-05 21:20+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr "ਇੱਕ ਆਰਚੀਵ ਮੈਨੇਜਰ ਚੁਣੋز"
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+"ਆਪਣੀ ਪਸੰਦ ਦਾ ਆਰਚੀਵ ਮੈਨੇਜਰ ਹੇਠ ਦਿੱਤੀ ਉਪਲੱਬਧ "
+"ਐਪਲੀਕੇਸ਼ਣ ਦੀ ਲਿਸਟ ਤੋਂ ਚੁਣੋ:"
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "ਕੋਈ ਢੁੱਕਵਾਂ ਆਰਚੀਵ ਮੈਨੇਜਰ ਨਹੀਂ ਮਿਲਿਆ"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
+msgid "Failed to extract files"
+msgstr "ਫਾਇਲਾਂ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:409
+msgid "Failed to create archive"
+msgstr "ਆਰਚੀਵ ਬਣਾਉਣ ਲਈ ਫੇਲ੍ਹ"
+
+#: thunar-archive-plugin/tap-provider.c:463
+msgid "Extract _Here"
+msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ(_H)"
+
+#: thunar-archive-plugin/tap-provider.c:470
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "ਚੁਣੇ ਆਰਚੀਵ ਨੂੰ ਮੌਜੂਦਾ ਫੋਲਡਰ 'ਚ ਖੋਲ੍ਹੋ"
+msgstr[1] "ਚੁਣੇ ਆਰਚੀਵ ਮੌਜੂਦਾ ਫੋਲਡਰ 'ਚ ਖੋਲ੍ਹੋ"
+
+#: thunar-archive-plugin/tap-provider.c:487
+msgid "_Extract To..."
+msgstr "ਖੋਲ੍ਹੋ(_E)..."
+
+#: thunar-archive-plugin/tap-provider.c:495
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "ਚੁਣਿਆ ਆਰਚੀਵ ਖੋਲ੍ਹੋ"
+msgstr[1] "ਚੁਣੇ ਆਰਚੀਵ ਖੋਲ੍ਹੋ"
+
+#: thunar-archive-plugin/tap-provider.c:515
+msgid "Cr_eate Archive..."
+msgstr "ਆਰਚੀਵ ਬਣਾਓ(_e)..."
+
+#: thunar-archive-plugin/tap-provider.c:523
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "ਚੁਣੇ ਆਬਜੈਕਟ ਨਾਲ ਇੱਕ ਆਰਚੀਵ ਬਣਾਓ"
+msgstr[1] "ਚੁਣੇ ਆਬਜੈਕਟਾਂ ਨਾਲ ਇੱਕ ਆਰਚੀਵ ਬਣਾਓ"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+msgid "_Extract here"
+msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ(_E)"
+
+#: thunar-archive-plugin/tap-provider.c:595
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "ਚੁਣਿਆ ਆਰਚੀਵ ਇੱਥੇ ਖੋਲ੍ਹੋ"
+msgstr[1] "ਚੁਣੇ ਆਰਚੀਵ ਇੱਥੇ ਖੋਲ੍ਹੋ"
+
