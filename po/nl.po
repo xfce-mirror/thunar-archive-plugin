@@ -80,13 +80,11 @@ msgstr[1] "De geselecteerde onderdelen in een nieuw archief plaatsen"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
 msgstr "_Hier Uitpakken"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Pak het geselecteerde archief uit"
-msgstr[1] "Pak de geselecteerde archieven uit"
+msgstr[0] "Het geselecteerde archief hier uitpakken"
+msgstr[1] "De geselecteerde archieven hier uitpakken"
