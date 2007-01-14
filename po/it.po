@@ -1,4 +1,4 @@
-# French translation for thunar-archive-plugin.
+# Italian translation of the thunar-archive-plugin package.
 # Copyright (C) 2006 Benedikt Meurer.
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Roberto Pariset <robdebian@gmail.com>, 2006.
@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2006-07-25 12:28+0100\n"
-"Last-Translator: Roberto Pariset <r.pariset@gmail.com>\n"
+"PO-Revision-Date: 2007-01-14 18:14+0100\n"
+"Last-Translator: Roberto Pariset <robdebian@gmail.com>\n"
 "Language-Team: Italian <traduzioni@gufi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -80,13 +80,12 @@ msgstr[1] "Crea un archivio con gli oggetto selezionati"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
 msgstr "Estrai _qui"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Estrai l'archivio selezionato"
-msgstr[1] "Estrai gli archivi selezionati"
+msgstr[0] "Estrai qui l'archivio selezionato"
+msgstr[1] "Estrai qui gli archivi selezionati"
+
