@@ -1,11 +1,12 @@
 # translation of pa.po to Punjabi
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>.
+# This file is distributed under the same license as the thunar-archive-plugin
+# package.
 #
 # A S Alam <aalam@users.sf.net>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: pa\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2007-01-05 21:20+0530\n"
@@ -27,9 +28,7 @@ msgstr "ਇੱਕ ਆਰਚੀਵ ਮੈਨੇਜਰ ਚੁਣੋز"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"ਆਪਣੀ ਪਸੰਦ ਦਾ ਆਰਚੀਵ ਮੈਨੇਜਰ ਹੇਠ ਦਿੱਤੀ ਉਪਲੱਬਧ "
-"ਐਪਲੀਕੇਸ਼ਣ ਦੀ ਲਿਸਟ ਤੋਂ ਚੁਣੋ:"
+msgstr "ਆਪਣੀ ਪਸੰਦ ਦਾ ਆਰਚੀਵ ਮੈਨੇਜਰ ਹੇਠ ਦਿੱਤੀ ਉਪਲੱਬਧ ਐਪਲੀਕੇਸ਼ਣ ਦੀ ਲਿਸਟ ਤੋਂ ਚੁਣੋ:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
@@ -89,4 +88,3 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "ਚੁਣਿਆ ਆਰਚੀਵ ਇੱਥੇ ਖੋਲ੍ਹੋ"
 msgstr[1] "ਚੁਣੇ ਆਰਚੀਵ ਇੱਥੇ ਖੋਲ੍ਹੋ"
-

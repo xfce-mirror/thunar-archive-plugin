@@ -1,3 +1,9 @@
+0.2.4
+=====
+- Updated translations: Carles Muñoz Gorriz (ca), Roberto Pariset (it)
+- New translations: Amanpreet Singh Alam (pa), Gunther Furtado (pt_BR)
+
+
 0.2.2
 =====
 - The dependency on Thunar was bumped to version 0.4.0.

@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pt_BR\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-01 21:02+0200\n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-11-14 22:19-0300\n"
 "Last-Translator: Gunther Furtado <gunzera0@yahoo.com.br>\n"
 "Language-Team: Xfce-i18n <xfce-i18n@xfce.org>\n"
@@ -38,40 +38,58 @@ msgid "No suitable archive manager found"
 msgstr "Nenhum gerenciador de arquivos compactados encontrado"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:289
-#: thunar-archive-plugin/tap-provider.c:323
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
 msgstr "A extração dos arquivos falhou"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:361
+#: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
 msgstr "A criação dos arquivos compactados falhou"
 
-#. append the "Extract Here" action
-#: thunar-archive-plugin/tap-provider.c:406
+#: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
 msgstr "Extrair Aqui (_H)"
 
-#: thunar-archive-plugin/tap-provider.c:408
+#: thunar-archive-plugin/tap-provider.c:470
+#, fuzzy
 msgid "Extract the selected archive in the current folder"
-msgstr "Extrair o arquivo selecionado no diretório atual"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Extrair o arquivo selecionado no diretório atual"
+msgstr[1] "Extrair o arquivo selecionado no diretório atual"
 
-#. append the "Extract To..." action
-#: thunar-archive-plugin/tap-provider.c:424
+#: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
 msgstr "_Extrair Para..."
 
-#: thunar-archive-plugin/tap-provider.c:426
+#: thunar-archive-plugin/tap-provider.c:495
+#, fuzzy
 msgid "Extract the selected archive"
-msgstr "Extrair o arquivo selecionado"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Extrair o arquivo selecionado"
+msgstr[1] "Extrair o arquivo selecionado"
 
-#. append the "Create Archive..." action
-#: thunar-archive-plugin/tap-provider.c:445
+#: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
 msgstr "Criar Arquivo... (_e)"
 
-#: thunar-archive-plugin/tap-provider.c:447
+#: thunar-archive-plugin/tap-provider.c:523
+#, fuzzy
 msgid "Create an archive with the selected object"
-msgstr "Criar um arquivo com os objetos selecionados"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Criar um arquivo com os objetos selecionados"
+msgstr[1] "Criar um arquivo com os objetos selecionados"
 
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+#, fuzzy
+msgid "_Extract here"
+msgstr "Extrair Aqui (_H)"
+
+#: thunar-archive-plugin/tap-provider.c:595
+#, fuzzy
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Extrair o arquivo selecionado"
+msgstr[1] "Extrair o arquivo selecionado"

@@ -1,6 +1,6 @@
 dnl $Id$
 dnl
-dnl Copyright (c) 2006
+dnl Copyright (c) 2006-2007
 dnl         The Thunar development team. All rights reserved.
 dnl
 dnl Written for Thunar by Benedikt Meurer <benny@xfce.org>.
@@ -11,9 +11,9 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([tap_version_major], [0])
 m4_define([tap_version_minor], [2])
-m4_define([tap_version_micro], [3])
+m4_define([tap_version_micro], [4])
 m4_define([tap_version_build], [r@REVISION@])
-m4_define([tap_version_tag], [svn])
+m4_define([tap_version_tag], [])
 m4_define([tap_version], [tap_version_major().tap_version_minor().tap_version_micro()ifelse(tap_version_tag(), [], [], [tap_version_tag()-tap_version_build()])])
 
 dnl *******************************************
@@ -24,7 +24,7 @@ m4_define([tap_debug_default], [ifelse(tap_version_tag(), [svn], [yes], [minimum
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006
+AC_COPYRIGHT([Copyright (c) 2006-2007
         The Thunar development team. All rights reserved.
         
 Written for Thunar by Benedikt Meurer <benny@xfce.org>.])
