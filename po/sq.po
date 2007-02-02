@@ -1,0 +1,93 @@
+# translation of sq.po to Albanian
+# Besnik Bleta <besnik@programeshqip.org>, 2007.
+# Albanian translation of thunar-archive-plugin package
+# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
+# This file is distributed under the same license as the thunar-archive-plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: sq\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
+"PO-Revision-Date: 2007-01-30 21:05+0200\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
+"Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: KBabel 1.11.1\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr "Përzgjidhni një përgjegjës arkivash"
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+"Ju lutem përzgjidhni përgjegjësin tuaj të\n"
+"parapëlqyer për arkivat prej listës së\n"
+"mëposhtme të zbatimeve që mund të kihen:"
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "Nuk u gjet përgjegjës arkivi i përshtatshëm"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
+msgid "Failed to extract files"
+msgstr "Dështova në përftimin e kartelave"
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:409
+msgid "Failed to create archive"
+msgstr "Dështova në krijimin e arkivit"
+
+#: thunar-archive-plugin/tap-provider.c:463
+msgid "Extract _Here"
+msgstr "Përfto _Këtu"
+
+#: thunar-archive-plugin/tap-provider.c:470
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Përftoje arkivin e përzgjedhur te dosja e çastit"
+msgstr[1] "Përftoje arkivat e përzgjedhur te dosja e çastit"
+
+#: thunar-archive-plugin/tap-provider.c:487
+msgid "_Extract To..."
+msgstr "_Përfto Te..."
+
+#: thunar-archive-plugin/tap-provider.c:495
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Përfto arkivin e përzgjedhur"
+msgstr[1] "Përfto arkivat e përzgjedhur"
+
+#: thunar-archive-plugin/tap-provider.c:515
+msgid "Cr_eate Archive..."
+msgstr "Krijo Arkiv..."
+
+#: thunar-archive-plugin/tap-provider.c:523
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Krijo arkiv me objektin e përzgjedhur"
+msgstr[1] "Krijo arkiv me objektet e përzgjedhur"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+msgid "_Extract here"
+msgstr "_Përfto këtu"
+
+#: thunar-archive-plugin/tap-provider.c:595
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Përftoje arkivin e përzgjedhur këtu"
+msgstr[1] "Përftoji arkivat e përzgjedhur këtu"
+
