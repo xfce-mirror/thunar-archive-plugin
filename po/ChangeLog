@@ -1,3 +1,8 @@
+2007-03-31  Pau Rul-lan Ferragut <paurullan@bulma.net>
+
+	* ca.po: Updated Catalan translation
+	by Ivà Burgos <debian.public@gmail.com>
+
 2007-03-30  Alexander Nyakhaychyk  <nyakhaychyk@gmail.com>
 
 	* be.po: Added Belarusian translation
@@ -5,7 +10,8 @@
 
 2007-03-14  Maximilian Schleiss <maxschleiss@bluewin.ch>
 
-	* uk.po: Added a third plural to the file, still needs to be translated.
+	* uk.po: Added a third plural to the file, still needs to be
+	translated.
 
 2007-02-20  Maximilian Schleiss <maxschleiss@bluewin.ch>
 
