@@ -1,18 +1,18 @@
-# English/GB translation of thunar-archive-plugin.
-# Copyright (C) 2007 THE thunar-archive-plugin'S COPYRIGHT HOLDER
+# British English translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Jeff Bailes <thepizzaking@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin\n"
+"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2007-03-31 09:17+0200\n"
 "Last-Translator: Jeff Bailes <thepizzaking@gmail.com>\n"
-"Language-Team: English/GB\n"
+"Language-Team: British English <xfce-i18n@xfce.org\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);"
 

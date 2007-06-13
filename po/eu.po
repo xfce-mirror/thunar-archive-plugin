@@ -1,10 +1,8 @@
-# translation of eu.po to librezale
-# Basque translations for thunar-archive-plugin package.
-# Copyright (C) 2006 Benedikt Meurer.
-# This file is distributed under the same license as
-#   the thunar-archive-plugin package.
-#
+# Basque translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
+# This file is distributed under the same license as the thunar-archive-plugin package.
 # Piarres Beobide <pi@beobide.net>, 2006.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
@@ -12,9 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-09-15 22:12+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: librezale <librezale@librezale.org>\n"
+"Language-Team: Basque <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: KBabel 1.11.4\n"

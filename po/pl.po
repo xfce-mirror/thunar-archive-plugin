@@ -1,7 +1,6 @@
-# Polish translations for thunar-archive-plugin package.
-# Copyright (C) 2006 Benedikt Meurer.
-# This file is distributed under the same license as
-#   the thunar-archive-plugin package.
+# Polish translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
+# This file is distributed under the same license as the thunar-archive-plugin package.
 # Piotr Maliński <admin@rk.edu.pl>, 2006.
 #
 msgid ""
@@ -11,9 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-04-08 12:09+0900\n"
 "Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"Language-Team: Polish <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"

@@ -1,5 +1,5 @@
-# Brazilian portuguese translation of the thunar-archive-plugin package.
-# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
+# Brazilian Portuguese translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
 #

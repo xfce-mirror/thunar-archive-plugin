@@ -1,5 +1,5 @@
-# Hungarian translations for the thunar-archive-plugin.
-# Copyright (C) 2006 Benedikt Meurer <benny@xfce.org>
+# Hungarian translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # SZERVÁC Attila <sas@321.hu>, 2006.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-09-27 21:11+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: hu\n"
+"Language-Team: Hungarian <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"

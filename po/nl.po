@@ -1,5 +1,5 @@
-# Dutch translations for thunar-archive-plugin package.
-# Copyright (C) 2006 THE thunar-archive-plugin'S COPYRIGHT HOLDER
+# Dutch translation of the thunar-archive-plugin package.
+# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Stephan Arts <psybsd@gmail.com>, 2006.
 #
@@ -10,9 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
 "PO-Revision-Date: 2006-07-20 21:18+0200\n"
 "Last-Translator: Stephan Arts <psybsd@gmail.com>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language-Team: Dutch <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
