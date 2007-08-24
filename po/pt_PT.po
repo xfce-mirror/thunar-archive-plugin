@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2007-06-14 23:20+0100\n"
+"PO-Revision-Date: 2007-08-24 14:39+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Seleccionar gestor de ficheiros comprimidos"
+msgstr "Seleccionar gestor de arquivos"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -27,9 +27,8 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Por favor, seleccione o gestor de ficheiros \n"
-"comprimidos da sua escolha da lista de \n"
-"aplicações disponíveis abaixo:"
+"Por favor, seleccione o gestor de arquivos preferido\n"
+"da lista de aplicações disponíveis abaixo:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
