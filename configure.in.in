@@ -28,7 +28,7 @@ AC_COPYRIGHT([Copyright (c) 2006-2007
         The Thunar development team. All rights reserved.
         
 Written for Thunar by Benedikt Meurer <benny@xfce.org>.])
-AC_INIT([thunar-archive-plugin], [tap_version()], [thunar-dev@xfce.org])
+AC_INIT([thunar-archive-plugin], [tap_version], [thunar-dev@xfce.org])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id$])
