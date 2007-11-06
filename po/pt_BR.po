@@ -2,15 +2,16 @@
 # Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2006-11-14 22:19-0300\n"
-"Last-Translator: Gunther Furtado <gunzera0@yahoo.com.br>\n"
-"Language-Team: Xfce-i18n <xfce-i18n@xfce.org>\n"
+"PO-Revision-Date: 2007-11-06 13:13-0400\n"
+"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +20,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Selecionar gerenciador de arquivos compactados"
+msgstr "Selecionar gerente de arquivos compactados"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -27,8 +28,8 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Por favor, selecione o gerenciador de arquivos \n"
-"compactados da sua escolha da lista de \n"
+"Por favor, selecione o gerente de arquivos\n"
+"compactados da sua escolha da lista de\n"
 "aplicativos disponíveis abaixo:"
 
 #. tell the user that we cannot handle the specified mime types
@@ -36,7 +37,7 @@ msgstr ""
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Nenhum gerenciador de arquivos compactados encontrado"
+msgstr "Nenhum gerente de arquivos compactados encontrado"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
@@ -82,10 +83,10 @@ msgstr[1] "Criar um arquivo com os objetos selecionados"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
 msgid "_Extract here"
-msgstr "_Extrair Aqui"
+msgstr "_Extrair aqui"
 
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Extrair o arquivo selecionado aqui"
-msgstr[1] "Extrair os arquivos selecionado aqui"
+msgstr[1] "Extrair os arquivos selecionados aqui"
