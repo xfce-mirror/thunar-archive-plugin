@@ -1,3 +1,9 @@
+2007-11-26	Benedikt Meurer <benny@xfce.org>
+
+	* INSTALL: Update from automake.
+	* thunar-archive-plugin/tap-provider.c: Add support for 7-Zip
+	  archives. Bug #3692.
+
 2007-01-20	Benedikt Meurer <benny@xfce.org>
 
 	* configure.in.in: Post-release version bump.

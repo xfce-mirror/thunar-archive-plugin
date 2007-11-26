@@ -121,6 +121,7 @@ static const gchar TAP_MIME_TYPES[][34] = {
   "application/x-lzop",
   "application/x-zoo",
   "application/x-cd-image",
+  "application/x-7z-compressed",
 };
 
 static GQuark tap_action_files_quark;
