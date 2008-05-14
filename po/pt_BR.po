@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
+# Og Maciel <ogmaciel@gnome.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2007-11-06 13:13-0400\n"
-"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
+"PO-Revision-Date: 2008-05-14 10:35-0400\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Selecionar gerente de arquivos compactados"
+msgstr "Selecionar gerenciador de arquivos compactados"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -28,7 +29,7 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Por favor, selecione o gerente de arquivos\n"
+"Por favor, selecione o gerenciador de arquivos\n"
 "compactados da sua escolha da lista de\n"
 "aplicativos disponíveis abaixo:"
 
@@ -37,7 +38,7 @@ msgstr ""
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Nenhum gerente de arquivos compactados encontrado"
+msgstr "Nenhum gerenciador de arquivos compactados encontrado"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
