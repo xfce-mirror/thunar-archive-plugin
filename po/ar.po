@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-04 21:24+0100\n"
+"PO-Revision-Date: 2008-07-15 15:33+0200\n"
+"Last-Translator: Mohamed Magdy <mohamedmk@gmail.com>\n"
+"Language-Team: Arabeyes <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Arabic\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: thunar-archive-plugin/tap-backend.c:84
+msgid "Select an archive manager"
+msgstr ""
+
+#. add the header label
+#: thunar-archive-plugin/tap-backend.c:108
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+
+#. tell the user that we cannot handle the specified mime types
+#: thunar-archive-plugin/tap-backend.c:280
+#: thunar-archive-plugin/tap-backend.c:432
+#, c-format
+msgid "No suitable archive manager found"
+msgstr ""
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:332
+#: thunar-archive-plugin/tap-provider.c:371
+msgid "Failed to extract files"
+msgstr ""
+
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:409
+msgid "Failed to create archive"
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:463
+msgid "Extract _Here"
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:470
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] ""
+msgstr[1] ""
+
+#: thunar-archive-plugin/tap-provider.c:487
+msgid "_Extract To..."
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:495
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] ""
+msgstr[1] ""
+
+#: thunar-archive-plugin/tap-provider.c:515
+msgid "Cr_eate Archive..."
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:523
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: thunar-archive-plugin/tap-provider.c:588
+msgid "_Extract here"
+msgstr ""
+
+#: thunar-archive-plugin/tap-provider.c:595
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] ""
+msgstr[1] ""
+
