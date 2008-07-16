@@ -81,4 +81,3 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] ""
 msgstr[1] ""
-
