@@ -1,3 +1,8 @@
+2008-10-28  Maximilian Schleiss <maximilian@xfce.org>
+
+	* ja.po: Japanese translation update (Nobuhiro Iwamatsu)
+	* ru.po: Russian translation update (Nikita Belobrov)
+
 2008-10-18  Maximilian Schleiss <maximilian@xfce.org>
 
 	* es.po, LINGUAS: Spanish translation added (Abel Martin)

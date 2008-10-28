@@ -1,3 +1,4 @@
+# translation of ru.po to ru_RU
 # Russian translation of the thunar-archive-plugin package.
 # Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
@@ -5,23 +6,22 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2006-03-26 22:00+0600\n"
-"Last-Translator: Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
-"Language-Team: Russian <xfce-i18n@xfce.org\n"
+"PO-Revision-Date: 2008-10-19 11:10+0400\n"
+"Last-Translator: Nikita Belobrov <qvzqvz@gmail.com>\n"
+"Language-Team: ru_RU <ru@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr ""
+msgstr "Укажите менеджер архива"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -29,13 +29,15 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
+"Пожалуйста, выберите предпочитаемый менеджер архивов\n"
+"из следующего списка доступных приложений:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr ""
+msgstr "Не найдено подходящего менеджера архивов"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
@@ -94,3 +96,4 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Извлечь файлы из выбранного архива"
 msgstr[1] "Извлечь файлы из выбранных архивов"
 msgstr[2] "Извлечь файлы из выбранных архивов"
+
