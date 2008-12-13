@@ -8,18 +8,19 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2008-10-24 00:16+0900\n"
-"Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
+"PO-Revision-Date: 2008-12-03 22:39+0900\n"
+"Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Japanese\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "アーカイブマネージャを選択する"
+msgstr "アーカイブマネージャの選択"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -35,45 +36,49 @@ msgstr ""
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "適当なアーカイブマネージャを見つけられませんでした"
+msgstr "適切なアーカイブマネージャを見つけられませんでした"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
 #: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
-msgstr "ファイルを取り出すのに失敗しました"
+msgstr "ファイルの展開に失敗しました"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
 msgstr "アーカイブの作成に失敗しました"
 
+# Thunar action menu entry
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "ここで展開する(_H)"
+msgstr "ここで展開(_H)"
 
+# Added "。" to coordinate with Thunar (description in status bar)
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "現在のフォルダで選択したアーカイブを展開する"
+msgstr[0] "現在のフォルダに選択したアーカイブを展開します。"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
 msgstr "別の場所に展開(_E)..."
 
+# Added "。" to coordinate with Thunar (description in status bar)
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "選択したアーカイブを展開する"
+msgstr[0] "選択したアーカイブを展開します。"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "アーカイブを作成(_E)..."
+msgstr "アーカイブの作成(_E)..."
 
+# Added "。" to coordinate with Thunar (description in status bar)
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "選択したオブジェクトでアーカイブを作成する"
+msgstr[0] "選択したオブジェクトでアーカイブを作成します。"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
@@ -83,5 +88,5 @@ msgstr "ここで展開(_E)"
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "選択したアーカイブをここに展開する"
+msgstr[0] "選択したアーカイブをここに展開します"
 
