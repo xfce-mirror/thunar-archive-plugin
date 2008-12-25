@@ -1,5 +1,5 @@
 # Galician translation of thunar-archive-plugin
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2008 Leandro Regueiro
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2008-06-24 21:34+0100\n"
+"PO-Revision-Date: 2008-12-14 16:06+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr ""
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr ""
+msgstr "Non se atopou un xestor de arquivos axeitado"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
@@ -53,7 +53,7 @@ msgstr "Fallo ó crear o arquivo"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr ""
+msgstr "Extraer _aquí"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
@@ -63,7 +63,7 @@ msgstr[1] "Extraer os arquivos seleccionados no cartafol actual"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr ""
+msgstr "_Extraer en..."
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
@@ -73,7 +73,7 @@ msgstr[1] "Extraer os arquivos seleccionados"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr ""
+msgstr "Cr_ear arquivo..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
@@ -84,7 +84,7 @@ msgstr[1] "Crear un arquivo cos obxectos seleccionados"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
 msgid "_Extract here"
-msgstr ""
+msgstr "_Extraer aquí"
 
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
