@@ -1,17 +1,18 @@
 # Galician translation of thunar-archive-plugin
-# Copyright (C) 2008 Leandro Regueiro
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2009 Leandro Regueiro.
+# This file is distributed under the same license as the Xfce package.
 #
-# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008.
+# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008, 2009.
 #
-# Proxecto Trasno: tradución de software libre ó galego http://trasno.net
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en <http://trasno.net>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2009-02-11 13:12+0100\n"
+"PO-Revision-Date: 2009-03-07 11:35+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
