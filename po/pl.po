@@ -8,19 +8,18 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2006-04-08 12:09+0900\n"
-"Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
+"PO-Revision-Date: 2009-03-23 10:24+0100\n"
+"Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Wybierz zarządcę archiwów"
+msgstr "Proszę wybrać menedżera archiwów"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -36,7 +35,7 @@ msgstr ""
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Brak odpowiednich aplikacji"
+msgstr "Nie znaleziono odpowiedniego programu"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
@@ -47,45 +46,45 @@ msgstr "Nie udało się rozpakować plików"
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
-msgstr "Nie mogę stworzyć archiwum"
+msgstr "Nie udało się utworzyć archiwum"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "Rozpakuj _Tutaj"
+msgstr "Rozpakuj _tutaj"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Rozpakuj tutaj"
-msgstr[1] "Rozpakuj tutaj"
-msgstr[2] "Rozpakuj tutaj"
+msgstr[0] "Rozpakowywuje zawartość archiwum do bieżącego katalogu"
+msgstr[1] "Rozpakowywuje zawartość archiwów do bieżącego katalogu"
+msgstr[2] "Rozpakowywuje zawartość archiwów do bieżącego katalogu"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr "_Rozpakuj Do..."
+msgstr "_Rozpakuj..."
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Rozpakuj zaznaczone archiwum"
-msgstr[1] "Rozpakuj zaznaczone archiwa"
-msgstr[2] "Rozpakuj zaznaczone archiwa"
+msgstr[0] "Rozpakowywuje zawartość archiwum do określonego katalogu"
+msgstr[1] "Rozpakowywuje zawartość archiwów do określonego katalogu"
+msgstr[2] "Rozpakowywuje zawartość archiwów do określonego katalogu"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "_Stwórz archiwum..."
+msgstr "_Utwórz archiwum..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Stwórz archiwum z zaznaczonego obiektu"
-msgstr[1] "Stwórz archiwum z zaznaczonych obiektów"
-msgstr[2] "Stwórz archiwum z zaznaczonych obiektów"
+msgstr[0] "Tworzy archiwum z zaznaczonego elementu"
+msgstr[1] "Tworzy archiwum z zaznaczonego elementów"
+msgstr[2] "Tworzy archiwum z zaznaczonego elementów"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
 msgid "_Extract here"
-msgstr "_Rozpakuj Tutaj"
+msgstr "_Rozpakuj tutaj"
 
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
@@ -93,3 +92,4 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Rozpakuj zaznaczone archiwum tutaj"
 msgstr[1] "Rozpakuj zaznaczone archiwa tutaj"
 msgstr[2] "Rozpakuj zaznaczone archiwa tutaj"
+
