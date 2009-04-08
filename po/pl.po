@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2009-03-23 15:07+0100\n"
+"PO-Revision-Date: 2009-04-03 19:03+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Proszę wybrać menedżera archiwów"
+msgstr "Wybór menedżera archiwów"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
