@@ -1,17 +1,16 @@
-# Traditional Chinese translations for thunar-archive-plugin package.
-# Copyright (C) 2006 Benedikt Meurer.
-# This file is distributed under the same license as
-#   the thunar-archive-plugin package.
-# Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>, 2006.
+# Chinese translations for PACKAGE package.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Hunt Xu <huntxu@live.cn>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2008-11-05 11:00+0800\n"
-"Last-Translator: Jiahua Huang <jhuangjiahua@gmail.com>\n"
-"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"PO-Revision-Date: 2009-06-16 03:39+0800\n"
+"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
+"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +19,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "请选择压缩文件管理程序"
+msgstr "选择归档文件管理器"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -28,62 +27,60 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"请由下面可用程序列表中选择您所喜爱的压缩文件\n"
-"管理程序："
+"请从以下可用程序列表中选择您首选的归档文件管理器"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "找不到合适的压缩文件管理程序"
+msgstr "未找到合适的归档文件管理器"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
 #: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
-msgstr "无法萃取出文件"
+msgstr "解压文件时失败"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
-msgstr "无法建立压缩文件"
+msgstr "创建归档文件时失败"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "解压缩到此处(_H)"
+msgstr "解压到这里(_H)"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "将所选的压缩文件解压缩到目前所在的资料夹"
+msgstr[0] "在当前目录解压所选的归档文件"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr "解压缩至(_E)..."
+msgstr "解压至...(_E)"
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "将所选的压缩文件解压缩"
+msgstr[0] "解压所选的归档文件"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "制作压缩文件(_E)..."
+msgstr "创建归档文件...(_E)"
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "将选取的文件制作压缩文件"
+msgstr[0] "为选中的对象创建一个归档文件"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
-#, fuzzy
 msgid "_Extract here"
-msgstr "解压缩到此处(_H)"
+msgstr "解压到这里(_E)"
 
 #: thunar-archive-plugin/tap-provider.c:595
-#, fuzzy
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "将所选的压缩文件解压缩"
+msgstr[0] "解压所选的归档文件到这里"
+
