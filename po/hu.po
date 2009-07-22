@@ -1,88 +1,93 @@
-# Hungarian translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
+# Hungarian translation of thunar-archive-plugin
+# Copyright 2009. Free Software Foundation, Inc.
 # This file is distributed under the same license as the thunar-archive-plugin package.
-# SZERVÁC Attila <sas@321.hu>, 2006.
 #
+# SZERVÁC Attila <sas@321.hu>, 2006.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2006-09-27 21:11+0100\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: Hungarian <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2009-07-22 22:28+0200\n"
+"PO-Revision-Date: 2009-07-22 22:40+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <gnome at gnome dot hu>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: thunar-archive-plugin/tap-backend.c:84
+#: ../thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Válassz egy archívum kezelőt"
+msgstr "Válasszon archívumkezelőt"
 
 #. add the header label
-#: thunar-archive-plugin/tap-backend.c:108
+#: ../thunar-archive-plugin/tap-backend.c:108
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Válaszd ki a kívánt archívum kezelőt\n"
-"az alábbi elérhető alkalmazásokból:"
+"Válassza ki az előnyben részesített archívumkezelőt\n"
+"az elérhető alkalmazások alábbi listájából:"
 
 #. tell the user that we cannot handle the specified mime types
-#: thunar-archive-plugin/tap-backend.c:280
-#: thunar-archive-plugin/tap-backend.c:432
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Nincs használható archívum kezelő"
+msgstr "Nem található megfelelő archívumkezelő"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:332
-#: thunar-archive-plugin/tap-provider.c:371
+#: ../thunar-archive-plugin/tap-provider.c:333
+#: ../thunar-archive-plugin/tap-provider.c:372
 msgid "Failed to extract files"
-msgstr "Fájlok kibontása sikertelen"
+msgstr "A fájlok kibontása meghiúsult"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:409
+#: ../thunar-archive-plugin/tap-provider.c:410
 msgid "Failed to create archive"
-msgstr "Archívum létrehozása sikertelen"
+msgstr "Az archívum létrehozása meghiúsult"
 
-#: thunar-archive-plugin/tap-provider.c:463
+#: ../thunar-archive-plugin/tap-provider.c:464
 msgid "Extract _Here"
-msgstr "Kibontás _ide"
+msgstr "Kibontás i_de"
 
-#: thunar-archive-plugin/tap-provider.c:470
+#: ../thunar-archive-plugin/tap-provider.c:471
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Kijelölt archívumok kibontása e mappába"
+msgstr[0] "A kiválasztott archívum kibontása az aktuális mappába"
+msgstr[1] "A kiválasztott archívumok kibontása az aktuális mappába"
 
-#: thunar-archive-plugin/tap-provider.c:487
+#: ../thunar-archive-plugin/tap-provider.c:488
 msgid "_Extract To..."
-msgstr "_Kibontás..."
+msgstr "_Kibontás máshova…"
 
-#: thunar-archive-plugin/tap-provider.c:495
+#: ../thunar-archive-plugin/tap-provider.c:496
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Kijelölt archívumok kibontása"
+msgstr[0] "A kijelölt archívum kibontása"
+msgstr[1] "A kijelölt archívumok kibontása"
 
-#: thunar-archive-plugin/tap-provider.c:515
+#: ../thunar-archive-plugin/tap-provider.c:516
 msgid "Cr_eate Archive..."
-msgstr "Archívum _létrehozása..."
+msgstr "Archí_vum létrehozása…"
 
-#: thunar-archive-plugin/tap-provider.c:523
+#: ../thunar-archive-plugin/tap-provider.c:524
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Archívum létrehozása a kijelölt objektumokkal"
+msgstr[0] "Archívum létrehozása a kiválasztott objektumból"
+msgstr[1] "Archívum létrehozása a kiválasztott objektumokból"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: thunar-archive-plugin/tap-provider.c:588
+#: ../thunar-archive-plugin/tap-provider.c:589
 msgid "_Extract here"
-msgstr "_Kibontás ide"
+msgstr "Kibontás id_e"
 
-#: thunar-archive-plugin/tap-provider.c:595
+#: ../thunar-archive-plugin/tap-provider.c:596
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Kijelölt archívumok kibontása ide"
+msgstr[0] "A kiválasztott archívum kibontása ide"
+msgstr[1] "A kiválasztott archívumok kibontása ide"
+
