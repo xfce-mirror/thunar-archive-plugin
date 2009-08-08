@@ -1,29 +1,21 @@
-# Galician translation of thunar-archive-plugin
-# Copyright (C) 2009 Leandro Regueiro.
-# This file is distributed under the same license as the Xfce package.
-#
-# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008, 2009.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en <http://trasno.net>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: thunar-archive-complementu 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-04 21:24+0100\n"
-"PO-Revision-Date: 2009-06-30 11:24+0100\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"PO-Revision-Date: 2009-07-13 19:55+0100\n"
+"Last-Translator: Marcos Antonio Alvarez Costales <marcoscostales@gmail.com>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Seleccione un xestor de arquivos"
+msgstr "Seleicionar un xestor de ficheros comprimíos"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -31,65 +23,64 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Seleccione o seu xestor de arquivos preferido\n"
-"na lista de aplicacións dispoñibles de embaixo:"
+"Por favor, escueyi el to xestor de ficheros comprimíos preferíu\n"
+"de la llista d'aplicaciones disponibles d'abaxo:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:280
 #: thunar-archive-plugin/tap-backend.c:432
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Non se atopou un xestor de arquivos axeitado"
+msgstr "Nun s'atopó dengún xestor de ficheros comprimíos adecuáu"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:332
 #: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
-msgstr "Fallo ó extraer os ficheiros"
+msgstr "Fallu al estrayer ficheros"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
-msgstr "Fallo ó crear o arquivo"
+msgstr "Fallu al criar ficheru comprimíu"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "Extraer _aquí"
+msgstr "Estrayer _equí"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Extraer o arquivo seleccionado no cartafol actual"
-msgstr[1] "Extraer os arquivos seleccionados no cartafol actual"
+msgstr[0] "Estrayer el ficheru seleicionáu na carpeta actual"
+msgstr[1] "Estrayer los ficheros seleicionaos na carpeta actual"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr "_Extraer en..."
+msgstr "_Estrayer en..."
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Extraer o arquivo seleccionado"
-msgstr[1] "Extraer os arquivos seleccionados"
+msgstr[0] "Estrayer el ficheru seleicionáu"
+msgstr[1] "Estrayer los ficheros seleicionaos"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "Cr_ear arquivo..."
+msgstr "Cr_iar ficheru comprimíu..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Crear un arquivo co obxecto seleccionado"
-msgstr[1] "Crear un arquivo cos obxectos seleccionados"
+msgstr[0] "Criar un ficheru comprimíu col oxetu seleicionáu"
+msgstr[1] "Criar un ficheru comprimíu colos oxetos seleicionaos"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
 msgid "_Extract here"
-msgstr "_Extraer aquí"
+msgstr "_Estrayer equí"
 
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Extraer aquí o arquivo seleccionado"
-msgstr[1] "Extraer aquí os arquivos seleccionados"
-
+msgstr[0] "Estrayer el ficheru seleicionáu equí"
+msgstr[1] "Estrayer los ficheros seleicionaos equí"
