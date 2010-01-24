@@ -3,7 +3,7 @@
 # Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
@@ -15,13 +15,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:84
 msgid "Select an archive manager"
-msgstr "Укажите менеджер архива"
+msgstr "Укажите менеджер архивов"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:108
@@ -52,7 +52,7 @@ msgstr "Не удалось создать архив"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "Извлечь сюда"
+msgstr "Извлечь _сюда"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
@@ -63,7 +63,7 @@ msgstr[2] "Извлечь файлы из выбранных архивов в �
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr "Извлечь в..."
+msgstr "_Извлечь в..."
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
@@ -74,7 +74,7 @@ msgstr[2] "Извлечь файлы из выбранных архивов"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "Создать архив..."
+msgstr "Со_здать архив..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
@@ -96,4 +96,3 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Извлечь файлы из выбранного архива"
 msgstr[1] "Извлечь файлы из выбранных архивов"
 msgstr[2] "Извлечь файлы из выбранных архивов"
-
