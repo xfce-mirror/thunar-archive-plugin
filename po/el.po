@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Stavros Giannouris <stavrosg@serverhive.com>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
@@ -50,7 +50,7 @@ msgstr "Η δημιουργία του συμπιεσμένου αρχείου �
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "Αποσυμπίεση Ε_δώ"
+msgstr "Αποσυμπίεση ε_δώ"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
@@ -70,7 +70,7 @@ msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμέ
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "Δημιουργία Συ_μπιεσμένου Αρχείου..."
+msgstr "Δημιουργία συ_μπιεσμένου αρχείου..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
@@ -81,7 +81,7 @@ msgstr[1] "Δημιουργεί ένα συμπιεσμένο αρχείο με 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: thunar-archive-plugin/tap-provider.c:588
 msgid "_Extract here"
-msgstr "Αποσυμπίεση Ε_δώ"
+msgstr "Αποσυμπίεση ε_δώ"
 
 #: thunar-archive-plugin/tap-provider.c:595
 msgid "Extract the selected archive here"
