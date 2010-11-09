@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Nuno Miguel <nunis@netcabo.pt>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
@@ -43,16 +43,16 @@ msgstr "Nenhum gestor de arquivos encontrado"
 #: thunar-archive-plugin/tap-provider.c:332
 #: thunar-archive-plugin/tap-provider.c:371
 msgid "Failed to extract files"
-msgstr "Falhou ao extrair ficheiros"
+msgstr "Falha ao extrair ficheiros"
 
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:409
 msgid "Failed to create archive"
-msgstr "Falhou ao criar o arquivo"
+msgstr "Falha ao criar o arquivo"
 
 #: thunar-archive-plugin/tap-provider.c:463
 msgid "Extract _Here"
-msgstr "Extrair _Aqui"
+msgstr "Extrair _aqui"
 
 #: thunar-archive-plugin/tap-provider.c:470
 msgid "Extract the selected archive in the current folder"
@@ -62,7 +62,7 @@ msgstr[1] "Extrair os arquivos seleccionados na pasta actual"
 
 #: thunar-archive-plugin/tap-provider.c:487
 msgid "_Extract To..."
-msgstr "_Extrair Para..."
+msgstr "_Extrair para..."
 
 #: thunar-archive-plugin/tap-provider.c:495
 msgid "Extract the selected archive"
@@ -72,7 +72,7 @@ msgstr[1] "Extrair os arquivos seleccionados"
 
 #: thunar-archive-plugin/tap-provider.c:515
 msgid "Cr_eate Archive..."
-msgstr "Cr_iar Arquivo..."
+msgstr "Cr_iar arquivo..."
 
 #: thunar-archive-plugin/tap-provider.c:523
 msgid "Create an archive with the selected object"
@@ -90,4 +90,3 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Extrair aqui o arquivo seleccionado"
 msgstr[1] "Extrair aqui os arquivos seleccionados"
-
