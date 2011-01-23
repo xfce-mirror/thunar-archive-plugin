@@ -1,5 +1,9 @@
 0.3.x
 =====
+
+
+0.3.0
+=====
 - Port the plugin to thunarx-2 and exo-1 (bug #6093).
 - Add support for extracting 7z, lzma and xz archives (bug #6136).
 - Remove INSTALL from the git repository.
