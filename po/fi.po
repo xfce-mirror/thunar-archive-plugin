@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-24 20:25+0300\n"
+"POT-Creation-Date: 2011-01-23 16:25+0100\n"
 "PO-Revision-Date: 2007-03-14 17:57+0000\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,12 +20,12 @@ msgstr ""
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:84
+#: ../thunar-archive-plugin/tap-backend.c:85
 msgid "Select an archive manager"
 msgstr "Valitse pakettienkäsittelyohjelma"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:108
+#: ../thunar-archive-plugin/tap-backend.c:109
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
@@ -33,59 +34,59 @@ msgstr ""
 "alla olevasta listasta:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:432
+#: ../thunar-archive-plugin/tap-backend.c:284
+#: ../thunar-archive-plugin/tap-backend.c:431
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Sopivaa pakettienkäsittelyohjelmaa ei löytynyt"
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:333
-#: ../thunar-archive-plugin/tap-provider.c:372
+#: ../thunar-archive-plugin/tap-provider.c:336
+#: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
 msgstr "Tiedostojen purku epäonnistui"
 
 #. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:410
+#: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
 msgstr "Arkiston luominen epäonnistui"
 
-#: ../thunar-archive-plugin/tap-provider.c:464
+#: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
 msgstr "Pura _tänne"
 
-#: ../thunar-archive-plugin/tap-provider.c:471
+#: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Pura valittu arkisto tämänhetkiseen kansioon"
 msgstr[1] "Pura valitut arkistot tämänhetkiseen kansioon"
 
-#: ../thunar-archive-plugin/tap-provider.c:488
+#: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
 msgstr "_Pura..."
 
-#: ../thunar-archive-plugin/tap-provider.c:496
+#: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Pura valittu arkisto"
 msgstr[1] "Pura valitut arkistot"
 
-#: ../thunar-archive-plugin/tap-provider.c:516
+#: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
 msgstr "Lu_o arkisto..."
 
-#: ../thunar-archive-plugin/tap-provider.c:524
+#: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Luo arkisto valitusta kohteesta"
 msgstr[1] "Luo arkisto valituista kohteista"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: ../thunar-archive-plugin/tap-provider.c:589
+#: ../thunar-archive-plugin/tap-provider.c:596
 msgid "_Extract here"
 msgstr "_Pura tänne"
 
-#: ../thunar-archive-plugin/tap-provider.c:596
+#: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Pura valittu arkisto tänne"

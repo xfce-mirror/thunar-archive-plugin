@@ -2,23 +2,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar archive plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-04 21:24+0100\n"
+"POT-Creation-Date: 2011-01-23 16:25+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Country: TURKEY\n"
-"Plural-Forms: nplurals=2; plural=0;"
+"Plural-Forms: nplurals=2; plural=0;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: thunar-archive-plugin/tap-backend.c:84
+#: ../thunar-archive-plugin/tap-backend.c:85
 msgid "Select an archive manager"
 msgstr "Arşiv yöneticisi seçin"
 
 #. add the header label
-#: thunar-archive-plugin/tap-backend.c:108
+#: ../thunar-archive-plugin/tap-backend.c:109
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
@@ -27,61 +28,60 @@ msgstr ""
 "aşağıdaki uygulama listesinden seçin:"
 
 #. tell the user that we cannot handle the specified mime types
-#: thunar-archive-plugin/tap-backend.c:280
-#: thunar-archive-plugin/tap-backend.c:432
+#: ../thunar-archive-plugin/tap-backend.c:284
+#: ../thunar-archive-plugin/tap-backend.c:431
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Uygun bir arşiv yöneticisi bulunamadı"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:332
-#: thunar-archive-plugin/tap-provider.c:371
+#: ../thunar-archive-plugin/tap-provider.c:336
+#: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
 msgstr "Arşiv ayıklanamadı"
 
 #. execute the action
-#: thunar-archive-plugin/tap-provider.c:409
+#: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
 msgstr "Arşiv oluşturulamadı"
 
-#: thunar-archive-plugin/tap-provider.c:463
+#: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
 msgstr "_Buraya ayıkla"
 
-#: thunar-archive-plugin/tap-provider.c:470
+#: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Seçilen arşivi mevcut dizine ayıkla"
 msgstr[1] "Seçilen arşivleri mevcut dizine ayıkla"
 
-#: thunar-archive-plugin/tap-provider.c:487
+#: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
 msgstr "_Ayıkla..."
 
-#: thunar-archive-plugin/tap-provider.c:495
+#: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Seçilen arşivi ayıkla"
 msgstr[1] "Seçilen arşivleri ayıkla"
 
-#: thunar-archive-plugin/tap-provider.c:515
+#: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
 msgstr "Arşiv _Oluştur..."
 
-#: thunar-archive-plugin/tap-provider.c:523
+#: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Seçili öğeden arşiv oluştur"
 msgstr[1] "Seçili öğelerden arşiv oluştur"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: thunar-archive-plugin/tap-provider.c:588
+#: ../thunar-archive-plugin/tap-provider.c:596
 msgid "_Extract here"
 msgstr "_Buraya Ayıkla"
 
-#: thunar-archive-plugin/tap-provider.c:595
+#: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Seçilen arşivi buraya ayıkla"
 msgstr[1] "Seçilen arşivleri buraya ayıkla"
-
