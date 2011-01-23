@@ -3,6 +3,9 @@
 - Port the plugin to thunarx-2 and exo-1 (bug #6093).
 - Add support for extracting 7z, lzma and xa archives (bug #6136).
 - Remove INSTALL from the git repository.
+- Drop .pot and LINGUAS file. Add .gitignore. Enable silent build rules.
+- Add a symlink to gnome-file-roller.tap to fix file-roller detection.
+- Make "Extract Here" work again with file-roller (bug #3261).
 - Updated translations: Chinese (Taiwan), Croatian, Galician, Greek, Hungarian,
   Kazakh, Polish, Portuguese, Romanian, Russian, Slovak, Uyghur and many more.
 
