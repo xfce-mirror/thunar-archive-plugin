@@ -96,6 +96,8 @@ struct _TapProvider
 
 
 static const gchar TAP_MIME_TYPES[][34] = {
+  "application/x-7z-compressed",
+  "application/x-7z-compressed-tar",
   "application/x-ar",
   "application/x-arj",
   "application/x-bzip",
@@ -107,9 +109,13 @@ static const gchar TAP_MIME_TYPES[][34] = {
   "application/x-gzip",
   "application/x-lha",
   "application/x-lhz",
+  "application/x-lzma",
+  "application/x-lzma-compressed-tar",
   "application/x-rar",
   "application/x-rar-compressed",
   "application/x-tar",
+  "application/x-xz",
+  "application/x-xz-compressed-tar",
   "application/x-zip",
   "application/x-zip-compressed",
   "application/zip",

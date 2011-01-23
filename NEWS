@@ -1,3 +1,9 @@
+0.3.x
+=====
+- Port the plugin to thunarx-2 and exo-1 (bug #6093).
+- Add support for extracting 7z, lzma and xa archives (bug #6136).
+
+
 0.2.4
 =====
 - Updated translations: Carles Muñoz Gorriz (ca), Roberto Pariset (it)
