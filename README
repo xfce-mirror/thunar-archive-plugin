@@ -12,7 +12,7 @@ Required packages
 
 thunar-archive-plugin depends on the following packages:
 
- - Thunar 0.4.0 or above
+ - Thunar 1.2.0 or above
 
 
 Supported archive managers
@@ -61,7 +61,6 @@ How to report bugs?
 ===================
 
 Bugs should be reported to the Xfce bug tracking system
-(http://bugzilla.xfce.org, product Thunar Plugins, component
-thunar-archive-plugin). You will need to create an
-account for yourself.
+(http://bugzilla.xfce.org, classification Thunar Plugins, product
+Thunar-archive-plugin). You will need to create an account for yourself.
 
