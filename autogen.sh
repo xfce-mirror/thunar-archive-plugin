@@ -1,12 +1,24 @@
 #!/bin/sh
 #
-# $Id$
-#
-# Copyright (c) 2002-2006
-#         The Thunar development team. All rights reserved.
-#
-# Written for Thunar by Benedikt Meurer <benny@xfce.org>.
-#
+# vi:set et ai sw=2 sts=2 ts=2: */
+# -
+# Copyright (c) 2002-2006 Benedikt Meurer <benny@xfce.org>
+# Copyright (c) 2011      Jannis Pohlmann <jannis@xfce.org>
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Library General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+# 
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+# GNU Library General Public License for more details.
+# 
+# You should have received a copy of the GNU Library General 
+# Public License along with this library; if not, write to the 
+# Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+# Boston, MA 02110-1301, USA.
 
 (type xdt-autogen) >/dev/null 2>&1 || {
   cat >&2 <<EOF
@@ -18,22 +30,4 @@ EOF
   exit 1
 }
 
-# verify that po/LINGUAS is present
-(test -f po/LINGUAS) >/dev/null 2>&1 || {
-  cat >&2 <<EOF
-autogen.sh: The file po/LINGUAS could not be found. Please check your snapshot
-            or try to checkout again.
-EOF
-  exit 1
-}
-
-# substitute revision and linguas
-linguas=`sed -e '/^#/d' po/LINGUAS`
-revision=`LC_ALL=C svn info $0 | awk '/^Revision: / {printf "%05d\n", $2}'`
-sed -e "s/@LINGUAS@/${linguas}/g" \
-    -e "s/@REVISION@/${revision}/g" \
-    < "configure.in.in" > "configure.in"
-
-exec xdt-autogen $@
-
-# vi:set ts=2 sw=2 et ai:
+XDT_AUTOGEN_REQUIRED_VERSION="4.7.2" exec xdt-autogen $@

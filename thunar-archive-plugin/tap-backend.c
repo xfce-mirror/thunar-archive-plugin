@@ -1,6 +1,7 @@
-/* $Id$ */
+/* vi:set et ai sw=2 sts=2 ts=2: */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
+ * Copyright (c) 2011 Jannis Pohlmann <jannis@xfce.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -9,13 +10,13 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU Library General 
+ * Public License along with this library; if not, write to the 
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -358,19 +359,19 @@ static gchar*
 tap_backend_mime_wrapper (GAppInfo *mime_application)
 {
   const gchar *desktop_id;
-  gchar       *basename;
+  gchar       *base_name;
   gchar       *filename;
   gchar       *dot;
 
   /* determine the basename of the .desktop file */
   desktop_id = g_app_info_get_id (mime_application);
-  basename = g_path_get_basename (desktop_id);
-  dot = strrchr (basename, '.');
+  base_name = g_path_get_basename (desktop_id);
+  dot = strrchr (base_name, '.');
   if (G_LIKELY (dot != NULL))
     *dot = '\0';
 
   /* generate the filename for the .tap wrapper script */
-  filename = g_strdup_printf (LIBEXECDIR G_DIR_SEPARATOR_S "thunar-archive-plugin" G_DIR_SEPARATOR_S "%s.tap", basename);
+  filename = g_strdup_printf (LIBEXECDIR G_DIR_SEPARATOR_S "thunar-archive-plugin" G_DIR_SEPARATOR_S "%s.tap", base_name);
 
   /* check if the wrapper script exists */
   if (!g_file_test (filename, G_FILE_TEST_IS_EXECUTABLE))
@@ -381,7 +382,7 @@ tap_backend_mime_wrapper (GAppInfo *mime_application)
     }
 
   /* cleanup */
-  g_free (basename);
+  g_free (base_name);
 
   return filename;
 }

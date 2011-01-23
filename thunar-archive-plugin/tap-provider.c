@@ -1,6 +1,7 @@
-/* $Id$ */
+/* vi:set et ai sw=2 sts=2 ts=2: */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
+ * Copyright (c) 2011 Jannis Pohlmann <jannis@xfce.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -9,13 +10,13 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU Library General 
+ * Public License along with this library; if not, write to the 
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -40,9 +41,7 @@
 
 
 
-static void   tap_provider_class_init           (TapProviderClass         *klass);
 static void   tap_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
-static void   tap_provider_init                 (TapProvider              *tap_provider);
 static void   tap_provider_finalize             (GObject                  *object);
 static GList *tap_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
@@ -245,7 +244,7 @@ tap_provider_finalize (GObject *object)
 static gboolean
 tap_is_archive (ThunarxFileInfo *file_info)
 {
-  gint n;
+  guint n;
 
   for (n = 0; n < G_N_ELEMENTS (TAP_MIME_TYPES); ++n)
     if (thunarx_file_info_has_mime_type (file_info, TAP_MIME_TYPES[n]))

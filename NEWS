@@ -2,6 +2,9 @@
 =====
 - Port the plugin to thunarx-2 and exo-1 (bug #6093).
 - Add support for extracting 7z, lzma and xa archives (bug #6136).
+- Remove INSTALL from the git repository.
+- Updated translations: Chinese (Taiwan), Croatian, Galician, Greek, Hungarian,
+  Kazakh, Polish, Portuguese, Romanian, Russian, Slovak, Uyghur and many more.
 
 
 0.2.4

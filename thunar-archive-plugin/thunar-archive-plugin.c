@@ -1,6 +1,7 @@
-/* $Id$ */
+/* vi:set et ai sw=2 sts=2 ts=2: */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
+ * Copyright (c) 2011 Jannis Pohlmann <jannis@xfce.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -9,13 +10,13 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU Library General 
+ * Public License along with this library; if not, write to the 
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -28,11 +29,18 @@
 
 
 
+G_MODULE_EXPORT void thunar_extension_initialize (ThunarxProviderPlugin *plugin);
+G_MODULE_EXPORT void thunar_extension_shutdown   (void);
+G_MODULE_EXPORT void thunar_extension_list_types (const GType          **types,
+                                                  gint                  *n_types);
+
+
+
 static GType type_list[1];
 
 
 
-G_MODULE_EXPORT void
+void
 thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 {
   const gchar *mismatch;
@@ -64,7 +72,7 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 
 
 
-G_MODULE_EXPORT void
+void
 thunar_extension_shutdown (void)
 {
 #ifdef G_ENABLE_DEBUG
@@ -74,7 +82,7 @@ thunar_extension_shutdown (void)
 
 
 
-G_MODULE_EXPORT void
+void
 thunar_extension_list_types (const GType **types,
                              gint         *n_types)
 {
