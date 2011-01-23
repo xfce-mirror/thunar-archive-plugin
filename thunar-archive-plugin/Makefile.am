@@ -9,7 +9,7 @@ INCLUDES =								\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
-extensionsdir = $(libdir)/thunarx-1
+extensionsdir = $(libdir)/thunarx-2
 extensions_LTLIBRARIES =						\
 	thunar-archive-plugin.la
 
@@ -23,7 +23,8 @@ thunar_archive_plugin_la_SOURCES =					\
 thunar_archive_plugin_la_CFLAGS =					\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
-	$(THUNAR_VFS_CFLAGS)
+	$(EXO_CFLAGS)							\
+	$(LIBXFCE4UTIL_CFLAGS)
 
 thunar_archive_plugin_la_LDFLAGS =					\
 	-avoid-version							\

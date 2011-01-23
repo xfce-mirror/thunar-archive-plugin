@@ -26,7 +26,7 @@
 #include <unistd.h>
 #endif
 
-#include <thunar-vfs/thunar-vfs.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include <thunar-archive-plugin/tap-backend.h>
 #include <thunar-archive-plugin/tap-provider.h>
@@ -85,12 +85,11 @@ struct _TapProvider
   GtkIconFactory *icon_factory;
 #endif
 
-  /* child watch support for the last spawn command,
-   * which allows us to refresh the folder contents
-   * after the command terminates (i.e. the archive
-   * is created).
+  /* child watch support for the last spawn command, which allowed us to refresh 
+   * the folder contents after the command had terminated with ThunarVFS (i.e. 
+   * when the archive had been created). This no longer works with GIO but 
+   * we still use the watch to close the PID properly.
    */
-  gchar          *child_watch_path;
   gint            child_watch_id;
 };
 
@@ -221,7 +220,6 @@ tap_provider_finalize (GObject *object)
     {
       /* reset the callback function to g_spawn_close_pid() so the plugin can be
        * safely unloaded and the child will still not become a zombie afterwards.
-       * This also resets the child_watch_id and child_watch_path properties.
        */
       source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
       g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
@@ -420,8 +418,7 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
-  ThunarVfsPathScheme scheme;
-  ThunarVfsInfo      *info;
+  gchar              *scheme;
   TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
   GtkAction          *action;
   GClosure           *closure;
@@ -435,13 +432,15 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
     {
       /* check if the file is a local file */
-      info = thunarx_file_info_get_vfs_info (lp->data);
-      scheme = thunar_vfs_path_get_scheme (info->path);
-      thunar_vfs_info_unref (info);
+      scheme = thunarx_file_info_get_uri_scheme (lp->data);
 
       /* unable to handle non-local files */
-      if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
-        return NULL;
+      if (G_UNLIKELY (strcmp (scheme, "file")))
+        {
+          g_free (scheme);
+          return NULL;
+        }
+      g_free (scheme);
 
       /* check if this file is a supported archive */
       if (all_archives && !tap_is_archive (lp->data))
@@ -548,8 +547,7 @@ tap_provider_get_dnd_actions (ThunarxMenuProvider *menu_provider,
                               ThunarxFileInfo     *folder,
                               GList               *files)
 {
-  ThunarVfsPathScheme scheme;
-  ThunarVfsInfo      *info;
+  gchar              *scheme;
   TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
   GtkAction          *action;
   GClosure           *closure;
@@ -557,25 +555,29 @@ tap_provider_get_dnd_actions (ThunarxMenuProvider *menu_provider,
   gint                n_files = 0;
 
   /* check if the folder is a local folder */
-  info = thunarx_file_info_get_vfs_info (folder);
-  scheme = thunar_vfs_path_get_scheme (info->path);
-  thunar_vfs_info_unref (info);
+  scheme = thunarx_file_info_get_uri_scheme (folder);
 
   /* unable to extract to non-local folders */
-  if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
-    return NULL;
+  if (G_UNLIKELY (strcmp (scheme, "file")))
+    {
+      g_free (scheme);
+      return NULL;
+    }
+  g_free (scheme);
 
   /* check all supplied files */
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
     {
       /* check if the file is a local file */
-      info = thunarx_file_info_get_vfs_info (lp->data);
-      scheme = thunar_vfs_path_get_scheme (info->path);
-      thunar_vfs_info_unref (info);
+      scheme = thunarx_file_info_get_uri_scheme (lp->data);
 
       /* unable to handle non-local files */
-      if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
-        return NULL;
+      if (G_UNLIKELY (strcmp (scheme, "file")))
+        {
+          g_free (scheme);
+          return NULL;
+        }
+      g_free (scheme);
 
       /* check if this file is a supported archive */
       if (G_LIKELY (!tap_is_archive (lp->data)))
@@ -649,10 +651,6 @@ tap_provider_execute (TapProvider *tap_provider,
       /* schedule the new child watch */
       tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
                                                              tap_provider, tap_provider_child_watch_destroy);
-
-      
-      /* remember the working directory for the child watch */
-      tap_provider->child_watch_path = g_strdup (folder);
     }
   else if (error != NULL)
     {
@@ -677,28 +675,7 @@ tap_provider_child_watch (GPid     pid,
                           gint     status,
                           gpointer user_data)
 {
-  ThunarVfsMonitor  *monitor;
-  ThunarVfsPath     *path;
-  TapProvider       *tap_provider = TAP_PROVIDER (user_data);
-
   GDK_THREADS_ENTER ();
-
-  /* verify that we still have a valid child_watch_path */
-  if (G_LIKELY (tap_provider->child_watch_path != NULL))
-    {
-      /* determine the corresponding ThunarVfsPath */
-      path = thunar_vfs_path_new (tap_provider->child_watch_path, NULL);
-      if (G_LIKELY (path != NULL))
-        {
-          /* schedule a changed notification on the path */
-          monitor = thunar_vfs_monitor_get_default ();
-          thunar_vfs_monitor_feed (monitor, THUNAR_VFS_MONITOR_EVENT_CHANGED, path);
-          g_object_unref (G_OBJECT (monitor));
-
-          /* release the ThunarVfsPath */
-          thunar_vfs_path_unref (path);
-        }
-    }
 
   /* need to cleanup */
   g_spawn_close_pid (pid);
@@ -713,9 +690,7 @@ tap_provider_child_watch_destroy (gpointer user_data)
 {
   TapProvider *tap_provider = TAP_PROVIDER (user_data);
 
-  /* reset child watch id and path */
-  g_free (tap_provider->child_watch_path);
-  tap_provider->child_watch_path = NULL;
+  /* reset child watch id */
   tap_provider->child_watch_id = 0;
 }
 
