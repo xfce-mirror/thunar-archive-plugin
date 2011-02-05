@@ -3,26 +3,25 @@
 # Copyright (C) 2009 THE Thunar Archive Plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Thunar Archive Plugin package.
 # Mișu Moldovan <dumol@xfce.org>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Archive Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
+"POT-Creation-Date: 2011-02-05 11:15+0000\n"
 "PO-Revision-Date: 2009-06-13 21:11+0300\n"
-"Last-Translator:  <dumol@xfce.org>\n"
+"Last-Translator: <dumol@xfce.org>\n"
 "Language-Team: Romanian\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
+"Language: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:85
 msgid "Select an archive manager"
-msgstr "Selectați un manager de arhive"
+msgstr "Alegeți un manager de arhive"
 
 #. add the header label
 #: ../thunar-archive-plugin/tap-backend.c:109
@@ -31,14 +30,14 @@ msgid ""
 "from the list of available applications below:"
 msgstr ""
 "Selectați managerul de arhive preferat din\n"
-"lista următoarelor aplicații disponibile:"
+"lista următoarelor programe disponibile:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:284
 #: ../thunar-archive-plugin/tap-backend.c:431
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Nu s-a găsit un manager de arhive potrivit"
+msgstr "Nu s-a găsit un manager de arhive adecvat"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:336
@@ -53,29 +52,29 @@ msgstr "Nu s-a putut crea arhiva"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
-msgstr "Desfă _aici"
+msgstr "Dezarhivează _aici"
 
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Desfă arhiva selectată în dosarul curent"
-msgstr[1] "Desfă arhivele selectate în dosarul curent"
-msgstr[2] "Desfă arhivele selectate în dosarul curent"
+msgstr[0] "Dezarhivează arhiva selectată în dosarul curent"
+msgstr[1] "Dezarhivează arhivele selectate în dosarul curent"
+msgstr[2] "Dezarhivează arhivele selectate în dosarul curent"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
-msgstr "_Desfă în..."
+msgstr "_Dezarhivează în..."
 
 #: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Desfă arhiva selectată"
-msgstr[1] "Desfă arhivele selectate"
-msgstr[2] "Desfă arhivele selectate"
+msgstr[0] "Dezarhivează arhiva selectată"
+msgstr[1] "Dezarhivează arhivele selectate"
+msgstr[2] "Dezarhivează arhivele selectate"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "Creea_ză arhivă..."
+msgstr "Creea_ză o arhivă..."
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
@@ -87,11 +86,11 @@ msgstr[2] "Creează o arhivă folosind obiectele selectate"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
 msgid "_Extract here"
-msgstr "Desfă _aici"
+msgstr "Dezarhivează _aici"
 
 #: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Desfă aici arhiva selectată"
-msgstr[1] "Desfă aici arhivele selectate"
-msgstr[2] "Desfă aici arhivele selectate"
+msgstr[0] "Dezarhivează aici arhiva selectată"
+msgstr[1] "Dezarhivează aici arhivele selectate"
+msgstr[2] "Dezarhivează aici arhivele selectate"
