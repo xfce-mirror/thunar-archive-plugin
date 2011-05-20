@@ -1,5 +1,6 @@
 0.3.x
 =====
+- Fix build with --as-needed (bug #7533). Patch by Yves-Alexis Perez.
 
 
 0.3.0

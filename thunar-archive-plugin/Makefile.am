@@ -26,6 +26,12 @@ thunar_archive_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)
 
+thunar_archive_plugin_la_LIBADD =					\
+	$(PLATFORM_LIBS)						\
+	$(THUNARX_LIBS)							\
+	$(EXO_LIBS)							\
+	$(LIBXFCE4UTIL_LIBS)
+
 thunar_archive_plugin_la_LDFLAGS =					\
 	-avoid-version							\
 	-export-dynamic							\
