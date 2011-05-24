@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
+"POT-Creation-Date: 2011-05-24 10:16+0000\n"
 "PO-Revision-Date: 2006-07-20 21:18+0200\n"
-"Last-Translator: Stephan Arts <psybsd@gmail.com>\n"
+"Last-Translator: Pjotr\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
-"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:85
 msgid "Select an archive manager"
-msgstr "Selecteer een archief beheerder"
+msgstr "Selecteer een archiefbeheerder"
 
 #. add the header label
 #: ../thunar-archive-plugin/tap-backend.c:109
@@ -28,26 +28,26 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"Selecteer aub een archief beheerder naar keuze\n"
-"uit de lijst van beschikbare applicaties:"
+"Selecteer a.u.b. de archiefbeheerder van uw voorkeur\n"
+"uit de onderstaande lijst van beschikbare toepassingen:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:284
 #: ../thunar-archive-plugin/tap-backend.c:431
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Geen geschikte archief beheerder gevonden"
+msgstr "Geen geschikte archiefbeheerder gevonden"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:336
 #: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
-msgstr "Uitpakken is mislukt"
+msgstr "Kon geen bestanden uitpakken"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
-msgstr "Maken van archief is mislukt"
+msgstr "Kon geen archief maken"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
