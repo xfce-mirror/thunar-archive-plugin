@@ -58,7 +58,6 @@ tap_backend_mime_ask (GList     *mime_applications,
                       GtkWidget *parent)
 {
   GAppInfo                 *mime_application = NULL;
-  GtkIconTheme             *icon_theme;
   GIcon                    *icon;
   GtkTooltips              *tooltips;
   GtkWidget                *button;
@@ -73,9 +72,6 @@ tap_backend_mime_ask (GList     *mime_applications,
   gchar                    *command;
   gchar                    *space;
   GList                    *mp;
-
-  /* determine the icon theme for this screen */
-  icon_theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (parent)));
 
   /* allocate tooltips */
   tooltips = gtk_tooltips_new ();
