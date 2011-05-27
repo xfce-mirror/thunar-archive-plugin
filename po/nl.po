@@ -1,13 +1,14 @@
 # Dutch translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
+# Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Stephan Arts <psybsd@gmail.com>, 2006.
+# Pjotr, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-24 10:16+0000\n"
+"POT-Creation-Date: 2011-05-27 10:18+0000\n"
 "PO-Revision-Date: 2006-07-20 21:18+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
@@ -18,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Selecteer een archiefbeheerder"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
@@ -32,8 +33,8 @@ msgstr ""
 "uit de onderstaande lijst van beschikbare toepassingen:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Geen geschikte archiefbeheerder gevonden"
