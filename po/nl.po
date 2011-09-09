@@ -1,4 +1,4 @@
-# Dutch translation for the thunar-archive-plugin package.
+# Dutch translation of the thunar-archive-plugin package.
 # Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Stephan Arts <psybsd@gmail.com>, 2006.
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-19 10:17+0000\n"
-"PO-Revision-Date: 2011-06-16 13:18+0200\n"
+"POT-Creation-Date: 2011-09-09 04:18+0000\n"
+"PO-Revision-Date: 2011-09-09 13:18+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Kon geen archief maken"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
-msgstr "_Hier Uitpakken"
+msgstr "_Hier uitpakken"
 
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
@@ -62,7 +62,7 @@ msgstr[1] "Pak de geselecteerde archieven uit in de huidige map"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
-msgstr "_Uitpakken Naar..."
+msgstr "_Uitpakken naar..."
 
 #: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
@@ -72,7 +72,7 @@ msgstr[1] "Pak de geselecteerde archieven uit"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "_Maak Archief..."
+msgstr "_Maak archief..."
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
@@ -83,7 +83,7 @@ msgstr[1] "De geselecteerde onderdelen in een nieuw archief plaatsen"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
 msgid "_Extract here"
-msgstr "_Hier Uitpakken"
+msgstr "_Hier uitpakken"
 
 #: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
