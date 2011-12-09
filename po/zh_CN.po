@@ -1,8 +1,10 @@
-# Chinese translations for PACKAGE package.
-# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-archive-plugin.
+# Simplified Chinese translations for
+# the thunar-archive-plugin package.
+# This file is distributed under the same license as
+# the thunar-archive-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2008.
 # Chipong Luo <chipong_l@yahoo.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin\n"
@@ -10,12 +12,11 @@ msgstr ""
 "POT-Creation-Date: 2011-11-11 17:11+0000\n"
 "PO-Revision-Date: 2009-06-16 03:39+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
-"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
+"Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:81
