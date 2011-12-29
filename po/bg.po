@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-archive-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-29 18:57+0000\n"
+"PO-Revision-Date: 2011-12-30 01:11+0200\n"
+"Last-Translator: Milen Milev <fanfolet@gmail.com>\n"
+"Language-Team: BULGARIAN\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Poedit-Language: BULGARIAN\n"
+"X-Poedit-Country: BULGARIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: ../thunar-archive-plugin/tap-backend.c:81
+msgid "Select an archive manager"
+msgstr "Изберете програма за архивиране"
+
+#. add the header label
+#: ../thunar-archive-plugin/tap-backend.c:105
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr ""
+"Изберете предпочитана програма за архивиране\n"
+"от списъка с наличните програми:"
+
+#. tell the user that we cannot handle the specified mime types
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "Не е намерена подходяща програма за архивиране"
+
+#. execute the action
+#: ../thunar-archive-plugin/tap-provider.c:336
+#: ../thunar-archive-plugin/tap-provider.c:375
+msgid "Failed to extract files"
+msgstr "Не може да се разархивират файловете"
+
+#. execute the action
+#: ../thunar-archive-plugin/tap-provider.c:413
+msgid "Failed to create archive"
+msgstr "Не може да се създаде архив"
+
+#: ../thunar-archive-plugin/tap-provider.c:468
+msgid "Extract _Here"
+msgstr "Разархивирай тук"
+
+#: ../thunar-archive-plugin/tap-provider.c:475
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Разархивирай архива в тази папка"
+msgstr[1] "Разархивирай архивите в тази папка"
+
+#: ../thunar-archive-plugin/tap-provider.c:492
+msgid "_Extract To..."
+msgstr "Разрхивирай в ..."
+
+#: ../thunar-archive-plugin/tap-provider.c:500
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Разархивирай архива"
+msgstr[1] "Разархивирай архивите"
+
+#: ../thunar-archive-plugin/tap-provider.c:520
+msgid "Cr_eate Archive..."
+msgstr "Създай архив"
+
+#: ../thunar-archive-plugin/tap-provider.c:528
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Създай архив на избрания обект"
+msgstr[1] "Създай архив на избраните обекти"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
+#: ../thunar-archive-plugin/tap-provider.c:596
+msgid "_Extract here"
+msgstr "Разархивирай тук"
+
+#: ../thunar-archive-plugin/tap-provider.c:603
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Разархивирай архива тук"
+msgstr[1] "Разархивирай архивите тук"
+
