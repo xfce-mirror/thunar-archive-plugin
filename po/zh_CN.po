@@ -3,15 +3,15 @@
 # This file is distributed under the same license as
 # the thunar-archive-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2008.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-11 17:11+0000\n"
+"POT-Creation-Date: 2012-02-09 03:42+0000\n"
 "PO-Revision-Date: 2009-06-16 03:39+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,9 @@ msgstr "选择归档文件管理器"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "请从以下可用应用程序列表中选择您首选的归档文件管理器："
+msgstr ""
+"请从以下可用应用程序列表中选择您首选的\n"
+"归档文件管理器："
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
