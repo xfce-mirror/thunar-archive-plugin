@@ -31,7 +31,7 @@ msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr ""
-"다음 사용 가능한 프로그램 목록으로부터\n"
+"다음 사용 가능한 프로그램 목록에서\n"
 "원하는 압축 관리자를 선택하여 주시기 바랍니다:"
 
 #. tell the user that we cannot handle the specified mime types
