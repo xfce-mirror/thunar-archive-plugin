@@ -68,7 +68,7 @@ msgstr "압축 풀기(_E)..."
 #: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "선택판 압축파일(들)을 풀기"
+msgstr[0] "선택판 압축파일을 풀기"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
@@ -77,7 +77,7 @@ msgstr "압축 파일 만들기(_E)..."
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "선택한 개체(들)에 대한 압축파일 만들기"
+msgstr[0] "선택한 개체에 대한 압축파일 만들기"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
@@ -87,5 +87,5 @@ msgstr "여기에 압축풀기(_E)"
 #: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "선택한 압축 파일(들)을 여기에 풀기		"
+msgstr[0] "선택한 압축 파일을 여기에 풀기		"
 
