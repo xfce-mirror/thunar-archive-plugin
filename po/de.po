@@ -72,7 +72,7 @@ msgstr[1] "Die ausgewählten Archive entpacken"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "A_rchiv erstellen"
+msgstr "A_rchiv erstellen …"
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
