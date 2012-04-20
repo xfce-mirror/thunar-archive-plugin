@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-14 17:12+0000\n"
+"POT-Creation-Date: 2012-04-20 16:57+0000\n"
 "PO-Revision-Date: 2007-12-01 18:38+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
@@ -62,7 +62,7 @@ msgstr[1] "Die ausgewählten Archive ins aktuelle Verzeichnis entpacken"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
-msgstr "Entpacken _nach …"
+msgstr "Entpacken _nach…"
 
 #: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
@@ -72,7 +72,7 @@ msgstr[1] "Die ausgewählten Archive entpacken"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "A_rchiv erstellen …"
+msgstr "A_rchiv erstellen…"
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
