@@ -2,7 +2,7 @@
 # Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the thunar-archive-plugin package.
 # Stephan Arts <psybsd@gmail.com>, 2006.
-# Pjotr, 2011.
+# Pjotr <pjotrvertaalt@gmail.com> , 2011 - 2013.
 #
 msgid ""
 msgstr ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-09 04:18+0000\n"
 "PO-Revision-Date: 2011-09-09 13:18+0200\n"
-"Last-Translator: Pjotr\n"
+"Last-Translator: Pjotr pjotrvertaalt@gmail.com\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -48,7 +48,7 @@ msgstr "Kon geen bestanden uitpakken"
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
-msgstr "Kon geen archief maken"
+msgstr "Kon geen archiefbestand maken"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
@@ -57,8 +57,8 @@ msgstr "_Hier uitpakken"
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Pak het geselecteerde archief uit in de huidige map"
-msgstr[1] "Pak de geselecteerde archieven uit in de huidige map"
+msgstr[0] "Pak het geselecteerde archiefbestand uit in de huidige map"
+msgstr[1] "Pak de geselecteerde archiefbestanden uit in de huidige map"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
@@ -67,18 +67,18 @@ msgstr "_Uitpakken naar..."
 #: ../thunar-archive-plugin/tap-provider.c:500
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Pak het geselecteerde archief uit"
-msgstr[1] "Pak de geselecteerde archieven uit"
+msgstr[0] "Pak het geselecteerde archiefbestand uit"
+msgstr[1] "Pak de geselecteerde archiefbestanden uit"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "_Maak archief..."
+msgstr "_Maak archiefbestand..."
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Het geselecteerde onderdeel in een nieuw archief plaatsen"
-msgstr[1] "De geselecteerde onderdelen in een nieuw archief plaatsen"
+msgstr[0] "Maak een archiefbestand met daarin het geselecteerde object"
+msgstr[1] "Maak een archiefbestand met daarin de geselecteerde objecten"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
@@ -88,5 +88,5 @@ msgstr "_Hier uitpakken"
 #: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Het geselecteerde archief hier uitpakken"
-msgstr[1] "De geselecteerde archieven hier uitpakken"
+msgstr[0] "Pak het geselecteerde archiefbestand hier uit"
+msgstr[1] "Pak de geselecteerde archiefbestanden hier uit"
