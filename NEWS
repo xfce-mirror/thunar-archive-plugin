@@ -1,6 +1,12 @@
-0.3.x
+0.3.1
 =====
 - Fix build with --as-needed (bug #7533). Patch by Yves-Alexis Perez.
+- Automake updates.
+- Fix unused but set variable.
+- Translation updates: Arabic, Bulgarian, German, Spanish
+  (Castilian), Croatian, Italian, Japanese, Korean, Lithuanian,
+  Latvian, Dutch (Flemish), Portuguese, Romanian, Slovak, Slovenian,
+  Serbian, Uyghur, Chinese (China).
 
 
 0.3.0
