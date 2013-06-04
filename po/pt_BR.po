@@ -4,28 +4,28 @@
 # Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
 # Og Maciel <ogmaciel@gnome.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-archive-plugin 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
+"POT-Creation-Date: 2013-06-04 22:48+0000\n"
 "PO-Revision-Date: 2008-11-13 10:35-0400\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Selecionar um gerenciador de arquivos compactados"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
@@ -35,8 +35,8 @@ msgstr ""
 "aplicativos disponíveis abaixo:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Nenhum gerenciador de arquivos compactados localizado"
@@ -74,7 +74,7 @@ msgstr[1] "Extrai os arquivos selecionados"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
-msgstr "Criar _arquivo..."
+msgstr "Criar _arquivo compactado..."
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Create an archive with the selected object"
