@@ -1,53 +1,54 @@
-# French translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Stéphane Roy <sroy@j2n.net>, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# jc1 <jc1.quebecos@gmail.com>, 2013
+# Stéphane Roy <sroy@j2n.net>, 2006
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
-"PO-Revision-Date: 2006-09-17 21:11+0100\n"
-"Last-Translator: Gérald Barré <g.barre@free.fr>\n"
-"Language-Team: French <xfce-i18n@xfce.org>\n"
-"Language: fr\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2014-06-28 19:24+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Sélectionner un gestionnaire d'archives"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Choisir le gestionnaire d'archives préféré\n"
-"de la liste d'applications disponibles ci-dessous :"
+msgstr "Veuillez choisir votre gestionnaire d'archives préféré\ndepuis la liste des applications disponibles ci-dessous :"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Aucun gestionnaire d'archives trouvé"
+msgstr "Aucun gestionnaire d'archives approprié trouvé"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:336
 #: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
-msgstr "Échec à l'extraction des fichiers"
+msgstr "Impossible d'extraire les fichiers"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
-msgstr "Échec à la création de l'archive"
+msgstr "Impossible de créer l'archive"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
