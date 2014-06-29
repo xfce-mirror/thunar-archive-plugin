@@ -5,14 +5,15 @@
 # Translators:
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # Stéphane Roy <sroy@j2n.net>, 2006
+# Urien Desterres <urien.desterres@gmail.com>, 2014
 # Yannick Le Guen <leguen.yannick@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2014-06-28 19:24+0000\n"
-"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"PO-Revision-Date: 2014-06-29 10:51+0000\n"
+"Last-Translator: Urien Desterres <urien.desterres@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr "Sélectionner un gestionnaire d'archives"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Veuillez choisir votre gestionnaire d'archives préféré\ndepuis la liste des applications disponibles ci-dessous :"
+msgstr "Veuillez choisir votre gestionnaire d’archives préféré\ndans la liste des applications disponibles ci-dessous :"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
