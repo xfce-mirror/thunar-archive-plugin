@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2014-09-08 16:28+0000\n"
+"PO-Revision-Date: 2014-12-02 04:24+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -42,12 +42,12 @@ msgstr "No se encontró ningún administrador de archivadores adecuado"
 #: ../thunar-archive-plugin/tap-provider.c:336
 #: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
-msgstr "Fallo al extraer los archivos"
+msgstr "No se pudieron extraer los archivos"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
-msgstr "Fallo al crear el archivador"
+msgstr "No se pudieron crear el archivador"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
