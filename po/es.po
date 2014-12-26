@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2014-12-02 04:24+0000\n"
+"PO-Revision-Date: 2014-12-26 06:02+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr[1] "Crear un archivador con los objetos seleccionados"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
 msgid "_Extract here"
-msgstr "_Extraer aquí"
+msgstr "E_xtraer aquí"
 
 #: ../thunar-archive-plugin/tap-provider.c:603
 msgid "Extract the selected archive here"
