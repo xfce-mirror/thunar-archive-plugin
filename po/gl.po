@@ -1,43 +1,39 @@
-# Galician translation of thunar-archive-plugin
-# Copyright (C) 2009 Leandro Regueiro.
-# This file is distributed under the same license as the Xfce package.
-#
-# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008, 2009.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en <http://trasno.net>
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008-2009
+# Xosé <xosecalvo@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
-"PO-Revision-Date: 2009-08-19 13:06+0100\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
-"Language: gl\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2015-09-18 20:18+0000\n"
+"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
+"Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Seleccione un xestor de arquivos"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Seleccione o seu xestor de arquivos preferido\n"
-"na lista de aplicacións dispoñibles de embaixo:"
+msgstr "Seleccione o seu xestor de arquivos preferido\nna lista de aplicacións dispoñibles de embaixo:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Non se atopou un xestor de arquivos axeitado"
@@ -46,12 +42,12 @@ msgstr "Non se atopou un xestor de arquivos axeitado"
 #: ../thunar-archive-plugin/tap-provider.c:336
 #: ../thunar-archive-plugin/tap-provider.c:375
 msgid "Failed to extract files"
-msgstr "Fallo ó extraer os ficheiros"
+msgstr "Produciuse un erro ao extraer os ficheiros"
 
 #. execute the action
 #: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Failed to create archive"
-msgstr "Fallo ó crear o arquivo"
+msgstr "Produciuse un erro ao crear o arquivo"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
