@@ -1,42 +1,39 @@
-# translation of ru.po to ru_RU
-# Russian translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: ru\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
-"PO-Revision-Date: 2008-10-19 11:10+0400\n"
-"Last-Translator: Nikita Belobrov <qvzqvz@gmail.com>\n"
-"Language-Team: ru_RU <ru@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2016-05-29 10:57+0000\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/xfce/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Укажите менеджер архивов"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Пожалуйста, выберите предпочитаемый менеджер архивов\n"
-"из следующего списка доступных приложений:"
+msgstr "Пожалуйста, выберите предпочитаемый менеджер архивов\nиз следующего списка доступных приложений:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Не найдено подходящего менеджера архивов"
@@ -59,9 +56,10 @@ msgstr "Извлечь _сюда"
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Извлечь файлы из выбранного архива в текущую папку"
-msgstr[1] "Извлечь файлы из выбранных архивов в текущую папку"
-msgstr[2] "Извлечь файлы из выбранных архивов в текущую папку"
+msgstr[0] "Извлечь из выбранного архива в текущий каталог"
+msgstr[1] "Извлечь из выбранных архивов в текущий каталог"
+msgstr[2] "Извлечь из выбранных архивов в текущий каталог"
+msgstr[3] "Извлечь из выбранных архивов в текущий каталог"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
@@ -73,6 +71,7 @@ msgid_plural "Extract the selected archives"
 msgstr[0] "Извлечь файлы из выбранного архива"
 msgstr[1] "Извлечь файлы из выбранных архивов"
 msgstr[2] "Извлечь файлы из выбранных архивов"
+msgstr[3] "Извлечь файлы из выбранных архивов"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
@@ -84,6 +83,7 @@ msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Поместить выбранный объект в архив"
 msgstr[1] "Поместить выбранные объекты в архив"
 msgstr[2] "Поместить выбранные объекты в архив"
+msgstr[3] "Поместить выбранные объекты в архив"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
@@ -96,3 +96,4 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Извлечь сюда файлы из выбранного архива"
 msgstr[1] "Извлечь сюда файлы из выбранных архивов"
 msgstr[2] "Извлечь сюда файлы из выбранных архивов"
+msgstr[3] "Извлечь сюда файлы из выбранных архивов"
