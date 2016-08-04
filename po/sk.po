@@ -1,37 +1,36 @@
-# Slovak translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Robert Hartl <hartl.robert@gmail.com>, 2009.
-# Tomáš Vadina <kyberdev@gmail.com>, 2011.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dušan Kazik <prescott66@gmail.com>, 2016
+# Robert Hartl <hartl.robert@gmail.com>, 2009
+# Tomáš Vadina <tomasvadina+transifex@cryptolab.net>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.2.4\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-29 10:17+0000\n"
-"PO-Revision-Date: 2011-06-29 14:36+0100\n"
-"Last-Translator: Tomáš Vadina <kyberdev@gmail.com>\n"
-"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2016-08-04 17:44+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"Language-Team: Slovak (http://www.transifex.com/xfce/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Poedit-Language: Slovak\n"
-"X-Poedit-Country: SLOVAKIA\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
-msgstr "Vyberte si správcu archívov"
+msgstr "Vyberte správcu archívov"
 
 #. add the header label
 #: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Vyberte si Vami uprednostňovaného správcu archívov\n"
-"zo zoznamu dostupných aplikácií uvedeného nižšie:"
+msgstr "Vyberte si Vami uprednostňovaného správcu archívov\nzo zoznamu dostupných aplikácií uvedeného nižšie:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
@@ -53,14 +52,14 @@ msgstr "Nepodarilo sa vytvoriť archív"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
-msgstr "Rozbaliť _tu"
+msgstr "Rozbaliť _sem"
 
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Rozbalí vybraný súbor v aktuálnom priečinku"
 msgstr[1] "Rozbalí vybrané súbory v aktuálnom priečinku"
-msgstr[2] "Rozbalí vybrané súbory v aktuálnom priečinku"
+msgstr[2] "Rozbalí vybrané súbory do aktuálneho priečinku"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
@@ -95,4 +94,3 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Rozbalí označený archív sem"
 msgstr[1] "Rozbalí označené archívy sem"
 msgstr[2] "Rozbalí označené archívy sem"
-
