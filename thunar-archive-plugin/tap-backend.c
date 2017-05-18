@@ -59,7 +59,6 @@ tap_backend_mime_ask (GList     *mime_applications,
 {
   GAppInfo                 *mime_application = NULL;
   GIcon                    *icon;
-  GtkTooltips              *tooltips;
   GtkWidget                *button;
   GtkWidget                *dialog;
   GtkWidget                *image;
@@ -72,10 +71,6 @@ tap_backend_mime_ask (GList     *mime_applications,
   gchar                    *command;
   gchar                    *space;
   GList                    *mp;
-
-  /* allocate tooltips */
-  tooltips = gtk_tooltips_new ();
-  g_object_ref_sink (tooltips);
 
   /* prepare the dialog to query the preferred archiver for the user */
   dialog = gtk_dialog_new_with_buttons (_("Select an archive manager"),
@@ -128,7 +123,7 @@ tap_backend_mime_ask (GList     *mime_applications,
       space = strchr (command, ' ');
       if (G_LIKELY (space != NULL))
         *space = '\0';
-      gtk_tooltips_set_tip (tooltips, button, command, NULL);
+      gtk_widget_set_tooltip_text (button, command);
       g_free (command);
 
       /* add the hbox */
@@ -167,7 +162,6 @@ tap_backend_mime_ask (GList     *mime_applications,
     }
 
   /* cleanup */
-  g_object_unref (G_OBJECT (tooltips));
   gtk_widget_destroy (dialog);
 
   return mime_application;
