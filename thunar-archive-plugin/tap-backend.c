@@ -76,7 +76,6 @@ tap_backend_mime_ask (GList     *mime_applications,
   dialog = gtk_dialog_new_with_buttons (_("Select an archive manager"),
                                         GTK_WINDOW (parent),
                                         GTK_DIALOG_DESTROY_WITH_PARENT
-                                        | GTK_DIALOG_NO_SEPARATOR
                                         | GTK_DIALOG_MODAL,
                                         GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
                                         GTK_STOCK_OK, GTK_RESPONSE_OK,
