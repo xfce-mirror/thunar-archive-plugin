@@ -11,6 +11,9 @@ install-exec-hook:
 	-( cd $(DESTDIR)$(wrapperdir) ; \
 		test -f gnome-file-roller.tap \
 		|| ln -sf file-roller.tap gnome-file-roller.tap )
+	-( cd $(DESTDIR)$(wrapperdir) ; \
+		test -f org.gnome.FileRoller.tap \
+		|| ln -sf file-roller.tap org.gnome.FileRoller.tap )
 
 EXTRA_DIST =								\
 	$(wrapper_SCRIPTS)						\
