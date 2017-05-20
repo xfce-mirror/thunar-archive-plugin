@@ -50,6 +50,7 @@ static GPid      tap_backend_run                        (const gchar *action,
                                                          GList       *content_types,
                                                          GtkWidget   *window,
                                                          GError     **error);
+static void      tap_backend_setup_display_cb           (gpointer data);
 
 
 
@@ -395,6 +396,7 @@ tap_backend_run (const gchar *action,
   GList                    *lp;
   GPid                      pid = -1;
   gint                      n;
+  gchar                    *display = NULL;
 
   /* determine the mime infos on-demand */
   if (G_LIKELY (content_types == NULL))
@@ -438,8 +440,11 @@ tap_backend_run (const gchar *action,
           /* determine the screen for this window */
           screen = gtk_widget_get_screen (window);
 
+          if (screen != NULL)
+            display = gdk_screen_make_display_name (screen);
+
           /* try to run the command */
-          if (!gdk_spawn_on_screen (screen, folder, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, error))
+          if (!g_spawn_async (folder, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, tap_backend_setup_display_cb, display, &pid, error))
             pid = -1;
 
           /* cleanup */
@@ -455,6 +460,14 @@ tap_backend_run (const gchar *action,
   g_list_free (content_types);
 
   return pid;
+}
+
+
+
+static void
+tap_backend_setup_display_cb (gpointer data)
+{
+  g_setenv ("DISPLAY", (char *) data, TRUE);
 }
 
 
@@ -570,5 +583,3 @@ tap_backend_extract_to (const gchar *folder,
   /* run the action */
   return tap_backend_run ("extract-to", folder, files, NULL, window, error);
 }
-
-
