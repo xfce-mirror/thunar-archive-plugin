@@ -1,21 +1,21 @@
-# Dutch translation of the thunar-archive-plugin package.
-# Copyright (C) The Xfce development team.
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Stephan Arts <psybsd@gmail.com>, 2006.
-# Pjotr <pjotrvertaalt@gmail.com> , 2011 - 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Stephan Arts <psybsd@gmail.com>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-09 04:18+0000\n"
-"PO-Revision-Date: 2011-09-09 13:18+0200\n"
-"Last-Translator: Pjotr pjotrvertaalt@gmail.com\n"
-"Language-Team: Dutch (Flemish)\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-08-07 21:49+0000\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/xfce/thunar-plugins/language/nl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl (Dutch)\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
@@ -28,9 +28,7 @@ msgstr "Selecteer een archiefbeheerder"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Selecteer a.u.b. de archiefbeheerder van uw voorkeur\n"
-"uit de onderstaande lijst van beschikbare toepassingen:"
+msgstr "Selecteer a.u.b. de archiefbeheerder van uw voorkeur\nuit de onderstaande lijst van beschikbare toepassingen:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
