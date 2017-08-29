@@ -1,20 +1,21 @@
-# Brazilian Portuguese translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Gunther Furtado <gunzera0@yahoo.com.br>, 2006.
-# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
-# Og Maciel <ogmaciel@gnome.org>, 2008.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007
+# Gunther Furtado <gunzera0@yahoo.com.br>, 2006
+# Og Maciel <ogmaciel@gnome.org>, 2008
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-04 22:48+0000\n"
-"PO-Revision-Date: 2008-11-13 10:35-0400\n"
-"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-08-28 22:40+0000\n"
+"Last-Translator: Michael Martins <michaelfm21@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -29,10 +30,7 @@ msgstr "Selecionar um gerenciador de arquivos compactados"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Por favor, selecione o gerenciador de arquivos\n"
-"compactados da sua escolha da lista de\n"
-"aplicativos disponíveis abaixo:"
+msgstr "Por favor, selecione o gerenciador de arquivos\ncompactados da sua escolha da lista de\naplicativos disponíveis abaixo:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
