@@ -1,20 +1,20 @@
-# Uyghur translation for thunar-archive-plugin.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Gheyret Kenji <gheyret@gmail.com>, YEAR.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 01:39+0000\n"
-"PO-Revision-Date: 2011-11-09 16:10+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Gheyret Kenji\n"
+"Language-Team: Uighur (http://www.transifex.com/xfce/thunar-plugins/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ug\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
@@ -27,8 +27,7 @@ msgstr "ئارخىپ باشقۇرغۇنى تاللا"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "تۆۋەندىكى پروگراممىلارنىڭ ئىچىدىن\n"
-"ئامراق ئارخىپ باشقۇرغۇنى تاللاڭ:"
+msgstr "تۆۋەندىكى پروگراممىلارنىڭ ئىچىدىن\nئامراق ئارخىپ باشقۇرغۇنى تاللاڭ:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
