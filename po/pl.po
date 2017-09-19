@@ -4,20 +4,20 @@
 # 
 # Translators:
 # Piotr Maliński <admin@rk.edu.pl>, 2006
-# Piotr Sokół <psokol@jabster.pl>, 2009,2013
+# Piotr Sokół <psokol.l10n@gmail.com>, 2009,2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2014-06-01 18:06+0000\n"
-"Last-Translator: OSWorld <michal.olber@osworld.pl>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/thunar-plugins/language/pl/)\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Michał Olber <michal@olber.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/xfce/thunar-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:81
@@ -59,6 +59,7 @@ msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Rozpakowuje zawartość archiwum do bieżącego katalogu"
 msgstr[1] "Rozpakowuje zawartość archiwów do bieżącego katalogu"
 msgstr[2] "Rozpakowuje zawartość archiwów do bieżącego katalogu"
+msgstr[3] "Rozpakowuje zawartość archiwów do bieżącego katalogu"
 
 #: ../thunar-archive-plugin/tap-provider.c:492
 msgid "_Extract To..."
@@ -70,6 +71,7 @@ msgid_plural "Extract the selected archives"
 msgstr[0] "Rozpakowuje zawartość archiwum do określonego katalogu"
 msgstr[1] "Rozpakowuje zawartość archiwów do określonego katalogu"
 msgstr[2] "Rozpakowuje zawartość archiwów do określonego katalogu"
+msgstr[3] "Rozpakowuje zawartość archiwów do określonego katalogu"
 
 #: ../thunar-archive-plugin/tap-provider.c:520
 msgid "Cr_eate Archive..."
@@ -81,6 +83,7 @@ msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Tworzy archiwum z zaznaczonego elementu"
 msgstr[1] "Tworzy archiwum z zaznaczonych elementów"
 msgstr[2] "Tworzy archiwum z zaznaczonych elementów"
+msgstr[3] "Tworzy archiwum z zaznaczonych elementów"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
 #: ../thunar-archive-plugin/tap-provider.c:596
@@ -93,3 +96,4 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Rozpakowuje zawartość archiwum do wskazanego położenia"
 msgstr[1] "Rozpakowuje zawartość archiwów do wskazanego położenia"
 msgstr[2] "Rozpakowuje zawartość archiwów do wskazanego położenia"
+msgstr[3] "Rozpakowuje zawartość archiwów do wskazanego położenia"
