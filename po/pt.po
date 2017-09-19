@@ -1,23 +1,22 @@
-# European Portuguese translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Nuno Miguel <nunis@netcabo.pt>, 2007.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Nuno Miguel <nunis@netcabo.pt>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-08 22:12+0000\n"
-"PO-Revision-Date: 2012-01-08 23:18+0100\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: PORTUGAL\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:81
@@ -29,9 +28,7 @@ msgstr "Selecione o gestor de arquivos"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Na lista de aplicações abaixo disponíveis,\n"
-"selecione o gestor de arquivos preferido::"
+msgstr "Na lista de aplicações abaixo disponíveis,\nselecione o gestor de arquivos preferido::"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
