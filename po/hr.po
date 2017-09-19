@@ -1,39 +1,39 @@
-# Ivica Kolić <ikoli@yahoo.com>, 2011.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Ivica  Kolić <ikoli@yahoo.com>, 2013
+# Ivica  Kolić <ikoli@yahoo.com>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: Thunar-archive-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-19 10:16+0000\n"
-"PO-Revision-Date: 2011-01-09 04:13+0100\n"
-"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
-"Language-Team: Croatian <ikoli@yahoo.com>\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"Language-Team: Croatian (http://www.transifex.com/xfce/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Croatian\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: CROATIA\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Odaberite upravitelja arhivama"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Molim odaberite vaš poželjni upravitelj arhivama\n"
-"sa liste dostupnih programa ispod:"
+msgstr "Molim odaberite vaš poželjni upravitelj arhivama\nsa liste dostupnih programa ispod:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Nije pronađen pogodan upravitelj datotekama"
@@ -51,7 +51,7 @@ msgstr "Neuspjelo stvaranje arhive"
 
 #: ../thunar-archive-plugin/tap-provider.c:468
 msgid "Extract _Here"
-msgstr "Rspakiraj _ovdje"
+msgstr "Raspakiraj _ovdje"
 
 #: ../thunar-archive-plugin/tap-provider.c:475
 msgid "Extract the selected archive in the current folder"
