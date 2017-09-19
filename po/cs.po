@@ -1,40 +1,38 @@
-# Czech translation of the thunar-archive-plugin package.
-# Copyright (C) 2006-2007 Benedikt Meurer <benny@xfce.org>
-# This file is distributed under the same license as the thunar-archive-plugin package.
-# Michal Várady <miko.vaji@gmail.com>, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Michal Várady <miko.vaji@gmail.com>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.4\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 17:57+0100\n"
-"PO-Revision-Date: 2008-03-02 00:18+0100\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
-"Language-Team: Czech <xfce-i18n@xfce.org>\n"
-"Language: cs\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Czech (http://www.transifex.com/xfce/thunar-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Poedit-Bookmarks: -1,-1,6,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:85
+#: ../thunar-archive-plugin/tap-backend.c:81
 msgid "Select an archive manager"
 msgstr "Vyberte si správce archivů"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:109
+#: ../thunar-archive-plugin/tap-backend.c:105
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Vyberte si vámi upřednostňovaný správce archivů\n"
-"z níže uvedeného seznamu dostupných aplikací:"
+msgstr "Vyberte si vámi upřednostňovaný správce archivů\nz níže uvedeného seznamu dostupných aplikací:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:284
-#: ../thunar-archive-plugin/tap-backend.c:431
+#: ../thunar-archive-plugin/tap-backend.c:280
+#: ../thunar-archive-plugin/tap-backend.c:427
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Nebyl nalezen žádný vhodný správce archivů"
