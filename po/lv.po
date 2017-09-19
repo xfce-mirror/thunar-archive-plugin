@@ -1,23 +1,23 @@
-# Latvian translations for thunar-archive-plugin package.
-# Copyright (C) 2007 THE thunar-archive-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-archive-plugin package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
-# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
-# Rihards Prieditis <rprieditis@gmail.com>, 2009.
+# Translators:
+# Rihards Priedītis <rprieditis@gmail.com>, 2009
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.5svn-r02842N\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-06 09:45+0000\n"
-"PO-Revision-Date: 2009-09-18 20:27+0100\n"
-"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
-"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2013-07-03 20:07+0200\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Latvian (http://www.transifex.com/xfce/thunar-plugins/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:81
@@ -29,9 +29,7 @@ msgstr "Atlasiet arhīva pārvaldnieku"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr ""
-"Lūdzu norādiet vēlamo arhīvu pārvaldnieku\n"
-"no pieejamo lietotņu saraksta:"
+msgstr "Lūdzu norādiet vēlamo arhīvu pārvaldnieku\nno pieejamo lietotņu saraksta:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:280
