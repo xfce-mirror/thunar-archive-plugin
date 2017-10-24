@@ -43,15 +43,13 @@
 
 static void   tap_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
 static void   tap_provider_finalize             (GObject                  *object);
-static GList *tap_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
+static GList *tap_provider_get_file_menu_items  (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  GList                    *files);
-#if THUNARX_CHECK_VERSION(0,4,1)
-static GList *tap_provider_get_dnd_actions      (ThunarxMenuProvider      *menu_provider,
+static GList *tap_provider_get_dnd_menu_items   (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  ThunarxFileInfo          *folder,
                                                  GList                    *files);
-#endif
 static void   tap_provider_execute              (TapProvider              *tap_provider,
                                                  GPid                    (*action) (const gchar *folder,
                                                                                     GList       *files,
@@ -128,11 +126,9 @@ static const gchar TAP_MIME_TYPES[][34] = {
   "application/x-7z-compressed",
 };
 
-static GQuark tap_action_files_quark;
-#if THUNARX_CHECK_VERSION(0,4,1)
-static GQuark tap_action_folder_quark;
-#endif
-static GQuark tap_action_provider_quark;
+static GQuark tap_item_files_quark;
+static GQuark tap_item_folder_quark;
+static GQuark tap_item_provider_quark;
 
 
 
@@ -148,12 +144,10 @@ tap_provider_class_init (TapProviderClass *klass)
 {
   GObjectClass *gobject_class;
 
-  /* determine the "tap-action-files", "tap-action-folder" and "tap-action-provider" quarks */
-  tap_action_files_quark = g_quark_from_string ("tap-action-files");
-#if THUNARX_CHECK_VERSION(0,4,1)
-  tap_action_folder_quark = g_quark_from_string ("tap-action-folder");
-#endif
-  tap_action_provider_quark = g_quark_from_string ("tap-action-provider");
+  /* determine the "tap-item-files", "tap-item-folder" and "tap-item-provider" quarks */
+  tap_item_files_quark = g_quark_from_string ("tap-item-files");
+  tap_item_folder_quark = g_quark_from_string ("tap-item-folder");
+  tap_item_provider_quark = g_quark_from_string ("tap-item-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = tap_provider_finalize;
@@ -164,10 +158,8 @@ tap_provider_class_init (TapProviderClass *klass)
 static void
 tap_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 {
-  iface->get_file_actions = tap_provider_get_file_actions;
-#if THUNARX_CHECK_VERSION(0,4,1)
-  iface->get_dnd_actions = tap_provider_get_dnd_actions;
-#endif
+  iface->get_file_menu_items = tap_provider_get_file_menu_items;
+  iface->get_dnd_menu_items = tap_provider_get_dnd_menu_items;
 }
 
 
@@ -175,41 +167,6 @@ tap_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 static void
 tap_provider_init (TapProvider *tap_provider)
 {
-#if !GTK_CHECK_VERSION(2,9,0)
-  GtkIconSource *icon_source;
-  GtkIconSet    *icon_set;
-
-  /* setup our icon factory */
-  tap_provider->icon_factory = gtk_icon_factory_new ();
-  gtk_icon_factory_add_default (tap_provider->icon_factory);
-
-  /* add the "tap-create" stock icon */
-  icon_set = gtk_icon_set_new ();
-  icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "tap-create");
-  gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tap_provider->icon_factory, "tap-create", icon_set);
-  gtk_icon_source_free (icon_source);
-  gtk_icon_set_unref (icon_set);
-
-  /* add the "tap-extract" stock icon */
-  icon_set = gtk_icon_set_new ();
-  icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "tap-extract");
-  gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract", icon_set);
-  gtk_icon_source_free (icon_source);
-  gtk_icon_set_unref (icon_set);
-
-  /* add the "tap-extract-to" stock icon */
-  icon_set = gtk_icon_set_new ();
-  icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "tap-extract-to");
-  gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tap_provider->icon_factory, "tap-extract-to", icon_set);
-  gtk_icon_source_free (icon_source);
-  gtk_icon_set_unref (icon_set);
-#endif /* !GTK_CHECK_VERSION(2,9,0) */
 }
 
 
@@ -229,12 +186,6 @@ tap_provider_finalize (GObject *object)
       source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
       g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
     }
-  
-#if !GTK_CHECK_VERSION(2,9,0)
-  /* release our icon factory */
-  gtk_icon_factory_remove_default (tap_provider->icon_factory);
-  g_object_unref (G_OBJECT (tap_provider->icon_factory));
-#endif
 
   (*G_OBJECT_CLASS (tap_provider_parent_class)->finalize) (object);
 }
@@ -287,37 +238,33 @@ tap_is_parent_writable (ThunarxFileInfo *file_info)
 
 
 static void
-tap_extract_here (GtkAction *action,
-                  GtkWidget *window)
+tap_extract_here (ThunarxMenuItem *item,
+                  GtkWidget       *window)
 {
-#if THUNARX_CHECK_VERSION(0,4,1)
   ThunarxFileInfo *folder;
-#endif
   TapProvider     *tap_provider;
   GList           *files;
   gchar           *dirname;
   gchar           *uri;
 
-  /* determine the files associated with the action */
-  files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
+  /* determine the files associated with the item */
+  files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
   if (G_UNLIKELY (files == NULL))
     return;
 
-  /* determine the provider associated with the action */
-  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  /* determine the provider associated with the item */
+  tap_provider = g_object_get_qdata (G_OBJECT (item), tap_item_provider_quark);
   if (G_UNLIKELY (tap_provider == NULL))
     return;
 
-#if THUNARX_CHECK_VERSION(0,4,1)
-  /* check if a folder was supplied (for the Drag'n'Drop action) */
-  folder = g_object_get_qdata (G_OBJECT (action), tap_action_folder_quark);
+  /* check if a folder was supplied (for the Drag'n'Drop item) */
+  folder = g_object_get_qdata (G_OBJECT (item), tap_item_folder_quark);
   if (G_UNLIKELY (folder != NULL))
     {
       /* determine the URI of the supplied folder */
       uri = thunarx_file_info_get_uri (folder);
     }
   else
-#endif
     {
       /* determine the parent URI of the first selected file */
       uri = thunarx_file_info_get_parent_uri (files->data);
@@ -332,7 +279,7 @@ tap_extract_here (GtkAction *action,
       /* verify that we were able to determine a local path */
       if (G_LIKELY (dirname != NULL))
         {
-          /* execute the action */
+          /* execute the action associated with the menu item */
           tap_provider_execute (tap_provider, tap_backend_extract_here, window, dirname, files, _("Failed to extract files"));
 
           /* release the dirname */
@@ -347,20 +294,20 @@ tap_extract_here (GtkAction *action,
 
 
 static void
-tap_extract_to (GtkAction *action,
-                GtkWidget *window)
+tap_extract_to (ThunarxMenuItem *item,
+                GtkWidget       *window)
 {
   TapProvider *tap_provider;
   const gchar *default_dir;
   GList       *files;
 
-  /* determine the files associated with the action */
-  files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
+  /* determine the files associated with the item */
+  files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
   if (G_UNLIKELY (files == NULL))
     return;
 
-  /* determine the provider associated with the action */
-  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  /* determine the provider associated with the item */
+  tap_provider = g_object_get_qdata (G_OBJECT (item), tap_item_provider_quark);
   if (G_UNLIKELY (tap_provider == NULL))
     return;
 
@@ -371,28 +318,28 @@ tap_extract_to (GtkAction *action,
   if (G_LIKELY (default_dir == NULL))
     default_dir = g_get_home_dir ();
 
-  /* execute the action */
+  /* execute the action associated with the menu item */
   tap_provider_execute (tap_provider, tap_backend_extract_to, window, default_dir, files, _("Failed to extract files"));
 }
 
 
 
 static void
-tap_create_archive (GtkAction *action,
-                    GtkWidget *window)
+tap_create_archive (ThunarxMenuItem *item,
+                    GtkWidget       *window)
 {
   TapProvider *tap_provider;
   GList       *files;
   gchar       *dirname;
   gchar       *uri;
 
-  /* determine the files associated with the action */
-  files = g_object_get_qdata (G_OBJECT (action), tap_action_files_quark);
+  /* determine the files associated with the item */
+  files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
   if (G_UNLIKELY (files == NULL))
     return;
 
-  /* determine the provider associated with the action */
-  tap_provider = g_object_get_qdata (G_OBJECT (action), tap_action_provider_quark);
+  /* determine the provider associated with the item */
+  tap_provider = g_object_get_qdata (G_OBJECT (item), tap_item_provider_quark);
   if (G_UNLIKELY (tap_provider == NULL))
     return;
 
@@ -409,7 +356,7 @@ tap_create_archive (GtkAction *action,
   if (G_UNLIKELY (dirname == NULL))
     return;
 
-  /* execute the action */
+  /* execute the action associated with the menu item */
   tap_provider_execute (tap_provider, tap_backend_create_archive, window, dirname, files, _("Failed to create archive"));
 
   /* cleanup */
@@ -419,17 +366,17 @@ tap_create_archive (GtkAction *action,
 
 
 static GList*
-tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
-                               GtkWidget           *window,
-                               GList               *files)
+tap_provider_get_file_menu_items (ThunarxMenuProvider *menu_provider,
+                                  GtkWidget           *window,
+                                  GList               *files)
 {
   gchar              *scheme;
   TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
-  GtkAction          *action;
+  ThunarxMenuItem    *item;
   GClosure           *closure;
   gboolean            all_archives = TRUE;
   gboolean            can_write = TRUE;
-  GList              *actions = NULL;
+  GList              *items = NULL;
   GList              *lp;
   gint                n_files = 0;
 
@@ -462,99 +409,83 @@ tap_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       /* check if we can write to the parent folders */
       if (G_LIKELY (can_write))
         {
-          /* append the "Extract Here" action */
-          action = g_object_new (GTK_TYPE_ACTION,
-                                 "name", "Tap::extract-here",
-                                 "label", _("Extract _Here"),
-#if !GTK_CHECK_VERSION(2,9,0)
-                                 "stock-id", "tap-extract",
-#else
-                                 "icon-name", "tap-extract",
-#endif
-                                 "tooltip", dngettext (GETTEXT_PACKAGE,
-                                                       "Extract the selected archive in the current folder",
-                                                       "Extract the selected archives in the current folder",
-                                                       n_files),
-                                 NULL);
-          g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
+          /* append the "Extract Here" menu item */
+          item = thunarx_menu_item_new ("Tap::extract-here",
+                                        _("Extract _Here"),
+                                        dngettext (GETTEXT_PACKAGE,
+                                                   "Extract the selected archive in the current folder",
+                                                   "Extract the selected archives in the current folder",
+                                                   n_files),
+                                        "tap-extract");
+
+          g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
                                    thunarx_file_info_list_copy (files),
                                    (GDestroyNotify) thunarx_file_info_list_free);
-          g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+          g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
                                    g_object_ref (G_OBJECT (tap_provider)),
                                    (GDestroyNotify) g_object_unref);
           closure = g_cclosure_new_object (G_CALLBACK (tap_extract_here), G_OBJECT (window));
-          g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
-          actions = g_list_append (actions, action);
+          g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
+          items = g_list_append (items, item);
         }
 
-      /* append the "Extract To..." action */
-      action = g_object_new (GTK_TYPE_ACTION,
-                             "label", _("_Extract To..."),
-                             "name", "Tap::extract-to",
-#if !GTK_CHECK_VERSION(2,9,0)
-                             "stock-id", "tap-extract-to",
-#else
-                             "icon-name", "tap-extract-to",
-#endif
-                             "tooltip", dngettext (GETTEXT_PACKAGE,
-                                                   "Extract the selected archive",
-                                                   "Extract the selected archives",
-                                                   n_files),
-                             NULL);
-      g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
+      /* append the "Extract To..." menu item */
+      item = thunarx_menu_item_new ("Tap::extract-to",
+                                    _("_Extract To..."),
+                                    dngettext (GETTEXT_PACKAGE,
+                                               "Extract the selected archive",
+                                               "Extract the selected archives",
+                                               n_files),
+                                    "tap-extract-to");
+
+      g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
-      g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+      g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
                                g_object_ref (G_OBJECT (tap_provider)),
                                (GDestroyNotify) g_object_unref);
       closure = g_cclosure_new_object (G_CALLBACK (tap_extract_to), G_OBJECT (window));
-      g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
-      actions = g_list_append (actions, action);
+      g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
+      items = g_list_append (items, item);
     }
 
   /* check if more than one files was given or the file is not an archive */
   if (G_LIKELY (n_files > 1 || !all_archives))
     {
-      /* append the "Create Archive..." action */
-      action = g_object_new (GTK_TYPE_ACTION,
-                             "label", _("Cr_eate Archive..."),
-                             "name", "Tap::create-archive",
-#if !GTK_CHECK_VERSION(2,9,0)
-                             "stock-id", "tap-create",
-#else
-                             "icon-name", "tap-create",
-#endif
-                             "tooltip", dngettext (GETTEXT_PACKAGE,
-                                                   "Create an archive with the selected object",
-                                                   "Create an archive with the selected objects",
-                                                   n_files),
-                             NULL);
-      g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
+      /* append the "Create Archive..." menu item */
+      item = thunarx_menu_item_new ("Tap::create-archive",
+                                    _("Cr_eate Archive..."),
+                                    dngettext (GETTEXT_PACKAGE,
+                                               "Create an archive with the selected object",
+                                               "Create an archive with the selected objects",
+                                               n_files),
+                                    "tap-create");
+
+      g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
                                thunarx_file_info_list_copy (files),
                                (GDestroyNotify) thunarx_file_info_list_free);
-      g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+      g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
                                g_object_ref (G_OBJECT (tap_provider)),
                                (GDestroyNotify) g_object_unref);
       closure = g_cclosure_new_object (G_CALLBACK (tap_create_archive), G_OBJECT (window));
-      g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
-      actions = g_list_append (actions, action);
+      g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
+      items = g_list_append (items, item);
     }
 
-  return actions;
+  return items;
 }
 
 
 
-#if THUNARX_CHECK_VERSION(0,4,1)
 static GList*
-tap_provider_get_dnd_actions (ThunarxMenuProvider *menu_provider,
-                              GtkWidget           *window,
-                              ThunarxFileInfo     *folder,
-                              GList               *files)
+tap_provider_get_dnd_menu_items (ThunarxMenuProvider *menu_provider,
+                                 GtkWidget           *window,
+                                 ThunarxFileInfo     *folder,
+                                 GList               *files)
 {
   gchar              *scheme;
   TapProvider        *tap_provider = TAP_PROVIDER (menu_provider);
-  GtkAction          *action;
+  ThunarxMenuItem    *item;
   GClosure           *closure;
   GList              *lp;
   gint                n_files = 0;
@@ -589,37 +520,31 @@ tap_provider_get_dnd_actions (ThunarxMenuProvider *menu_provider,
         return NULL;
     }
 
-  /* setup the "Extract here" action */
-  action = g_object_new (GTK_TYPE_ACTION,
-                         "name", "Tap::extract-here-dnd",
-                         /* TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action */
-                         "label", _("_Extract here"),
-#if !GTK_CHECK_VERSION(2,9,0)
-                         "stock-id", "tap-extract",
-#else
-                         "icon-name", "tap-extract",
-#endif
-                         "tooltip", dngettext (GETTEXT_PACKAGE,
-                                               "Extract the selected archive here",
-                                               "Extract the selected archives here",
-                                               n_files),
-                         NULL);
-  g_object_set_qdata_full (G_OBJECT (action), tap_action_files_quark,
+  /* setup the "Extract here" menu item */
+  item = thunarx_menu_item_new ("Tap::extract-here-dnd",
+                                /* TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item */
+                                _("_Extract here"),
+                                dngettext (GETTEXT_PACKAGE,
+                                           "Extract the selected archive here",
+                                           "Extract the selected archives here",
+                                           n_files),
+                                "tap-extract");
+
+  g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
                            thunarx_file_info_list_copy (files),
                            (GDestroyNotify) thunarx_file_info_list_free);
-  g_object_set_qdata_full (G_OBJECT (action), tap_action_provider_quark,
+  g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
                            g_object_ref (G_OBJECT (tap_provider)),
                            (GDestroyNotify) g_object_unref);
-  g_object_set_qdata_full (G_OBJECT (action), tap_action_folder_quark,
+  g_object_set_qdata_full (G_OBJECT (item), tap_item_folder_quark,
                            g_object_ref (G_OBJECT (folder)),
                            (GDestroyNotify) g_object_unref);
   closure = g_cclosure_new_object (G_CALLBACK (tap_extract_here), G_OBJECT (window));
-  g_signal_connect_closure (G_OBJECT (action), "activate", closure, TRUE);
+  g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
 
-  /* return a list with only the "Extract here" action */
-  return g_list_prepend (NULL, action);
+  /* return a list with only the "Extract here" item */
+  return g_list_prepend (NULL, item);
 }
-#endif
 
 
 
