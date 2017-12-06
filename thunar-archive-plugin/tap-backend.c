@@ -64,7 +64,7 @@ tap_backend_mime_ask (GList     *mime_applications,
   GtkWidget                *dialog;
   GtkWidget                *image;
   GtkWidget                *label;
-  GtkWidget                *table;
+  GtkWidget                *grid;
   GtkWidget                *bbox;
   GtkWidget                *hbox;
   GSList                   *buttons = NULL;
@@ -76,36 +76,38 @@ tap_backend_mime_ask (GList     *mime_applications,
   /* prepare the dialog to query the preferred archiver for the user */
   dialog = gtk_dialog_new_with_buttons (_("Select an archive manager"),
                                         GTK_WINDOW (parent),
-                                        GTK_DIALOG_DESTROY_WITH_PARENT
-                                        | GTK_DIALOG_MODAL,
-                                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                        GTK_STOCK_OK, GTK_RESPONSE_OK,
+                                        GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL,
+                                        _("_Cancel"), GTK_RESPONSE_CANCEL,
+                                        _("_OK"), GTK_RESPONSE_OK,
                                         NULL);
   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 
-  /* add the main table */
-  table = gtk_table_new (2, 2, FALSE);
-  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-  gtk_container_set_border_width (GTK_CONTAINER (table), 6);
-  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, TRUE, TRUE, 0);
-  gtk_widget_show (table);
+  /* add the main grid */
+  grid = gtk_grid_new ();
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+  gtk_container_set_border_width (GTK_CONTAINER (grid), 6);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, TRUE, TRUE, 0);
+  gtk_widget_show (grid);
 
   /* add the header image */
   image = gtk_image_new_from_icon_name ("gnome-package", GTK_ICON_SIZE_DIALOG);
-  gtk_table_attach (GTK_TABLE (table), image, 0, 1, 0, 1, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), image, 0, 0, 1, 1);
   gtk_widget_show (image);
 
   /* add the header label */
   label = gtk_label_new (_("Please select your preferred archive manager\nfrom the list of available applications below:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 0, 1, GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
+  gtk_widget_set_vexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
   gtk_widget_show (label);
 
   /* add the button box */
-  bbox = gtk_vbox_new (FALSE, 6);
+  bbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_set_border_width (GTK_CONTAINER (bbox), 12);
-  gtk_table_attach (GTK_TABLE (table), bbox, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (bbox, TRUE);
+  gtk_widget_set_vexpand (bbox, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), bbox, 1, 1, 1, 1);
   gtk_widget_show (bbox);
 
   /* add the radio buttons */
@@ -127,7 +129,7 @@ tap_backend_mime_ask (GList     *mime_applications,
       g_free (command);
 
       /* add the hbox */
-      hbox = gtk_hbox_new (FALSE, 2);
+      hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
       gtk_container_add (GTK_CONTAINER (button), hbox);
       gtk_widget_show (hbox);
 
@@ -143,7 +145,7 @@ tap_backend_mime_ask (GList     *mime_applications,
 
       /* add the label for the application */
       label = gtk_label_new (g_app_info_get_name (mp->data));
-      gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+      gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
       gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
       gtk_widget_show (label);
     }
