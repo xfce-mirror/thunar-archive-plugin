@@ -1,8 +1,9 @@
 # $Id$
 
 wrapperdir = $(libexecdir)/thunar-archive-plugin
-wrapper_SCRIPTS =							\
+wrapper_SCRIPTS= 						\
 	ark.tap								\
+	engrampa.tap						\
 	file-roller.tap
 
 # Install symlink to 'gnome-file-roller.tap'
