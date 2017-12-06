@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Elishai Eliyahu <e1907@mm.st>, 2017
 # GenghisKhan <genghiskhan@gmx.ca>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"POT-Creation-Date: 2017-12-06 06:30+0100\n"
+"PO-Revision-Date: 2017-12-06 19:56+0000\n"
+"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/thunar-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,71 +20,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
 msgstr "בחר מנהל ארכיון"
 
+#: ../thunar-archive-plugin/tap-backend.c:80
+msgid "_Cancel"
+msgstr "_ביטול"
+
+#: ../thunar-archive-plugin/tap-backend.c:81
+msgid "_OK"
+msgstr "_אישור"
+
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:105
+#: ../thunar-archive-plugin/tap-backend.c:99
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "אנא בחר מנהל ארכיון המועדף עליך\nמתוך הרשימה של יישומים זמינים להלן:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:427
+#: ../thunar-archive-plugin/tap-backend.c:276
+#: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "לא נמצא מנהל ארכיון מתאים"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:336
-#: ../thunar-archive-plugin/tap-provider.c:375
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:283
+#: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
 msgstr "נכשל לחלץ קבצים"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:413
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
 msgstr "נכשל ליצור ארכיון"
 
-#: ../thunar-archive-plugin/tap-provider.c:468
+#: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
 msgstr "חלץ _כאן"
 
-#: ../thunar-archive-plugin/tap-provider.c:475
+#: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "חלץ את הארכיון הנבחר בתוך התיקייה הנוכחית"
 msgstr[1] "חלץ את הארכיונים הנבחרים בתוך התיקייה הנוכחית"
 
-#: ../thunar-archive-plugin/tap-provider.c:492
+#: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
 msgstr "_חלץ לתוך..."
 
-#: ../thunar-archive-plugin/tap-provider.c:500
+#: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "חלץ את הארכיון הנבחר"
 msgstr[1] "חלץ את הארכיונים הנבחרים"
 
-#: ../thunar-archive-plugin/tap-provider.c:520
+#: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
 msgstr "צו_ר ארכיון..."
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "צור ארכיון עם האובייקט הנבחר"
 msgstr[1] "צור ארכיון עם האובייקטים הנבחרים"
 
-#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: ../thunar-archive-plugin/tap-provider.c:596
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
+#: ../thunar-archive-plugin/tap-provider.c:526
 msgid "_Extract here"
 msgstr "_חלץ כאן"
 
-#: ../thunar-archive-plugin/tap-provider.c:603
+#: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "חלץ את הארכיון הנבחר כאן"
