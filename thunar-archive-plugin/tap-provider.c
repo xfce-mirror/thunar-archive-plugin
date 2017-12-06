@@ -605,12 +605,8 @@ tap_provider_child_watch (GPid     pid,
                           gint     status,
                           gpointer user_data)
 {
-  GDK_THREADS_ENTER ();
-
   /* need to cleanup */
   g_spawn_close_pid (pid);
-
-  GDK_THREADS_LEAVE ();
 }
 
 
