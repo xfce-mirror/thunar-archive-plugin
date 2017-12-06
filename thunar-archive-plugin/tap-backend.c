@@ -449,6 +449,7 @@ tap_backend_run (const gchar *action,
 
           /* cleanup */
           g_strfreev (argv);
+          g_free (display);
         }
 
       /* cleanup */
