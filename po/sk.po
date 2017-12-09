@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Dušan Kazik <prescott66@gmail.com>, 2016
+# Dušan Kazik <prescott66@gmail.com>, 2016-2017
 # Robert Hartl <hartl.robert@gmail.com>, 2009
 # Tomáš Vadina <inactive+kyberdev@transifex.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"POT-Creation-Date: 2017-12-06 06:30+0100\n"
+"PO-Revision-Date: 2017-12-09 08:15+0000\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -21,74 +21,82 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
 msgstr "Vyberte správcu archívov"
 
+#: ../thunar-archive-plugin/tap-backend.c:80
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+#: ../thunar-archive-plugin/tap-backend.c:81
+msgid "_OK"
+msgstr "_OK"
+
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:105
+#: ../thunar-archive-plugin/tap-backend.c:99
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "Vyberte si Vami uprednostňovaného správcu archívov\nzo zoznamu dostupných aplikácií uvedeného nižšie:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:427
+#: ../thunar-archive-plugin/tap-backend.c:276
+#: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Nebol nájdený žiadny vhodný správca archívov"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:336
-#: ../thunar-archive-plugin/tap-provider.c:375
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:283
+#: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
 msgstr "Nepodarilo sa rozbaliť súbory"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:413
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
 msgstr "Nepodarilo sa vytvoriť archív"
 
-#: ../thunar-archive-plugin/tap-provider.c:468
+#: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
 msgstr "Rozbaliť _sem"
 
-#: ../thunar-archive-plugin/tap-provider.c:475
+#: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Rozbalí vybraný súbor v aktuálnom priečinku"
 msgstr[1] "Rozbalí vybrané súbory v aktuálnom priečinku"
 msgstr[2] "Rozbalí vybrané súbory do aktuálneho priečinku"
 
-#: ../thunar-archive-plugin/tap-provider.c:492
+#: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
 msgstr "_Rozbaliť do..."
 
-#: ../thunar-archive-plugin/tap-provider.c:500
+#: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Rozbalí vybraný archív"
 msgstr[1] "Rozbalí vybrané archívy"
 msgstr[2] "Rozbalí vybrané archívy"
 
-#: ../thunar-archive-plugin/tap-provider.c:520
+#: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
 msgstr "_Vytvoriť archív..."
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Vytvorí archív s vybraným objektom"
 msgstr[1] "Vytvorí archív s vybranými objektami"
 msgstr[2] "Vytvorí archív s vybranými objektami"
 
-#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: ../thunar-archive-plugin/tap-provider.c:596
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
+#: ../thunar-archive-plugin/tap-provider.c:526
 msgid "_Extract here"
 msgstr "_Rozbaliť sem"
 
-#: ../thunar-archive-plugin/tap-provider.c:603
+#: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Rozbalí označený archív sem"
