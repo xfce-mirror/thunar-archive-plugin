@@ -1,3 +1,19 @@
+0.4.0
+=====
+- GTK3 Port
+- Thunarx-3 Port (Thunar >=1.7.0 required)
+- Engrampa archiver is now supported
+- Updated translations: Albanian, Arabic, Asturian, Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech,
+  Danish, Dutch (Flemish), English (Australia), English (Great Britain),
+  Finnish, French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Italian, Japanese, Kazakh, Korean, Latvian, Lithuanian, Malay,
+  Norwegian Bokmål, Norwegian Nynorsk, Occitan, Panjabi, Polish, Portuguese,
+  Portuguese (Brazilian), Romanian, Russian, Serbian, Slovak, Slovenian,
+  Spanish, Swedish, Thai, Turkish, Ukrainian, Urdu, Urdu (Pakistan), Uyghur,
+  Vietnamese
+
+
 0.3.1
 =====
 - Fix build with --as-needed (bug #7533). Patch by Yves-Alexis Perez.
