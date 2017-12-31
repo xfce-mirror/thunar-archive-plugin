@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-14 07:53+0000\n"
+"PO-Revision-Date: 2017-12-31 18:04+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/thunar-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -49,12 +49,12 @@ msgstr "No s'ha trobat cap gestor d'arxius adequat"
 #: ../thunar-archive-plugin/tap-provider.c:283
 #: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
-msgstr "No s'han pogut extreure els fitxers"
+msgstr "Ha fallat l'extracció dels fitxers"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
-msgstr "No s'ha pogut crear l'arxiu"
+msgstr "Ha fallat la creació de l'arxiu"
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
