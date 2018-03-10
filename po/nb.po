@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Erlend Østlie <erlendandreas12368@gmail.com>, 2018
 # Terje Uriansrud <ter@operamail.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:07+0200\n"
-"PO-Revision-Date: 2017-09-19 18:03+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"POT-Creation-Date: 2017-12-06 06:30+0100\n"
+"PO-Revision-Date: 2018-03-10 17:05+0000\n"
+"Last-Translator: Erlend Østlie <erlendandreas12368@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/thunar-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,71 +20,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
 msgstr "Velg en arkiveringsbehandler"
 
+#: ../thunar-archive-plugin/tap-backend.c:80
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: ../thunar-archive-plugin/tap-backend.c:81
+msgid "_OK"
+msgstr "_OK"
+
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:105
+#: ../thunar-archive-plugin/tap-backend.c:99
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "Velg din prefererte arkiveringsbehandler fra\nlisten over tilgjengelige programmer under:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:280
-#: ../thunar-archive-plugin/tap-backend.c:427
+#: ../thunar-archive-plugin/tap-backend.c:276
+#: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Ingen passende arkiveringsbehandlere funnet"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:336
-#: ../thunar-archive-plugin/tap-provider.c:375
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:283
+#: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
 msgstr "Klarte ikke pakke ut filer"
 
-#. execute the action
-#: ../thunar-archive-plugin/tap-provider.c:413
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
 msgstr "Klarte ikke lage arkiv"
 
-#: ../thunar-archive-plugin/tap-provider.c:468
+#: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
 msgstr "Pakk ut _her"
 
-#: ../thunar-archive-plugin/tap-provider.c:475
+#: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Pakk ut valgt arkiv i gjeldende mappe"
 msgstr[1] "Pakk ut valgte arkiv i gjeldende mappe"
 
-#: ../thunar-archive-plugin/tap-provider.c:492
+#: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
 msgstr "_Pakk ut til ..."
 
-#: ../thunar-archive-plugin/tap-provider.c:500
+#: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Pakk ut valgt arkiv"
 msgstr[1] "Pakk ut valgte arkiv"
 
-#: ../thunar-archive-plugin/tap-provider.c:520
+#: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
 msgstr "_Lag arkiv ..."
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Lag et arkiv med valgt element"
 msgstr[1] "Lag et arkiv med valgte elementer"
 
-#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" action
-#: ../thunar-archive-plugin/tap-provider.c:596
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
+#: ../thunar-archive-plugin/tap-provider.c:526
 msgid "_Extract here"
 msgstr "_Pakk ut her"
 
-#: ../thunar-archive-plugin/tap-provider.c:603
+#: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Pakk ut valgt arkiv her"
