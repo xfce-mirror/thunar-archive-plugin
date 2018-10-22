@@ -15,6 +15,11 @@ install-exec-hook:
 	-( cd $(DESTDIR)$(wrapperdir) ; \
 		test -f org.gnome.FileRoller.tap \
 		|| ln -sf file-roller.tap org.gnome.FileRoller.tap )
+# Install symlink to 'mate-engrampa.tap'
+	$(mkinstalldirs) $(DESTDIR)$(wrapperdir)
+	-( cd $(DESTDIR)$(wrapperdir) ; \
+		test -f mate-engrampa.tap \
+		|| ln -sf engrampa.tap mate-engrampa.tap )
 
 EXTRA_DIST =								\
 	$(wrapper_SCRIPTS)						\
