@@ -26,20 +26,20 @@
 
 # determine the action and the folder, $@ then contains only the files
 action=$1; shift;
-folder=$1; shift;
+pwd=$1; shift;
 
 # check the action
 case $action in
 create)
-	exec file-roller "--default-dir=$folder" --add "$@"
+	exec file-roller "--default-dir=$pwd" --add "$@"
 	;;
 
 extract-here)
-	exec file-roller "--extract-to=$(pwd)" --extract-here --force "$@"
+	exec file-roller "--extract-to=$pwd" --extract-here --force "$@"
 	;;
 
 extract-to)
-	exec file-roller "--default-dir=$folder" --extract "$@"
+	exec file-roller "--default-dir=$pwd" --extract "$@"
 	;;
 
 *)

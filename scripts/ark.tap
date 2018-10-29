@@ -25,7 +25,7 @@
 
 # determine the action and the folder, $@ then contains only the files
 action=$1; shift;
-folder=$1; shift;
+pwd=$1; shift;
 
 # check the action
 case $action in
@@ -34,7 +34,7 @@ create)
 	;;
 
 extract-here)
-	exec ark --extract-to "$folder" "$@"
+	exec ark --extract-to "$pwd" "$@"
 	;;
 
 extract-to)

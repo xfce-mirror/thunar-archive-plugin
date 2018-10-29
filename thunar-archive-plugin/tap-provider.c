@@ -297,9 +297,10 @@ static void
 tap_extract_to (ThunarxMenuItem *item,
                 GtkWidget       *window)
 {
-  TapProvider *tap_provider;
-  const gchar *default_dir;
-  GList       *files;
+  TapProvider     *tap_provider;
+  GList           *files;
+  gchar           *dirname;
+  gchar           *uri;
 
   /* determine the files associated with the item */
   files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
@@ -309,17 +310,36 @@ tap_extract_to (ThunarxMenuItem *item,
   /* determine the provider associated with the item */
   tap_provider = g_object_get_qdata (G_OBJECT (item), tap_item_provider_quark);
   if (G_UNLIKELY (tap_provider == NULL))
-    return;
+    {
+      g_warning ("Failed to determine tap provider");
+      return;
+    }
 
-  /* if $GTK_DEFAULT_FILECHOOSER_DIR is set, we use that as default
-   * folder (i.e. Ubuntu), otherwise we just use $HOME.
-   */
-  default_dir = g_getenv ("GTK_DEFAULT_FILECHOOSER_DIR");
-  if (G_LIKELY (default_dir == NULL))
-    default_dir = g_get_home_dir ();
 
-  /* execute the action associated with the menu item */
-  tap_provider_execute (tap_provider, tap_backend_extract_to, window, default_dir, files, _("Failed to extract files"));
+  /* determine the parent URI of the first selected file */
+  uri = thunarx_file_info_get_parent_uri (files->data);
+  if (G_UNLIKELY (uri == NULL))
+    {
+      g_warning ("Failed to get parent URI");
+      return;
+    }
+
+  /* determine the directory of the first selected file */
+  dirname = g_filename_from_uri (uri, NULL, NULL);
+  g_free (uri);
+
+  /* verify that we were able to determine a local path */
+  if (G_UNLIKELY (dirname == NULL))
+    {
+      g_warning ("Failed to determine local path");
+      return;
+    }
+
+  /* execute the action */
+  tap_provider_execute (tap_provider, tap_backend_extract_to, window, dirname, files, _("Failed to extract files"));
+
+  /* cleanup */
+  g_free (dirname);
 }
 
 
