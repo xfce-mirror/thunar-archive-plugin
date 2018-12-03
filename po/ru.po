@@ -5,14 +5,14 @@
 # Translators:
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
 # Igor <f2404@yandex.ru>, 2017
-# Sergey Alyoshin <alyoshin.s@gmail.com>, 2016
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-06 15:23+0000\n"
-"Last-Translator: Igor <f2404@yandex.ru>\n"
+"PO-Revision-Date: 2018-12-02 10:56+0000\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Укажите менеджер архивов"
 
 #: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_Cancel"
-msgstr "_Отмена"
+msgstr "О_тмена"
 
 #: ../thunar-archive-plugin/tap-backend.c:81
 msgid "_OK"
@@ -60,7 +60,7 @@ msgstr "Не удалось создать архив"
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
-msgstr "Извлечь _сюда"
+msgstr "Из_влечь сюда"
 
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
