@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2018-03-02 23:21+0000\n"
+"PO-Revision-Date: 2019-01-18 16:09+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/thunar-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Ju lutemi, përzgjidhni përgjegjësin tuaj të\nparapëlqyer arkivash prej listës më\nposhtë të aplikacioneve të gatshme:"
+msgstr "Ju lutemi, përzgjidhni përgjegjësin tuaj të\nparapëlqyer arkivash prej listës së\naplikacioneve të gatshme më poshtë:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
@@ -50,12 +50,12 @@ msgstr "S’u gjet përgjegjës arkivi i përshtatshëm"
 #: ../thunar-archive-plugin/tap-provider.c:283
 #: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
-msgstr "Dështoi në përftimin e kartelave"
+msgstr "S’u arrit të përftoheshin kartela"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
-msgstr "Dështoi në krijimin e arkivit"
+msgstr "S’u arrit të krijohej arkiv"
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
