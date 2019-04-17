@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2017
+# Красимир Беров, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
+"PO-Revision-Date: 2019-04-17 12:18+0000\n"
+"Last-Translator: Красимир Беров\n"
 "Language-Team: Bulgarian (http://www.transifex.com/xfce/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "_ОК"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Моля, изберете предпочитаната от вас програма за работа с архиви\nот списъка с изброените по- долу достъпни приложения:"
+msgstr "Моля, изберете предпочитаната от вас програма за работа с архиви\nот списъка с изброените по-долу достъпни приложения:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
