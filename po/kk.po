@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
@@ -64,6 +64,7 @@ msgstr "Осын_да тарқату"
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Ерекшеленген архивт(ерд)і ағымдағы бумаға тарқату"
+msgstr[1] "Ерекшеленген архивт(ерд)і ағымдағы бумаға тарқату"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
@@ -73,6 +74,7 @@ msgstr "Қ_айда тарқату..."
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Ерекшеленген архивті тарқату"
+msgstr[1] "Ерекшеленген архивті тарқату"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
@@ -82,6 +84,7 @@ msgstr "Ар_хивті жасау..."
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Ерекшеленген нәрсе(лер)ден архивті жасау"
+msgstr[1] "Ерекшеленген нәрсе(лер)ден архивті жасау"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: ../thunar-archive-plugin/tap-provider.c:526
@@ -92,3 +95,4 @@ msgstr "Осында _тарқату"
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Ерекшеленген архивт(ерд)і осында тарқату"
+msgstr[1] "Ерекшеленген архивт(ерд)і осында тарқату"
