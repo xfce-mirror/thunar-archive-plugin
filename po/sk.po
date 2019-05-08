@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
@@ -68,6 +68,7 @@ msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Rozbalí vybraný súbor v aktuálnom priečinku"
 msgstr[1] "Rozbalí vybrané súbory v aktuálnom priečinku"
 msgstr[2] "Rozbalí vybrané súbory do aktuálneho priečinku"
+msgstr[3] "Rozbalí vybrané súbory do aktuálneho priečinku"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
@@ -79,6 +80,7 @@ msgid_plural "Extract the selected archives"
 msgstr[0] "Rozbalí vybraný archív"
 msgstr[1] "Rozbalí vybrané archívy"
 msgstr[2] "Rozbalí vybrané archívy"
+msgstr[3] "Rozbalí vybrané archívy"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
@@ -90,6 +92,7 @@ msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Vytvorí archív s vybraným objektom"
 msgstr[1] "Vytvorí archív s vybranými objektami"
 msgstr[2] "Vytvorí archív s vybranými objektami"
+msgstr[3] "Vytvorí archív s vybranými objektami"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: ../thunar-archive-plugin/tap-provider.c:526
@@ -102,3 +105,4 @@ msgid_plural "Extract the selected archives here"
 msgstr[0] "Rozbalí označený archív sem"
 msgstr[1] "Rozbalí označené archívy sem"
 msgstr[2] "Rozbalí označené archívy sem"
+msgstr[3] "Rozbalí označené archívy sem"
