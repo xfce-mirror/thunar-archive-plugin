@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
@@ -66,6 +66,8 @@ msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "חלץ את הארכיון הנבחר בתוך התיקייה הנוכחית"
 msgstr[1] "חלץ את הארכיונים הנבחרים בתוך התיקייה הנוכחית"
+msgstr[2] "חלץ את הארכיונים הנבחרים בתוך התיקייה הנוכחית"
+msgstr[3] "חלץ את הארכיונים הנבחרים בתוך התיקייה הנוכחית"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
@@ -76,6 +78,8 @@ msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "חלץ את הארכיון הנבחר"
 msgstr[1] "חלץ את הארכיונים הנבחרים"
+msgstr[2] "חלץ את הארכיונים הנבחרים"
+msgstr[3] "חלץ את הארכיונים הנבחרים"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
@@ -86,6 +90,8 @@ msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "צור ארכיון עם האובייקט הנבחר"
 msgstr[1] "צור ארכיון עם האובייקטים הנבחרים"
+msgstr[2] "צור ארכיון עם האובייקטים הנבחרים"
+msgstr[3] "צור ארכיון עם האובייקטים הנבחרים"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: ../thunar-archive-plugin/tap-provider.c:526
@@ -97,3 +103,5 @@ msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "חלץ את הארכיון הנבחר כאן"
 msgstr[1] "חלץ את הארכיונים הנבחרים כאן"
+msgstr[2] "חלץ את הארכיונים הנבחרים כאן"
+msgstr[3] "חלץ את הארכיונים הנבחרים כאן"
