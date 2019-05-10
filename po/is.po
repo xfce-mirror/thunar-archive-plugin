@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2014
+# Sveinn í Felli <sv1@fellsnet.is>, 2013-2014,2018-2019
 # Sveinn í Felli <sveinki@nett.is>, 2013,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2018-11-05 18:24+0000\n"
+"PO-Revision-Date: 2019-05-10 11:27+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/thunar-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr[1] "Búa til safnskrá með völdum atriðum"
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: ../thunar-archive-plugin/tap-provider.c:526
 msgid "_Extract here"
-msgstr "Afþjappa _hér"
+msgstr "_Afþjappa hér"
 
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
