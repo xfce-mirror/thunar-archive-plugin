@@ -469,28 +469,24 @@ tap_provider_get_file_menu_items (ThunarxMenuProvider *menu_provider,
       items = g_list_append (items, item);
     }
 
-  /* check if more than one files was given or the file is not an archive */
-  if (G_LIKELY (n_files > 1 || !all_archives))
-    {
-      /* append the "Create Archive..." menu item */
-      item = thunarx_menu_item_new ("Tap::create-archive",
-                                    _("Cr_eate Archive..."),
-                                    dngettext (GETTEXT_PACKAGE,
-                                               "Create an archive with the selected object",
-                                               "Create an archive with the selected objects",
-                                               n_files),
-                                    "tap-create");
+    /* append the "Create Archive..." menu item */
+    item = thunarx_menu_item_new ("Tap::create-archive",
+                                  _("Cr_eate Archive..."),
+                                  dngettext (GETTEXT_PACKAGE,
+                                              "Create an archive with the selected object",
+                                              "Create an archive with the selected objects",
+                                              n_files),
+                                  "tap-create");
 
-      g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
-                               thunarx_file_info_list_copy (files),
-                               (GDestroyNotify) thunarx_file_info_list_free);
-      g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
-                               g_object_ref (G_OBJECT (tap_provider)),
-                               (GDestroyNotify) g_object_unref);
-      closure = g_cclosure_new_object (G_CALLBACK (tap_create_archive), G_OBJECT (window));
-      g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
-      items = g_list_append (items, item);
-    }
+    g_object_set_qdata_full (G_OBJECT (item), tap_item_files_quark,
+                              thunarx_file_info_list_copy (files),
+                              (GDestroyNotify) thunarx_file_info_list_free);
+    g_object_set_qdata_full (G_OBJECT (item), tap_item_provider_quark,
+                              g_object_ref (G_OBJECT (tap_provider)),
+                              (GDestroyNotify) g_object_unref);
+    closure = g_cclosure_new_object (G_CALLBACK (tap_create_archive), G_OBJECT (window));
+    g_signal_connect_closure (G_OBJECT (item), "activate", closure, TRUE);
+    items = g_list_append (items, item);
 
   return items;
 }
