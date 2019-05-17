@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2019-05-17 10:30+0000\n"
+"PO-Revision-Date: 2019-05-17 11:49+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr[1] "Udpak de valgte arkiver i den nuværende mappe"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
-msgstr "_Udpak til..."
+msgstr "_Udpak til ..."
 
 #: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
@@ -79,7 +79,7 @@ msgstr[1] "Udpak de valgte arkiver"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
-msgstr "_Opret arkiv..."
+msgstr "_Opret arkiv ..."
 
 #: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
