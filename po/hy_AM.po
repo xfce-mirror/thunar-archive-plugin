@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-06 06:30+0100\n"
+"PO-Revision-Date: 2019-06-12 10:47+0000\n"
+"Last-Translator: Hayk Andreasyan <hayk.andreasyan@realschool.am>\n"
+"Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/thunar-plugins/language/hy_AM/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy_AM\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: ../thunar-archive-plugin/tap-backend.c:77
+msgid "Select an archive manager"
+msgstr "Ընտրել պահոցային կառավարիչ"
+
+#: ../thunar-archive-plugin/tap-backend.c:80
+msgid "_Cancel"
+msgstr "_Չեղարկել"
+
+#: ../thunar-archive-plugin/tap-backend.c:81
+msgid "_OK"
+msgstr "_Բարի"
+
+#. add the header label
+#: ../thunar-archive-plugin/tap-backend.c:99
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr "Ընտրէք պահոցային կառավարիչ\nներքեւում առկայ յաւելուածների ցուցակից։"
+
+#. tell the user that we cannot handle the specified mime types
+#: ../thunar-archive-plugin/tap-backend.c:276
+#: ../thunar-archive-plugin/tap-backend.c:424
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "Համապատասխան պահոցային կառավարիչ չկայ"
+
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:283
+#: ../thunar-archive-plugin/tap-provider.c:322
+msgid "Failed to extract files"
+msgstr "Չյաջողուեց արտածել նիշերը"
+
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:360
+msgid "Failed to create archive"
+msgstr "Չյաջողուեց ստեղծել պահոց"
+
+#: ../thunar-archive-plugin/tap-provider.c:414
+msgid "Extract _Here"
+msgstr "Արտածել _այստեղ"
+
+#: ../thunar-archive-plugin/tap-provider.c:416
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Բացել ընտրուած պահոցը ընթացիկ պանակում"
+msgstr[1] "Բացել ընտրուած պահոցները ընթացիկ պանակում"
+
+#: ../thunar-archive-plugin/tap-provider.c:434
+msgid "_Extract To..."
+msgstr "_Արտածել․․․"
+
+#: ../thunar-archive-plugin/tap-provider.c:436
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Բացել ընտրուած պահոցը"
+msgstr[1] "Բացել ընտրուած պահոցները"
+
+#: ../thunar-archive-plugin/tap-provider.c:457
+msgid "Cr_eate Archive..."
+msgstr "Նո_ր պահոց․․․"
+
+#: ../thunar-archive-plugin/tap-provider.c:459
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Ստեղծել նոր պահոց ընտրուած տարրով"
+msgstr[1] "Ստեղծել նոր պահոց ընտրուած տարրերով"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
+#: ../thunar-archive-plugin/tap-provider.c:526
+msgid "_Extract here"
+msgstr "_Արտածել այստեղ"
+
+#: ../thunar-archive-plugin/tap-provider.c:528
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Արտածել ընտրուած պահոցն այստեղ"
+msgstr[1] "Արտածել ընտրուած պահոցներն այստեղ"
