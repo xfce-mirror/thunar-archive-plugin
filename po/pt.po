@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Nuno Miguel <nunis@netcabo.pt>, 2007
-# Nuno Miguel <nunomgue@gmail.com>, 2017
+# Nuno Miguel <nunomgue@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-11 18:57+0000\n"
+"PO-Revision-Date: 2019-08-08 15:27+0000\n"
 "Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Na lista de aplicações abaixo disponíveis,\nselecione o gestor de arquivos preferido::"
+msgstr "Na lista de aplicações abaixo disponíveis,\nselecione o gestor de arquivos preferido:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
