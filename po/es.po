@@ -4,15 +4,16 @@
 # 
 # Translators:
 # Abel Martín <abel.martin.ruiz@gmail.com, 2008
-# Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2017
-# Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2014
+# prflr88 <prflr88@gmail.com>, 2017
+# prflr88 <prflr88@gmail.com>, 2014
+# Toni Estévez <toni.estevez@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-07 00:04+0000\n"
-"Last-Translator: Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>\n"
+"PO-Revision-Date: 2019-11-17 16:25+0000\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
-msgstr "Seleccione un administrador de archivadores"
+msgstr "Seleccione un gestor de archivadores"
 
 #: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_Cancel"
@@ -38,14 +39,14 @@ msgstr "_Aceptar"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Seleccione su administrador de archivadores preferido\nde la siguiente lista de aplicaciones disponibles:"
+msgstr "Seleccione su gestor de archivadores preferido\nde la siguiente lista de aplicaciones disponibles:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
 #: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "No se encontró ningún administrador de archivadores adecuado"
+msgstr "No se encontró ningún gestor de archivadores adecuado"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:283
