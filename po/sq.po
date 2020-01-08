@@ -5,12 +5,13 @@
 # Translators:
 # Besnik <besnik@programeshqip.org>, 2007
 # Besnik <besnik@programeshqip.org>, 2007
+# Besnik <besnik@programeshqip.org>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2019-01-18 16:09+0000\n"
+"PO-Revision-Date: 2020-01-08 19:29+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/thunar-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -37,14 +38,14 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Ju lutemi, përzgjidhni përgjegjësin tuaj të\nparapëlqyer arkivash prej listës së\naplikacioneve të gatshme më poshtë:"
+msgstr "Ju lutemi, përzgjidhni prej listës së aplikacioneve\ntë gatshme më poshtë përgjegjësin tuaj të parapëlqyer\narkivash:"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
 #: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "S’u gjet përgjegjës arkivi i përshtatshëm"
+msgstr "S’u gjet përgjegjës i përshtatshëm arkivash"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:283
@@ -64,8 +65,8 @@ msgstr "Përftoje _Këtu"
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Përftoje arkivin e përzgjedhur te dosja e çastit"
-msgstr[1] "Përftoji arkivat e përzgjedhura te dosja e çastit"
+msgstr[0] "Përftoje arkivin e përzgjedhur te dosja e tanishme"
+msgstr[1] "Përftoji arkivat e përzgjedhur te dosja e tanishme"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
