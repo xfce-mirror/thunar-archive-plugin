@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Alexander Nyakhaychyk <nyakhaychyk@gmail.com>, 2007
-# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <nashtlumach@gmail.com>, 2018
+# Zmicer Turok <nashtlumach@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
+"PO-Revision-Date: 2020-03-02 08:46+0000\n"
+"Last-Translator: Zmicer Turok <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/thunar-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
-msgstr "Абярыце кіраўніка архіваў"
+msgstr "Абраць кіраўніка архіваў"
 
 #: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_Cancel"
@@ -64,10 +65,10 @@ msgstr "Выняць _сюды"
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Выняць файл з абранага архіву ў бягучы каталог"
-msgstr[1] "Выняць файлы з абранага архіву ў бягучы каталог"
-msgstr[2] "Выняць файлы з абранага архіву ў бягучы каталог"
-msgstr[3] "Выняць файлы з абранага архіву ў бягучы каталог"
+msgstr[0] "Выняць файл з абранага архіва ў бягучы каталог"
+msgstr[1] "Выняць файлы з абранага архіва ў бягучы каталог"
+msgstr[2] "Выняць файлы з абранага архіва ў бягучы каталог"
+msgstr[3] "Выняць файлы з абранага архіва ў бягучы каталог"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
@@ -76,10 +77,10 @@ msgstr "_Выняць у..."
 #: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Выняць файл з абранага архіву"
-msgstr[1] "Выняць файлы з абранага архіву"
-msgstr[2] "Выняць файлы з абранага архіву"
-msgstr[3] "Выняць файлы з абранага архіву"
+msgstr[0] "Выняць файл з абранага архіва"
+msgstr[1] "Выняць файлы з абранага архіва"
+msgstr[2] "Выняць файлы з абранага архіва"
+msgstr[3] "Выняць файлы з абранага архіва"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
@@ -101,7 +102,7 @@ msgstr "_Выняць сюды"
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Выняць файл з абранага архіву сюды"
-msgstr[1] "Выняць файлы з абранага архіву сюды"
-msgstr[2] "Выняць файлы з абранага архіву сюды"
-msgstr[3] "Выняць файлы з абранага архіву сюды"
+msgstr[0] "Выняць файл з абранага архіва сюды"
+msgstr[1] "Выняць файлы з абранага архіва сюды"
+msgstr[2] "Выняць файлы з абранага архіва сюды"
+msgstr[3] "Выняць файлы з абранага архіва сюды"
