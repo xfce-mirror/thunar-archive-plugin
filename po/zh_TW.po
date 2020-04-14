@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>, 2006
-# Jeff Huang <s8321414@gmail.com>, 2017
+# 黃柏諺 <s8321414@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
 "PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/thunar-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
