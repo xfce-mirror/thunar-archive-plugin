@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Abel Martín <abel.martin.ruiz@gmail.com, 2008
+# Ignacio Poggi <ignaciop.3@gmail.com>, 2020
 # prflr88 <prflr88@gmail.com>, 2017
 # prflr88 <prflr88@gmail.com>, 2014
 # Toni Estévez <toni.estevez@gmail.com>, 2019
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2019-11-17 16:25+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
+"PO-Revision-Date: 2020-04-30 15:41+0000\n"
+"Last-Translator: Ignacio Poggi <ignaciop.3@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +58,7 @@ msgstr "No se pudieron extraer los archivos"
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
-msgstr "No se pudieron crear el archivador"
+msgstr "No se pudo crear el archivador"
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
