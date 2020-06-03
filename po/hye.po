@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
 # Samvel Harutyunyan <samvel@ehayq.am>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2020-05-29 06:41+0000\n"
-"Last-Translator: Samvel Harutyunyan <samvel@ehayq.am>\n"
+"PO-Revision-Date: 2020-06-03 18:46+0000\n"
+"Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>\n"
 "Language-Team: Eastern Armenian (http://www.transifex.com/xfce/thunar-plugins/language/hye/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
-msgstr "Ընտրէք արխիւի կառաւարչին"
+msgstr "Ընտրել պահոցային կառավարիչ"
 
 #: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_Cancel"
@@ -29,62 +30,62 @@ msgstr "_Չեղարկել"
 
 #: ../thunar-archive-plugin/tap-backend.c:81
 msgid "_OK"
-msgstr "_Լաւ"
+msgstr "_Բարի"
 
 #. add the header label
 #: ../thunar-archive-plugin/tap-backend.c:99
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Ընտրէք ձեր  պահոցային կառաւարչին\nներքեւում առկայ յաւելուածների ցուցակից։"
+msgstr "Ընտրէք պահոցային կառավարիչ\nներքեւում առկայ յաւելուածների ցուցակից։"
 
 #. tell the user that we cannot handle the specified mime types
 #: ../thunar-archive-plugin/tap-backend.c:276
 #: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Համապատասխան պահոցային կառաւարիչ չկայ"
+msgstr "Համապատասխան պահոցային կառավարիչ չկայ"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:283
 #: ../thunar-archive-plugin/tap-provider.c:322
 msgid "Failed to extract files"
-msgstr "Չյաջողուեց արտածել ֆայլերը"
+msgstr "Չյաջողուեց հանել նիշերը"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
-msgstr "Չյաջողուեց ստեղծել արխիւը"
+msgstr "Չյաջողուեց ստեղծել պահոց"
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
-msgstr "Արտածել_այստեղ"
+msgstr "Արտածել _այստեղ"
 
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Հանել ընտրած արխիւը ընթացիկ թղթապանակից"
-msgstr[1] "Արտածել  ընտրած արխիւը ընթացիկ թղթապանակից"
+msgstr[0] "Բացել ընտրուած պահոցը ընթացիկ պանակում"
+msgstr[1] "Բացել ընտրուած պահոցները ընթացիկ պանակում"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
-msgstr "_Արտածել..."
+msgstr "_Արտածել․․․"
 
 #: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Արտածել ընտրած արխիւը"
-msgstr[1] "Արտածել ընտրուած արխիւը"
+msgstr[0] "Բացել ընտրուած պահոցը"
+msgstr[1] "Բացել ընտրուած պահոցները"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
-msgstr "Ստե_ղծել Արխիւը..."
+msgstr "Նո_ր պահոց․․․"
 
 #: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Ստեղծել արխիւը ընտրուած աւբյեկտների հետ"
-msgstr[1] "Ստեղծել արխիւը ընտրուած աւբյեկտների հետ"
+msgstr[0] "Ստեղծել նոր պահոց ընտրուած տարրով"
+msgstr[1] "Ստեղծել նոր պահոց ընտրուած տարրերով"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: ../thunar-archive-plugin/tap-provider.c:526
@@ -94,5 +95,5 @@ msgstr "_Արտածել այստեղ"
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Արտածել ընտրած արխիւը այստեղ"
-msgstr[1] "Արտածել ընտրած արխիւը այստեղ"
+msgstr[0] "Արտածել ընտրուած պահոցն այստեղ"
+msgstr[1] "Արտածել ընտրուած պահոցներն այստեղ"
