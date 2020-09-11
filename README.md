@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/thunar-archive-plugin/COPYING)
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/blob/master/COPYING)
 
 thunar-archive-plugin
 ====================
@@ -9,21 +9,21 @@ thunar-archive-plugin(Thunar Archive Plugin) allows you to create and extract ar
 
 ### Homepage
 
-[thunar-archive-plugin documentation](https://docs.xfce.org/xfce/thunar-archive-plugin/start)
+[thunar-archive-plugin documentation](https://docs.xfce.org/xfce/thunar/archive)
 
 ### Changelog
 
-See [NEWS](https://gitlab.xfce.org/xfce/thunar-archive-plugin/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
 ### Source Code Repository
 
-[thunar-archive-plugin source code](https://gitlab.xfce.org/xfce/thunar-archive-plugin)
+[thunar-archive-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin)
 
 ### Download A Release Tarball
 
-[thunar-archive-plugin archive](https://archive.xfce.org/src/xfce/thunar-archive-plugin)
+[thunar-archive-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin)
     or
-[thunar-archive-plugin tags](https://gitlab.xfce.org/xfce/thunar-archive-plugin/-/tags)
+[thunar-archive-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/tags)
 ### Installation
 
 From source: 
@@ -43,5 +43,5 @@ From release tarball:
 
 ### Reporting Bugs
 
-Visit the [reporting bugs](https://docs.xfce.org/xfce/thunar-archive-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+Visit the [reporting bugs](https://docs.xfce.org/xfce/thunar/thunar-archive-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
