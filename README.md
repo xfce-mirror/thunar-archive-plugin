@@ -3,13 +3,13 @@
 thunar-archive-plugin
 ====================
 
-thunar-archive-plugin(Thunar Archive Plugin) allows you to create and extract archive files using the file context menus in the Thunar file manager.
+Thunar-archive-plugin(Thunar Archive Plugin) allows you to create and extract archive files using the file context menus in the Thunar file manager.
 
 ----
 
 ### Homepage
 
-[thunar-archive-plugin documentation](https://docs.xfce.org/xfce/thunar/archive)
+[Thunar-archive-plugin documentation](https://docs.xfce.org/xfce/thunar/archive)
 
 ### Changelog
 
@@ -17,13 +17,13 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/blob/m
 
 ### Source Code Repository
 
-[thunar-archive-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin)
+[Thunar-archive-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin)
 
-### Download A Release Tarball
+### Download a Release Tarball
 
-[thunar-archive-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin)
+[Thunar-archive-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin)
     or
-[thunar-archive-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/tags)
+[Thunar-archive-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/tags)
 ### Installation
 
 From source: 
