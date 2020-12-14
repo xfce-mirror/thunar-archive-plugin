@@ -177,16 +177,6 @@ tap_provider_finalize (GObject *object)
   TapProvider *tap_provider = TAP_PROVIDER (object);
   GSource     *source;
 
-  /* give up maintaince of any pending child watch */
-  if (G_UNLIKELY (tap_provider->child_watch_id != 0))
-    {
-      /* reset the callback function to g_spawn_close_pid() so the plugin can be
-       * safely unloaded and the child will still not become a zombie afterwards.
-       */
-      source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
-      g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
-    }
-
   (*G_OBJECT_CLASS (tap_provider_parent_class)->finalize) (object);
 }
 
@@ -584,16 +574,6 @@ tap_provider_execute (TapProvider *tap_provider,
   pid = (*action) (folder, files, window, &error);
   if (G_LIKELY (pid >= 0))
     {
-      /* check if we already have a child watch */
-      if (G_UNLIKELY (tap_provider->child_watch_id != 0))
-        {
-          /* reset the callback function to g_spawn_close_pid() so the plugin can be
-           * safely unloaded and the child will still not become a zombie afterwards.
-           */
-          source = g_main_context_find_source_by_id (NULL, tap_provider->child_watch_id);
-          g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
-        }
-
       /* schedule the new child watch */
       tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
                                                              tap_provider, tap_provider_child_watch_destroy);
