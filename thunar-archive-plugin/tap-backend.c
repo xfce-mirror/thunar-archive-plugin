@@ -50,7 +50,6 @@ static GPid      tap_backend_run                        (const gchar *action,
                                                          GList       *content_types,
                                                          GtkWidget   *window,
                                                          GError     **error);
-static void      tap_backend_setup_display_cb           (gpointer data);
 
 
 
@@ -394,6 +393,7 @@ tap_backend_run (const gchar *action,
   GdkScreen                *screen;
   gchar                    *wrapper;
   gchar                   **argv;
+  gchar                   **envp;
   gchar                    *uri;
   GList                    *lp;
   GPid                      pid = -1;
@@ -439,17 +439,24 @@ tap_backend_run (const gchar *action,
               g_free (uri);
             }
 
+          envp = g_get_environ();
+
           /* determine the screen for this window */
           screen = gtk_widget_get_screen (window);
 
           if (screen != NULL)
-            display = gdk_screen_make_display_name (screen);
+            {
+              display = gdk_screen_make_display_name (screen);
+              if (display != NULL)
+                envp = g_environ_setenv(envp, "DISPLAY", display, TRUE);
+            }
 
           /* try to run the command */
-          if (!g_spawn_async (folder, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, tap_backend_setup_display_cb, display, &pid, error))
+          if (!g_spawn_async (folder, argv, envp, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, error))
             pid = -1;
 
           /* cleanup */
+          g_strfreev (envp);
           g_strfreev (argv);
           g_free (display);
         }
@@ -467,11 +474,6 @@ tap_backend_run (const gchar *action,
 
 
 
-static void
-tap_backend_setup_display_cb (gpointer data)
-{
-  g_setenv ("DISPLAY", (char *) data, TRUE);
-}
 
 
 
