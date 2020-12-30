@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2006,2017
+# Michal Várady <miko.vaji@gmail.com>, 2006,2017,2020
 # Pavel Borecki <pavel.borecki@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2019-01-11 08:01+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"PO-Revision-Date: 2020-12-30 01:59+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/thunar-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,10 +64,10 @@ msgstr "Rozbalit _zde"
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Rozbalí vybraný archiv do nyní zobrazované složky"
-msgstr[1] "Rozbalí vybrané archivy do nyní zobrazované složky"
-msgstr[2] "Rozbalí vybrané archivy do nyní zobrazované složky"
-msgstr[3] "Rozbalí vybrané archivy do nyní zobrazované složky"
+msgstr[0] "Rozbalí vybraný archiv do aktuálně zobrazované složky"
+msgstr[1] "Rozbalí vybrané archivy do aktuálně zobrazované složky"
+msgstr[2] "Rozbalí vybrané archivy do aktuálně zobrazované složky"
+msgstr[3] "Rozbalí vybrané archivy do aktuálně zobrazované složky"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
