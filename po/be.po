@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Alexander Nyakhaychyk <nyakhaychyk@gmail.com>, 2007
-# Zmicer Turok <nashtlumach@gmail.com>, 2018
-# Zmicer Turok <nashtlumach@gmail.com>, 2018
+# Źmicier Turok <nashtlumach@gmail.com>, 2018
+# Źmicier Turok <nashtlumach@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
 "PO-Revision-Date: 2020-03-02 08:46+0000\n"
-"Last-Translator: Zmicer Turok <nashtlumach@gmail.com>\n"
+"Last-Translator: Źmicier Turok <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/thunar-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
