@@ -174,9 +174,6 @@ tap_provider_init (TapProvider *tap_provider)
 static void
 tap_provider_finalize (GObject *object)
 {
-  TapProvider *tap_provider = TAP_PROVIDER (object);
-  GSource     *source;
-
   (*G_OBJECT_CLASS (tap_provider_parent_class)->finalize) (object);
 }
 
@@ -566,7 +563,6 @@ tap_provider_execute (TapProvider *tap_provider,
                       const gchar *error_message)
 {
   GtkWidget *dialog;
-  GSource   *source;
   GError    *error = NULL;
   GPid       pid;
 

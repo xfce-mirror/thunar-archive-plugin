@@ -223,8 +223,7 @@ tap_backend_mime_applications (GList *content_types)
             }
 
           /* release the list of applications for this mime type */
-          g_list_foreach (list, (GFunc) g_object_unref, NULL);
-          g_list_free (list);
+          g_list_free_full (list, g_object_unref);
         }
 
       /* check if the set is still not empty */
@@ -310,7 +309,7 @@ tap_backend_mime_application (GList     *content_types,
       if (G_LIKELY (lp == NULL))
         {
           /* use the first available archive manager */
-          mime_application = g_object_ref (G_OBJECT (mime_applications->data));
+          mime_application = G_APP_INFO (g_object_ref (G_OBJECT (mime_applications->data)));
         }
       else
         {
@@ -337,8 +336,7 @@ tap_backend_mime_application (GList     *content_types,
         }
 
       /* cleanup */
-      g_list_foreach (mime_applications, (GFunc) g_object_unref, NULL);
-      g_list_free (mime_applications);
+      g_list_free_full (mime_applications, g_object_unref);
     }
 
   return mime_application;
@@ -466,8 +464,7 @@ tap_backend_run (const gchar *action,
     }
 
   /* cleanup */
-  g_list_foreach (content_types, (GFunc) g_free, NULL);
-  g_list_free (content_types);
+  g_list_free_full (content_types, g_free);
 
   return pid;
 }
