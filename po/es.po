@@ -7,13 +7,14 @@
 # Ignacio Poggi <ignaciop.3@gmail.com>, 2020
 # prflr88 <prflr88@gmail.com>, 2017
 # prflr88 <prflr88@gmail.com>, 2014
+# prflr88 <prflr88@gmail.com>, 2014,2017
 # Toni Estévez <toni.estevez@gmail.com>, 2019,2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2021-04-25 18:03+0000\n"
+"PO-Revision-Date: 2021-05-01 06:19+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +83,7 @@ msgstr[1] "Extraer los archivadores seleccionados"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
-msgstr "Cr_ear un archivador…"
+msgstr "Cr_ear un archivador..."
 
 #: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
