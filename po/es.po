@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2021-05-01 06:19+0000\n"
+"PO-Revision-Date: 2021-05-29 15:55+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,7 @@ msgstr[1] "Extraer los archivadores seleccionados"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
-msgstr "Cr_ear un archivador..."
+msgstr "Crear un arc_hivador..."
 
 #: ../thunar-archive-plugin/tap-provider.c:459
 msgid "Create an archive with the selected object"
