@@ -1,3 +1,29 @@
+0.5.0
+======
+- Fix for ark (Issue #4)
+- automake: INCLUDES -> AM_CPPFLAGS
+- preserve callbacks in tap-provider
+- remove GSpawnChildSetupFunc usage from tap_backend_run
+- Adds new README.md
+- updates AM_INIT_AUTOMAKE macro with foreign option
+- Add basic GitLab pipeline
+- Allow zip files (i.e. odt, docx...) to be compressed (Bug #15295)
+- Start archive application from file's directory (Bug #14773)
+- Replace AC_PROG_LIBTOOL with IT_PROG_INTLTOOL
+- Add support for archive manager for MATE
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, Eastern Armenian, Eastern Armenian
+  (Russia), English (Australia), English (United Kingdom), Esperanto,
+  Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hindi,
+  Hungarian, Icelandic, Indonesian, Interlingue, Italian, Japanese,
+  Kabyle, Kazakh, Korean, Latvian, Lithuanian, Malay, Norwegian
+  Bokmål, Norwegian Nynorsk, Occitan (post 1500), Panjabi (Punjabi),
+  Portuguese, Portuguese (Brazil), Romanian, Russian, Serbian, Slovak,
+  Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Urdu, Urdu
+  (Pakistan), Uyghur, Uzbek, Uzbek (Latin), Vietnamese
+
 0.4.0
 =====
 - GTK3 Port
