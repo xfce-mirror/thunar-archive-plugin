@@ -90,7 +90,7 @@ tap_backend_mime_ask (GList     *mime_applications,
   gtk_widget_show (grid);
 
   /* add the header image */
-  image = gtk_image_new_from_icon_name ("gnome-package", GTK_ICON_SIZE_DIALOG);
+  image = gtk_image_new_from_icon_name ("package-x-generic", GTK_ICON_SIZE_DIALOG);
   gtk_grid_attach (GTK_GRID (grid), image, 0, 0, 1, 1);
   gtk_widget_show (image);
 
