@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2018
+# Ioannis LM, 2022
 # Stavros Giannouris <stavrosg@serverhive.com>, 2006
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 06:30+0100\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Stavros Giannouris <stavrosg@serverhive.com>, 2006\n"
+"Last-Translator: Ioannis LM, 2022\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/thunar-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: ../thunar-archive-plugin/tap-backend.c:77
 msgid "Select an archive manager"
-msgstr "Επιλέξτε ένα διαχειριστή συμπιεσμένων αρχείων"
+msgstr "Επιλογή διαχειριστή συμπιεσμένων αρχείων"
 
 #: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_Cancel"
@@ -44,7 +45,7 @@ msgstr "Παρακαλώ επιλέξτε το διαχειριστή συμπι
 #: ../thunar-archive-plugin/tap-backend.c:424
 #, c-format
 msgid "No suitable archive manager found"
-msgstr "Δε βρέθηκε κανένας κατάλληλος διαχειριστής συμπιεσμένων αρχείων"
+msgstr "Δε βρέθηκε κατάλληλος διαχειριστής συμπιεσμένων αρχείων"
 
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:283
@@ -55,7 +56,7 @@ msgstr "Η αποσυμπίεση των αρχείων απέτυχε"
 #. execute the action associated with the menu item
 #: ../thunar-archive-plugin/tap-provider.c:360
 msgid "Failed to create archive"
-msgstr "Η δημιουργία του συμπιεσμένου αρχείου απέτυχε"
+msgstr "Απέτυχε η δημιουργία συμπιεσμένου αρχείου "
 
 #: ../thunar-archive-plugin/tap-provider.c:414
 msgid "Extract _Here"
@@ -64,8 +65,8 @@ msgstr "Αποσυμπίεση ε_δώ"
 #: ../thunar-archive-plugin/tap-provider.c:416
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο στον τρέχον φάκελο"
-msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία στον τρέχον φάκελο"
+msgstr[0] "Αποσυμπιέζει το επιλεγμένο αρχείο στον τρέχοντα φάκελο"
+msgstr[1] "Αποσυμπιέζει τα επιλεγμένα αρχεία στο τρέχοντα φάκελο"
 
 #: ../thunar-archive-plugin/tap-provider.c:434
 msgid "_Extract To..."
@@ -74,8 +75,8 @@ msgstr "Αποσυμπίεση σ_το..."
 #: ../thunar-archive-plugin/tap-provider.c:436
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο"
-msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία"
+msgstr[0] "Αποσυμπιέζει το επιλεγμένο αρχείο"
+msgstr[1] "Αποσυμπιέζει τα επιλεγμένα αρχεία"
 
 #: ../thunar-archive-plugin/tap-provider.c:457
 msgid "Cr_eate Archive..."
@@ -95,5 +96,5 @@ msgstr "Αποσυμπίεση ε_δώ"
 #: ../thunar-archive-plugin/tap-provider.c:528
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Αποσυμπιέζει το επιλεγμένο συμπιεσμένο αρχείο εδώ"
-msgstr[1] "Αποσυμπιέζει τα επιλεγμένα συμπιεσμένα αρχεία εδώ"
+msgstr[0] "Αποσυμπιέζει το επιλεγμένο αρχείο εδώ"
+msgstr[1] "Αποσυμπιέζει τα επιλεγμένα αρχεία εδώ"
