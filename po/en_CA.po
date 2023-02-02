@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Steve Harris <steve@jbs.ca>, 2023
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 14:59+0100\n"
+"PO-Revision-Date: 2013-07-03 18:08+0000\n"
+"Last-Translator: Steve Harris <steve@jbs.ca>, 2023\n"
+"Language-Team: English (Canada) (http://www.transifex.com/xfce/thunar-plugins/language/en_CA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_CA\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. prepare the dialog to query the preferred archiver for the user
+#: ../thunar-archive-plugin/tap-backend.c:76
+msgid "Select an archive manager"
+msgstr "Select an archive manager"
+
+#: ../thunar-archive-plugin/tap-backend.c:79
+msgid "_Cancel"
+msgstr "_Cancel"
+
+#: ../thunar-archive-plugin/tap-backend.c:80
+msgid "_OK"
+msgstr "_OK"
+
+#. add the header label
+#: ../thunar-archive-plugin/tap-backend.c:98
+msgid ""
+"Please select your preferred archive manager\n"
+"from the list of available applications below:"
+msgstr "Please select your preferred archive manager\nfrom the list of available applications below:"
+
+#. tell the user that we cannot handle the specified mime types
+#: ../thunar-archive-plugin/tap-backend.c:274
+#: ../thunar-archive-plugin/tap-backend.c:422
+#, c-format
+msgid "No suitable archive manager found"
+msgstr "No suitable archive manager found"
+
+#. execute the action associated with the menu item
+#. execute the action
+#: ../thunar-archive-plugin/tap-provider.c:270
+#: ../thunar-archive-plugin/tap-provider.c:326
+msgid "Failed to extract files"
+msgstr "Failed to extract files"
+
+#. execute the action associated with the menu item
+#: ../thunar-archive-plugin/tap-provider.c:367
+msgid "Failed to create archive"
+msgstr "Failed to create archive"
+
+#: ../thunar-archive-plugin/tap-provider.c:421
+msgid "Extract _Here"
+msgstr "Extract _Here"
+
+#: ../thunar-archive-plugin/tap-provider.c:423
+msgid "Extract the selected archive in the current folder"
+msgid_plural "Extract the selected archives in the current folder"
+msgstr[0] "Extract the selected archive in the current folder"
+msgstr[1] "Extract the selected archives in the current folder"
+
+#: ../thunar-archive-plugin/tap-provider.c:441
+msgid "_Extract To..."
+msgstr "_Extract To..."
+
+#: ../thunar-archive-plugin/tap-provider.c:443
+msgid "Extract the selected archive"
+msgid_plural "Extract the selected archives"
+msgstr[0] "Extract the selected archive"
+msgstr[1] "Extract the selected archives"
+
+#: ../thunar-archive-plugin/tap-provider.c:461
+msgid "Cr_eate Archive..."
+msgstr "Cr_eate Archive..."
+
+#: ../thunar-archive-plugin/tap-provider.c:463
+msgid "Create an archive with the selected object"
+msgid_plural "Create an archive with the selected objects"
+msgstr[0] "Create an archive with the selected object"
+msgstr[1] "Create an archive with the selected objects"
+
+#. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
+#: ../thunar-archive-plugin/tap-provider.c:529
+msgid "_Extract here"
+msgstr "_Extract here"
+
+#: ../thunar-archive-plugin/tap-provider.c:531
+msgid "Extract the selected archive here"
+msgid_plural "Extract the selected archives here"
+msgstr[0] "Extract the selected archive here"
+msgstr[1] "Extract the selected archives here"
