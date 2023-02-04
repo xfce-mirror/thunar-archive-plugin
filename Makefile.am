@@ -17,6 +17,8 @@
 # Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301, USA.
 
+ACLOCAL_AMFLAGS = -I m4
+
 SUBDIRS =								\
 	icons								\
 	po								\
@@ -26,7 +28,7 @@ SUBDIRS =								\
 distclean-local:
 	rm -rf *.spec *.cache *~
 
-distuninstallcheck_listfiles = 						\ 
+distuninstallcheck_listfiles = 						\
 	find . -type f -print | grep -v ./share/icons/hicolor/icon-theme.cache
 
 .PHONY: ChangeLog
