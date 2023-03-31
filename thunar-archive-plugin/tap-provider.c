@@ -62,7 +62,6 @@ static void   tap_provider_execute              (TapProvider              *tap_p
 static void   tap_provider_child_watch          (GPid                      pid,
                                                  gint                      status,
                                                  gpointer                  user_data);
-static void   tap_provider_child_watch_destroy  (gpointer                  user_data);
 
 
 
@@ -81,13 +80,6 @@ struct _TapProvider
    */
   GtkIconFactory *icon_factory;
 #endif
-
-  /* child watch support for the last spawn command, which allowed us to refresh 
-   * the folder contents after the command had terminated with ThunarVFS (i.e. 
-   * when the archive had been created). This no longer works with GIO but 
-   * we still use the watch to close the PID properly.
-   */
-  gint            child_watch_id;
 };
 
 
@@ -571,8 +563,7 @@ tap_provider_execute (TapProvider *tap_provider,
   if (G_LIKELY (pid >= 0))
     {
       /* schedule the new child watch */
-      tap_provider->child_watch_id = g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch,
-                                                             tap_provider, tap_provider_child_watch_destroy);
+      g_child_watch_add_full (G_PRIORITY_LOW, pid, tap_provider_child_watch, NULL, NULL);
     }
   else if (error != NULL)
     {
@@ -599,17 +590,6 @@ tap_provider_child_watch (GPid     pid,
 {
   /* need to cleanup */
   g_spawn_close_pid (pid);
-}
-
-
-
-static void
-tap_provider_child_watch_destroy (gpointer user_data)
-{
-  TapProvider *tap_provider = TAP_PROVIDER (user_data);
-
-  /* reset child watch id */
-  tap_provider->child_watch_id = 0;
 }
 
 
