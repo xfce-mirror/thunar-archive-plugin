@@ -1,3 +1,12 @@
+0.5.1 (2023-03-31)
+=====
+- Fix use-after-free crash in "tap_provider_child_watch_destroy"
+- build: Add GLib requirement
+- build: Fix autotools warnings
+- Use generic package icon name in dialog header
+- Translation Updates:
+  English (Canada), Greek, Persian (Iran), Russian
+
 0.5.0
 ======
 - Fix for ark (Issue #4)
