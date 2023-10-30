@@ -1,3 +1,9 @@
+0.5.2 (2023-10-30)
+=====
+- Add/fix support for bz2 and bz3 files (#20)
+- Add a few more compression mimetypes, sort the list.
+
+
 0.5.1 (2023-03-31)
 =====
 - Fix use-after-free crash in "tap_provider_child_watch_destroy"
