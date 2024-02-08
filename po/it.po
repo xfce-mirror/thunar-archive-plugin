@@ -5,95 +5,101 @@
 # Translators:
 # Cristian Marchi <cri.penta@gmail.com>, 2013
 # Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2018
+# Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Mark <marco_pace@msn.com>\n"
-"Language-Team: Italian (http://www.transifex.com/xfce/thunar-plugins/language/it/)\n"
+"POT-Creation-Date: 2023-05-30 00:46+0200\n"
+"PO-Revision-Date: 2013-07-03 18:08+0000\n"
+"Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2024\n"
+"Language-Team: Italian (http://app.transifex.com/xfce/thunar-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:77
+#: ../thunar-archive-plugin/tap-backend.c:76
 msgid "Select an archive manager"
 msgstr "Selezionare un gestore di archivi"
 
-#: ../thunar-archive-plugin/tap-backend.c:80
+#: ../thunar-archive-plugin/tap-backend.c:79
 msgid "_Cancel"
-msgstr "_Cancella"
+msgstr "_Annulla"
 
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: ../thunar-archive-plugin/tap-backend.c:80
 msgid "_OK"
 msgstr "_OK"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:99
+#: ../thunar-archive-plugin/tap-backend.c:98
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "Selezionare il gestore di archivi preferito\ndal seguente elenco di applicazioni disponibili:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:276
-#: ../thunar-archive-plugin/tap-backend.c:424
+#: ../thunar-archive-plugin/tap-backend.c:274
+#: ../thunar-archive-plugin/tap-backend.c:422
 #, c-format
 msgid "No suitable archive manager found"
 msgstr "Non è stato trovato alcun gestore di archivi adatto"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:283
-#: ../thunar-archive-plugin/tap-provider.c:322
+#. execute the action
+#: ../thunar-archive-plugin/tap-provider.c:262
+#: ../thunar-archive-plugin/tap-provider.c:318
 msgid "Failed to extract files"
 msgstr "Impossibile estrarre i file"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:360
+#: ../thunar-archive-plugin/tap-provider.c:359
 msgid "Failed to create archive"
 msgstr "Impossibile creare l'archivio"
 
-#: ../thunar-archive-plugin/tap-provider.c:414
+#: ../thunar-archive-plugin/tap-provider.c:413
 msgid "Extract _Here"
 msgstr "Estrai _qui"
 
-#: ../thunar-archive-plugin/tap-provider.c:416
+#: ../thunar-archive-plugin/tap-provider.c:415
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Estrae l'archivio selezionato nella cartella corrente"
 msgstr[1] "Estrae gli archivi selezionati nella cartella corrente"
+msgstr[2] "Estrae gli archivi selezionati nella cartella corrente"
 
-#: ../thunar-archive-plugin/tap-provider.c:434
+#: ../thunar-archive-plugin/tap-provider.c:433
 msgid "_Extract To..."
 msgstr "_Estrai in..."
 
-#: ../thunar-archive-plugin/tap-provider.c:436
+#: ../thunar-archive-plugin/tap-provider.c:435
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Estrae l'archivio selezionato"
 msgstr[1] "Estrae gli archivi selezionati"
+msgstr[2] "Estrae gli archivi selezionati"
 
-#: ../thunar-archive-plugin/tap-provider.c:457
+#: ../thunar-archive-plugin/tap-provider.c:453
 msgid "Cr_eate Archive..."
 msgstr "Cr_ea un archivio..."
 
-#: ../thunar-archive-plugin/tap-provider.c:459
+#: ../thunar-archive-plugin/tap-provider.c:455
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Crea un archivio con l'oggetto selezionato"
 msgstr[1] "Crea un archivio con gli oggetti selezionati"
+msgstr[2] "Crea un archivio con gli oggetti selezionati"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
-#: ../thunar-archive-plugin/tap-provider.c:526
+#: ../thunar-archive-plugin/tap-provider.c:521
 msgid "_Extract here"
 msgstr "Estrai _qui"
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: ../thunar-archive-plugin/tap-provider.c:523
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Estrae qui l'archivio selezionato"
 msgstr[1] "Estrae qui gli archivi selezionati"
+msgstr[2] "Estrae qui gli archivi selezionati"
