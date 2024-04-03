@@ -30,4 +30,4 @@ EOF
   exit 1
 }
 
-XDT_AUTOGEN_REQUIRED_VERSION="4.7.2" exec xdt-autogen $@
+XDT_AUTOGEN_REQUIRED_VERSION="4.17.0" exec xdt-autogen $@
