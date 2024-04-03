@@ -32,6 +32,9 @@
 
 #include <exo/exo.h>
 #include <thunar-archive-plugin/tap-backend.h>
+#ifdef GDK_WINDOWING_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif
 
 
 
@@ -448,7 +451,18 @@ tap_backend_run (const gchar *action,
               display = gdk_screen_get_display (screen);
               displayname = gdk_display_get_name (display);
               if (displayname != NULL)
-                envp = g_environ_setenv(envp, "DISPLAY", displayname, TRUE);
+                {
+#ifdef GDK_WINDOWING_WAYLAND
+                  if (GDK_IS_WAYLAND_DISPLAY (display))
+                    {
+                      envp = g_environ_setenv (envp, "WAYLAND_DISPLAY", displayname, TRUE);
+                    }
+                  else
+#endif
+                  if (TRUE) {
+                      envp = g_environ_setenv(envp, "DISPLAY", displayname, TRUE);
+                    }
+                }
             }
 
           /* try to run the command */
