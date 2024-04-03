@@ -389,6 +389,7 @@ tap_backend_run (const gchar *action,
   GAppInfo                 *mime_application;
   gchar                    *mime_type;
   GdkScreen                *screen;
+  GdkDisplay               *display;
   gchar                    *wrapper;
   gchar                   **argv;
   gchar                   **envp;
@@ -396,7 +397,7 @@ tap_backend_run (const gchar *action,
   GList                    *lp;
   GPid                      pid = -1;
   gint                      n;
-  gchar                    *display = NULL;
+  const gchar              *displayname;
 
   /* determine the mime infos on-demand */
   if (G_LIKELY (content_types == NULL))
@@ -444,9 +445,10 @@ tap_backend_run (const gchar *action,
 
           if (screen != NULL)
             {
-              display = gdk_screen_make_display_name (screen);
-              if (display != NULL)
-                envp = g_environ_setenv(envp, "DISPLAY", display, TRUE);
+              display = gdk_screen_get_display (screen);
+              displayname = gdk_display_get_name (display);
+              if (displayname != NULL)
+                envp = g_environ_setenv(envp, "DISPLAY", displayname, TRUE);
             }
 
           /* try to run the command */
@@ -456,7 +458,6 @@ tap_backend_run (const gchar *action,
           /* cleanup */
           g_strfreev (envp);
           g_strfreev (argv);
-          g_free (display);
         }
 
       /* cleanup */
