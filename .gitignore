@@ -23,8 +23,6 @@ config.log
 config.status
 config.sub
 configure
-configure.ac
-configure.in
 depcomp
 install-sh
 libtool
