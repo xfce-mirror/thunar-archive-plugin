@@ -461,7 +461,7 @@ tap_provider_get_file_menu_items (ThunarxMenuProvider *menu_provider,
 
     /* append the "Create Archive..." menu item */
     item = thunarx_menu_item_new ("Tap::create-archive",
-                                  _("Cr_eate Archive..."),
+                                  _("Create _Archive..."),
                                   dngettext (GETTEXT_PACKAGE,
                                               "Create an archive with the selected object",
                                               "Create an archive with the selected objects",
