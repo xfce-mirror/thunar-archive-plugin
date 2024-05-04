@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the thunar-plugins.thunar-archive-plugin package.
 # 
 # Translators:
 # Duy Truong Nguyen <truongap.ars@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-06 05:30+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/xfce/thunar-plugins/language/vi/)\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-04 12:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:08+0000\n"
+"Last-Translator: Duy Truong Nguyen <truongap.ars@gmail.com>, 2014\n"
+"Language-Team: Vietnamese (http://app.transifex.com/xfce/thunar-plugins/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,76 +19,76 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:77
+#: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
 msgstr "Chọn trình quản lý tệp tin nén"
 
-#: ../thunar-archive-plugin/tap-backend.c:80
+#: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
 msgstr ""
 
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
 msgstr ""
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:99
+#: thunar-archive-plugin/tap-backend.c:101
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "Hãy chọn trình quản lý tệp tin nén ưa thích\ntừ danh sách ứng dụng có sẵn bên dưới:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:276
-#: ../thunar-archive-plugin/tap-backend.c:424
-#, c-format
+#: thunar-archive-plugin/tap-backend.c:277
+#: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
 msgstr "Không tìm thấy ứng dụng thích hợp nào"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:283
-#: ../thunar-archive-plugin/tap-provider.c:322
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:273
+#: thunar-archive-plugin/tap-provider.c:329
 msgid "Failed to extract files"
 msgstr "Thất bại khi giải nén"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:360
+#: thunar-archive-plugin/tap-provider.c:370
 msgid "Failed to create archive"
 msgstr "Tạo tệp tin nén thất bạn"
 
-#: ../thunar-archive-plugin/tap-provider.c:414
+#: thunar-archive-plugin/tap-provider.c:424
 msgid "Extract _Here"
 msgstr "Giải nén _tại đây"
 
-#: ../thunar-archive-plugin/tap-provider.c:416
+#: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Giải nén tệp tin được chọn trong thư mục hiện tại"
 
-#: ../thunar-archive-plugin/tap-provider.c:434
+#: thunar-archive-plugin/tap-provider.c:444
 msgid "_Extract To..."
 msgstr "_Giải nén đến..."
 
-#: ../thunar-archive-plugin/tap-provider.c:436
+#: thunar-archive-plugin/tap-provider.c:446
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Giải nén tệp tin được chọn"
 
-#: ../thunar-archive-plugin/tap-provider.c:457
-msgid "Cr_eate Archive..."
-msgstr "_Tạo tệp tin nén..."
+#: thunar-archive-plugin/tap-provider.c:464
+msgid "Create _Archive..."
+msgstr ""
 
-#: ../thunar-archive-plugin/tap-provider.c:459
+#: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Tạo tệp tin nén với đối tượng được chọn"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
-#: ../thunar-archive-plugin/tap-provider.c:526
+#: thunar-archive-plugin/tap-provider.c:532
 msgid "_Extract here"
 msgstr "_Giải nén tại đây"
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: thunar-archive-plugin/tap-provider.c:534
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Giải nén tệp tin được chọn tại đây"
