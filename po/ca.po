@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the thunar-plugins.thunar-archive-plugin package.
 # 
 # Translators:
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-06 06:30+0100\n"
-"PO-Revision-Date: 2017-12-31 18:04+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/xfce/thunar-plugins/language/ca/)\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-04 12:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:08+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016-2017\n"
+"Language-Team: Catalan (http://app.transifex.com/xfce/thunar-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,79 +19,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. prepare the dialog to query the preferred archiver for the user
-#: ../thunar-archive-plugin/tap-backend.c:77
+#: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
 msgstr "Seleccioneu un gestor d'arxius"
 
-#: ../thunar-archive-plugin/tap-backend.c:80
+#: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: ../thunar-archive-plugin/tap-backend.c:81
+#: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
 msgstr "D'ac_ord"
 
 #. add the header label
-#: ../thunar-archive-plugin/tap-backend.c:99
+#: thunar-archive-plugin/tap-backend.c:101
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
 msgstr "Si us plau, seleccioneu el vostre gestor d'arxius preferit\nde la llista d'aplicacions disponibles de més avall:"
 
 #. tell the user that we cannot handle the specified mime types
-#: ../thunar-archive-plugin/tap-backend.c:276
-#: ../thunar-archive-plugin/tap-backend.c:424
-#, c-format
+#: thunar-archive-plugin/tap-backend.c:277
+#: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
 msgstr "No s'ha trobat cap gestor d'arxius adequat"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:283
-#: ../thunar-archive-plugin/tap-provider.c:322
+#. execute the action
+#: thunar-archive-plugin/tap-provider.c:273
+#: thunar-archive-plugin/tap-provider.c:329
 msgid "Failed to extract files"
 msgstr "Ha fallat l'extracció dels fitxers"
 
 #. execute the action associated with the menu item
-#: ../thunar-archive-plugin/tap-provider.c:360
+#: thunar-archive-plugin/tap-provider.c:370
 msgid "Failed to create archive"
 msgstr "Ha fallat la creació de l'arxiu"
 
-#: ../thunar-archive-plugin/tap-provider.c:414
+#: thunar-archive-plugin/tap-provider.c:424
 msgid "Extract _Here"
 msgstr "Extreu _aquí"
 
-#: ../thunar-archive-plugin/tap-provider.c:416
+#: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Extreu l'arxiu seleccionat a la carpeta actual"
 msgstr[1] "Extreu els arxius seleccionats a la carpeta actual"
 
-#: ../thunar-archive-plugin/tap-provider.c:434
+#: thunar-archive-plugin/tap-provider.c:444
 msgid "_Extract To..."
 msgstr "_Extreu a..."
 
-#: ../thunar-archive-plugin/tap-provider.c:436
+#: thunar-archive-plugin/tap-provider.c:446
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Extreu l'arxiu seleccionat"
 msgstr[1] "Extreu els arxius seleccionats"
 
-#: ../thunar-archive-plugin/tap-provider.c:457
-msgid "Cr_eate Archive..."
-msgstr "Cr_ea un arxiu..."
+#: thunar-archive-plugin/tap-provider.c:464
+msgid "Create _Archive..."
+msgstr ""
 
-#: ../thunar-archive-plugin/tap-provider.c:459
+#: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Crea un arxiu amb l'objecte seleccionat"
 msgstr[1] "Crea un arxiu amb els objectes seleccionats"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
-#: ../thunar-archive-plugin/tap-provider.c:526
+#: thunar-archive-plugin/tap-provider.c:532
 msgid "_Extract here"
 msgstr "_Extreu aquí"
 
-#: ../thunar-archive-plugin/tap-provider.c:528
+#: thunar-archive-plugin/tap-provider.c:534
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Extreu aquí l'arxiu seleccionat"
