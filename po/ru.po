@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the thunar-plugins.thunar-archive-plugin package.
 # 
 # Translators:
+# Andrei Stepanov, 2024
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
 # Igor <f2404@yandex.ru>, 2017
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2016,2018
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Темак, 2022\n"
+"Last-Translator: Andrei Stepanov, 2024\n"
 "Language-Team: Russian (http://app.transifex.com/xfce/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -85,7 +86,7 @@ msgstr[3] "Извлечь файлы из выбранных архивов"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Создать _архив…"
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
