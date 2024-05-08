@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2007
+# Gordon Freeman, 2024
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2018
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>, 2018\n"
+"Last-Translator: Gordon Freeman, 2024\n"
 "Language-Team: Ukrainian (http://app.transifex.com/xfce/thunar-plugins/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +44,7 @@ msgstr "Будь-ласка виберіть Ваш улюблений мене�
 #: thunar-archive-plugin/tap-backend.c:277
 #: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
-msgstr "Не знайдено підходящого менеджера"
+msgstr "Не знайдено відповідного менеджера"
 
 #. execute the action associated with the menu item
 #. execute the action
@@ -83,7 +84,7 @@ msgstr[3] "Розпакувати вибрані архіви??"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Створити _архів..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
@@ -91,7 +92,7 @@ msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Створити архів з вибраним об'єктом"
 msgstr[1] "Створити архів з вибраними об'єктами."
 msgstr[2] "Створити архів з вибраними об'єктами.??"
-msgstr[3] "Створити архів з вибраними об'єктами.??"
+msgstr[3] "Створити архів з вибраними об'єктами"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: thunar-archive-plugin/tap-provider.c:532
