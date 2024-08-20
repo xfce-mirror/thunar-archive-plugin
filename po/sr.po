@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012
-# Саша Петровић <salepetronije@gmail.com>, 2017
+# Саша Петровић <salepetronije@gmail.com>, 2017,2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2017\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2017,2024\n"
 "Language-Team: Serbian (http://app.transifex.com/xfce/thunar-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
-msgstr "Изаберите управника архивом"
+msgstr "Изаберите управника складиштима"
 
 #: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
@@ -37,67 +37,67 @@ msgstr "_У реду"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Изаберите вашег жељеног управника архива\nса списка доступних програма испод:"
+msgstr "Изаберите себи жељеног управника складиштима\nса списка доступних програма испод:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
 #: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
-msgstr "Није пронађен оодговарајући управник архивом"
+msgstr "Није пронађен одговарајући управник складишта"
 
 #. execute the action associated with the menu item
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:273
 #: thunar-archive-plugin/tap-provider.c:329
 msgid "Failed to extract files"
-msgstr "Нисам успео да распакујем датотеке"
+msgstr "Нисам успео да извучем датотеке"
 
 #. execute the action associated with the menu item
 #: thunar-archive-plugin/tap-provider.c:370
 msgid "Failed to create archive"
-msgstr "Нисам успео да направим архиву"
+msgstr "Нисам успео да направим складиште"
 
 #: thunar-archive-plugin/tap-provider.c:424
 msgid "Extract _Here"
-msgstr "Распакуј _овде"
+msgstr "Извуци _овде"
 
 #: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
 msgstr[0] "Распакујте изабрану архиву у тренутну фасциклу"
 msgstr[1] "Распакујте изабране архиве у тренутну фасциклу"
-msgstr[2] "Распакујте изабране архиве у тренутну фасциклу"
+msgstr[2] "Извуци изабрана складишта у тренутну фасциклу"
 
 #: thunar-archive-plugin/tap-provider.c:444
 msgid "_Extract To..."
-msgstr "Распакуј _у..."
+msgstr "Извуци _у..."
 
 #: thunar-archive-plugin/tap-provider.c:446
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Распакујте изабрану архиву"
 msgstr[1] "Распакујте изабране архиве"
-msgstr[2] "Распакујте изабране архиве"
+msgstr[2] "Извуци из изабраних складишта"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Направи _складиште"
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
 msgstr[0] "Направите архиву од изабраног објекта"
 msgstr[1] "Направите архиву од изабраних објеката"
-msgstr[2] "Направите архиву од изабраних објеката"
+msgstr[2] "Направи складиште од изабраних ставки"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: thunar-archive-plugin/tap-provider.c:532
 msgid "_Extract here"
-msgstr "_Распакуј овде"
+msgstr "_Извуци овде"
 
 #: thunar-archive-plugin/tap-provider.c:534
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
 msgstr[0] "Распакујте овде изабрану архиву"
 msgstr[1] "Распакујте овде изабране архиве"
-msgstr[2] "Распакујте овде изабране архиве"
+msgstr[2] "Извуци овде изабрана складишта"
