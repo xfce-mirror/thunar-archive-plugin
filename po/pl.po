@@ -39,7 +39,7 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Proszę wybrać preferowany program do\ndo zarządzania archiwami:"
+msgstr "Proszę wybrać preferowany program\ndo zarządzania archiwami:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
