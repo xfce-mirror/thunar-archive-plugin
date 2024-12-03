@@ -39,7 +39,7 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Proszę wybrać preferowany program\ndo zarządzania archiwami:"
+msgstr "Wybierz preferowany menedżer archiwów\nz poniższej listy dostępnych programów:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
@@ -90,10 +90,10 @@ msgstr "Utwórz _archiwum..."
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Tworzy archiwum z zaznaczonego elementu"
-msgstr[1] "Tworzy archiwum z zaznaczonych elementów"
-msgstr[2] "Tworzy archiwum z zaznaczonych elementów"
-msgstr[3] "Tworzy archiwum z zaznaczonych elementów"
+msgstr[0] "Tworzy archiwum z zaznaczonego elementu"
+msgstr[1] "Tworzy archiwum z zaznaczonych elementów"
+msgstr[2] "Tworzy archiwum z zaznaczonych elementów"
+msgstr[3] "Tworzy archiwum z zaznaczonych elementów"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: thunar-archive-plugin/tap-provider.c:532
