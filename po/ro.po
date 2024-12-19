@@ -4,14 +4,16 @@
 # 
 # Translators:
 # Marius Ghita, 2022
+# Marius Ghita, 2022
 # Mișu Moldovan <dumol@xfce.org>, 2009
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Marius Ghita, 2022\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
 "Language-Team: Romanian (http://app.transifex.com/xfce/thunar-plugins/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +24,11 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
-msgstr "Alegeți un manager de arhive"
+msgstr "Alege un gestionar de arhive"
 
 #: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
-msgstr "_Anulați"
+msgstr "_Anulează"
 
 #: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
@@ -37,13 +39,13 @@ msgstr "_OK"
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Selectați managerul de arhive preferat din\nlista următoarelor programe disponibile:"
+msgstr "Selectează gestionarul de arhive preferat din\nlista următoarelor aplicații disponibile:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
 #: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
-msgstr "Nu s-a găsit un manager de arhive adecvat"
+msgstr "Nu s-a găsit un gestionar de arhive adecvat"
 
 #. execute the action associated with the menu item
 #. execute the action
@@ -81,7 +83,7 @@ msgstr[2] "Dezarhivează arhivele selectate"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Creează o arhivă..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
