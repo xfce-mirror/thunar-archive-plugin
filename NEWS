@@ -1,3 +1,27 @@
+0.5.3 (2024-12-30)
+=====
+- build: Add ACLOCAL_FLAGS to ACLOCAL_AMFLAGS
+- Resolve conflicting mnemonics
+- configure: Get rid of configure.ac.in
+- build: Add missing check for bind_textdomain_codeset
+- I18n: Update po/LINGUAS list
+- backend: Support setting WAYLAND environment
+- backend: Avoid deprecated functions
+- build: Get rid of intltool
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, Eastern Armenian, Eastern Armenian
+  (Russia), English (Australia), English (Canada), English (United
+  Kingdom), Esperanto, Estonian, Finnish, French, Galician, German,
+  Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Interlingue,
+  Italian, Japanese, Kazakh, Korean, Latvian, Lithuanian, Malay,
+  Norwegian Bokmål, Norwegian Nynorsk, Occitan (post 1500), Panjabi
+  (Punjabi), Persian (Iran), Polish, Portuguese, Portuguese (Brazil),
+  Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+  Thai, Turkish, Ukrainian, Urdu, Urdu (Pakistan), Uyghur, Uzbek, Uzbek
+  (Latin), Vietnamese
+
 0.5.2 (2023-10-30)
 =====
 - Add/fix support for bz2 and bz3 files (#20)
