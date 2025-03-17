@@ -23,8 +23,6 @@
 #include <config.h>
 #endif
 
-#include <exo/exo.h>
-
 #include <thunar-archive-plugin/tap-provider.h>
 
 
@@ -89,6 +87,3 @@ thunar_extension_list_types (const GType **types,
   *types = type_list;
   *n_types = G_N_ELEMENTS (type_list);
 }
-
-
-
