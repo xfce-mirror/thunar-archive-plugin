@@ -72,7 +72,6 @@ dnl ***********************************
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.50.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.22.0])
 XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [0.4.0])
-XDT_CHECK_PACKAGE([EXO], [exo-2], [0.10.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
 
 dnl ***********************************

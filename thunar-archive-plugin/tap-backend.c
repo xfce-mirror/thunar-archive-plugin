@@ -30,7 +30,7 @@
 #include <string.h>
 #endif
 
-#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 #include <thunar-archive-plugin/tap-backend.h>
 #ifdef GDK_WINDOWING_WAYLAND
 #include <gdk/gdkwayland.h>
