@@ -31,15 +31,15 @@ pwd=$1; shift;
 # check the action
 case $action in
 create)
-	exec file-roller "--default-dir=$pwd" --add "$@"
+	exec file-roller --default-dir="$pwd" --add "$@"
 	;;
 
 extract-here)
-	exec file-roller "--extract-to=$pwd" --extract-here --force "$@"
+	exec file-roller --extract-to="$pwd" --extract-here --force "$@"
 	;;
 
 extract-to)
-	exec file-roller "--default-dir=$pwd" --extract "$@"
+	exec file-roller --default-dir="$pwd" --extract "$@"
 	;;
 
 *)
