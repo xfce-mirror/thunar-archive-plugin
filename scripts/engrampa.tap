@@ -38,7 +38,7 @@ extract-here)
 	;;
 
 extract-to)
-	exec engrampa --extract "$@"
+	exec engrampa --default-dir="$pwd" --extract "$@"
 	;;
 
 *)
