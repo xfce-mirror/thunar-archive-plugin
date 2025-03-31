@@ -284,7 +284,7 @@ tap_extract_here (ThunarxMenuItem *item,
 
 
 static gint
-compare_time (gconstpointer a, gconstpointer b)
+compare_modification_time (gconstpointer a, gconstpointer b)
 {
   /*
    * For GTK4:
@@ -310,16 +310,59 @@ compare_time (gconstpointer a, gconstpointer b)
 }
 
 
+/**
+ * get_recent_location:
+ * Retrieves the recently used location from GtkRecent.
+ *
+ * Return value: #gchar pointer to recent location or %NULL.
+ * The caller of the method takes ownership of the returned data,
+ * and is responsible for freeing it.
+ **/
+static gchar*
+get_recent_location (void)
+{
+  GtkRecentManager *recent_manager;
+  GList            *recent_items;
+  gchar            *path = NULL;
+
+  recent_manager = gtk_recent_manager_get_default ();
+  recent_items = gtk_recent_manager_get_items (recent_manager);
+  if (!recent_items)
+      return path;
+
+  /* sort by modification time, newer first */
+  recent_items = g_list_sort (recent_items, compare_modification_time);
+
+  /* find first location not pointed to file */
+  for (GList *l = recent_items; l != NULL; l = l->next)
+    {
+      gchar *uri = gtk_recent_info_get_uri_display ((GtkRecentInfo *)l->data);
+      if (uri && g_file_test (uri, G_FILE_TEST_IS_DIR) &&
+          g_file_test (uri, G_FILE_TEST_EXISTS))
+        {
+          path = uri;
+          break;
+        }
+      else
+        {
+          free (uri);
+        }
+    }
+
+  /* cleanup */
+  g_list_free_full (recent_items, (GDestroyNotify) gtk_recent_info_unref);
+  return path;
+}
+
+
 static void
 tap_extract_to (ThunarxMenuItem *item,
                 GtkWidget       *window)
 {
-  TapProvider      *tap_provider;
-  GtkRecentManager *recent_manager;
-  GList            *recent_items;
-  GList            *files;
-  gchar            *dirname;
-  gchar            *uri;
+  TapProvider     *tap_provider;
+  GList           *files;
+  gchar           *dirname;
+  gchar           *uri;
 
   /* determine the files associated with the item */
   files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
@@ -334,54 +377,26 @@ tap_extract_to (ThunarxMenuItem *item,
       return;
     }
 
-  /* determine the recently used path */
-  recent_manager = gtk_recent_manager_get_default ();
-  recent_items = gtk_recent_manager_get_items (recent_manager);
-  if (recent_items)
+  /* try to determine the recently used location */
+  dirname = get_recent_location();
+  if (!dirname)
     {
-      /* sort by modification time, newer first */
-      recent_items = g_list_sort (recent_items, compare_time);
-      uri = gtk_recent_info_get_uri_display (recent_items->data);
-      g_list_free_full (recent_items, (GDestroyNotify) gtk_recent_info_unref);
-
+      /*
+       * fallback to default behavior:
+       * determine the parent URI of the first selected file
+       */
+      uri = thunarx_file_info_get_parent_uri (files->data);
       if (G_UNLIKELY (uri == NULL))
         {
-          g_warning ("Failed to get recent URI");
-          goto default_way;
+          g_warning ("Failed to get parent URI");
+          return;
         }
 
-      if (g_file_test (uri, G_FILE_TEST_IS_DIR))
-        {
-          dirname = uri;
-        }
-      else
-        {
-          dirname = g_path_get_dirname (uri);
-          g_free (uri);
-        }
-
-      /* check the path exists */
-      if (g_file_test (dirname, G_FILE_TEST_EXISTS))
-          goto final_check;
-
-      /* fallback to default behavior if the path doesn't exist */
-      g_free (dirname);
+      /* determine the directory of the first selected file */
+      dirname = g_filename_from_uri (uri, NULL, NULL);
+      g_free (uri);
     }
 
-default_way:
-  /* determine the parent URI of the first selected file */
-  uri = thunarx_file_info_get_parent_uri (files->data);
-  if (G_UNLIKELY (uri == NULL))
-    {
-      g_warning ("Failed to get parent URI");
-      return;
-    }
-
-  /* determine the directory of the first selected file */
-  dirname = g_filename_from_uri (uri, NULL, NULL);
-  g_free (uri);
-
-final_check:
   /* verify that we were able to determine a local path */
   if (G_UNLIKELY (dirname == NULL))
     {
