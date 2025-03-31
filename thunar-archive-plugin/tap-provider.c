@@ -283,6 +283,78 @@ tap_extract_here (ThunarxMenuItem *item,
 
 
 
+static gint
+compare_modification_time (gconstpointer a, gconstpointer b)
+{
+  /*
+   * For GTK4:
+   * GDateTime* t1;
+   * GDateTime* t2;
+   * ...
+   * return g_date_time_compare(t2, t1);
+   */
+  time_t t1;
+  time_t t2;
+  gint result;
+  t1 = gtk_recent_info_get_modified ((GtkRecentInfo *) a);
+  t2 = gtk_recent_info_get_modified ((GtkRecentInfo *) b);
+  /* compare in descending order */
+  if (t1 > t2)
+      result = -1;
+  else if (t1 == t2)
+      result = 0;
+  else
+      result = 1;
+
+  return result;
+}
+
+
+/**
+ * get_recent_location:
+ * Retrieves the recently used location from GtkRecent.
+ *
+ * Return value: #gchar pointer to recent location or %NULL.
+ * The caller of the method takes ownership of the returned data,
+ * and is responsible for freeing it.
+ **/
+static gchar*
+get_recent_location (void)
+{
+  GtkRecentManager *recent_manager;
+  GList            *recent_items;
+  gchar            *path = NULL;
+
+  recent_manager = gtk_recent_manager_get_default ();
+  recent_items = gtk_recent_manager_get_items (recent_manager);
+  if (!recent_items)
+      return path;
+
+  /* sort by modification time, newer first */
+  recent_items = g_list_sort (recent_items, compare_modification_time);
+
+  /* find first location not pointed to file */
+  for (GList *l = recent_items; l != NULL; l = l->next)
+    {
+      gchar *uri = gtk_recent_info_get_uri_display ((GtkRecentInfo *)l->data);
+      if (uri && g_file_test (uri, G_FILE_TEST_IS_DIR) &&
+          g_file_test (uri, G_FILE_TEST_EXISTS))
+        {
+          path = uri;
+          break;
+        }
+      else
+        {
+          free (uri);
+        }
+    }
+
+  /* cleanup */
+  g_list_free_full (recent_items, (GDestroyNotify) gtk_recent_info_unref);
+  return path;
+}
+
+
 static void
 tap_extract_to (ThunarxMenuItem *item,
                 GtkWidget       *window)
@@ -305,18 +377,25 @@ tap_extract_to (ThunarxMenuItem *item,
       return;
     }
 
-
-  /* determine the parent URI of the first selected file */
-  uri = thunarx_file_info_get_parent_uri (files->data);
-  if (G_UNLIKELY (uri == NULL))
+  /* try to determine the recently used location */
+  dirname = get_recent_location();
+  if (!dirname)
     {
-      g_warning ("Failed to get parent URI");
-      return;
-    }
+      /*
+       * fallback to default behavior:
+       * determine the parent URI of the first selected file
+       */
+      uri = thunarx_file_info_get_parent_uri (files->data);
+      if (G_UNLIKELY (uri == NULL))
+        {
+          g_warning ("Failed to get parent URI");
+          return;
+        }
 
-  /* determine the directory of the first selected file */
-  dirname = g_filename_from_uri (uri, NULL, NULL);
-  g_free (uri);
+      /* determine the directory of the first selected file */
+      dirname = g_filename_from_uri (uri, NULL, NULL);
+      g_free (uri);
+    }
 
   /* verify that we were able to determine a local path */
   if (G_UNLIKELY (dirname == NULL))
