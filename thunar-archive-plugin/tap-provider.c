@@ -283,6 +283,120 @@ tap_extract_here (ThunarxMenuItem *item,
 
 
 
+static gint
+compare_modification_time (gconstpointer a, gconstpointer b)
+{
+  /*
+   * For GTK4:
+   * GDateTime* t1;
+   * GDateTime* t2;
+   * ...
+   * return g_date_time_compare(t2, t1);
+   */
+  time_t t1;
+  time_t t2;
+  gint result;
+  t1 = gtk_recent_info_get_modified ((GtkRecentInfo *) a);
+  t2 = gtk_recent_info_get_modified ((GtkRecentInfo *) b);
+  /* compare in descending order */
+  if (t1 > t2)
+      result = -1;
+  else if (t1 == t2)
+      result = 0;
+  else
+      result = 1;
+
+  return result;
+}
+
+
+/**
+ * get_recent_location:
+ * Retrieves the recently used location from GtkRecent.
+ *
+ * Return value: #gchar pointer to recent location or %NULL.
+ * The caller of the method takes ownership of the returned data,
+ * and is responsible for freeing it.
+ **/
+static gchar*
+get_recent_location (void)
+{
+  GtkRecentManager *recent_manager;
+  GList            *recent_items;
+  gchar            *path = NULL;
+
+  recent_manager = gtk_recent_manager_get_default ();
+  recent_items = gtk_recent_manager_get_items (recent_manager);
+  if (!recent_items)
+      return path;
+
+  /* sort by modification time, newer first */
+  recent_items = g_list_sort (recent_items, compare_modification_time);
+
+  /* find first location not pointed to file */
+  for (GList *l = recent_items; l != NULL; l = l->next)
+    {
+      gchar *uri = gtk_recent_info_get_uri_display ((GtkRecentInfo *)l->data);
+      if (uri && g_file_test (uri, G_FILE_TEST_IS_DIR) &&
+          g_file_test (uri, G_FILE_TEST_EXISTS))
+        {
+          path = uri;
+          break;
+        }
+      else
+        {
+          free (uri);
+        }
+    }
+
+  /* cleanup */
+  g_list_free_full (recent_items, (GDestroyNotify) gtk_recent_info_unref);
+  return path;
+}
+
+/**
+ * choose_extract_path:
+ * Dialog window to select the target location.
+ *
+ * @window : a #GtkWindow, used to popup dialogs.
+ * Return value: #gchar pointer to selected location or %NULL.
+ * The caller of the method takes ownership of the returned data,
+ * and is responsible for freeing it.
+ **/
+static gchar*
+choose_extract_path (GtkWidget *window)
+{
+  GtkWidget *dialog;
+  GtkFileChooser *chooser;
+  GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER;
+  gchar *destination = NULL;
+  gchar *recent;
+
+  dialog = gtk_file_chooser_dialog_new (_("_Extract To..."),
+                                       GTK_WINDOW (window),
+                                       action,
+                                       _("_Cancel"),
+                                       GTK_RESPONSE_CANCEL,
+                                       _("_OK"),
+                                       GTK_RESPONSE_ACCEPT,
+                                       NULL);
+  chooser = GTK_FILE_CHOOSER (dialog);
+
+  /* Determine recently used location and set it to dialog window */
+  recent = get_recent_location ();
+  if (recent)
+    {
+      gtk_file_chooser_set_current_folder (chooser, recent);
+      g_free (recent);
+    }
+
+  if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
+      destination = gtk_file_chooser_get_filename (chooser);
+
+  gtk_widget_destroy (dialog);
+  return destination;
+}
+
 static void
 tap_extract_to (ThunarxMenuItem *item,
                 GtkWidget       *window)
@@ -290,7 +404,6 @@ tap_extract_to (ThunarxMenuItem *item,
   TapProvider     *tap_provider;
   GList           *files;
   gchar           *dirname;
-  gchar           *uri;
 
   /* determine the files associated with the item */
   files = g_object_get_qdata (G_OBJECT (item), tap_item_files_quark);
@@ -305,23 +418,13 @@ tap_extract_to (ThunarxMenuItem *item,
       return;
     }
 
-
-  /* determine the parent URI of the first selected file */
-  uri = thunarx_file_info_get_parent_uri (files->data);
-  if (G_UNLIKELY (uri == NULL))
-    {
-      g_warning ("Failed to get parent URI");
-      return;
-    }
-
-  /* determine the directory of the first selected file */
-  dirname = g_filename_from_uri (uri, NULL, NULL);
-  g_free (uri);
+  /* try to get the destination location */
+  dirname = choose_extract_path(window);
 
   /* verify that we were able to determine a local path */
   if (G_UNLIKELY (dirname == NULL))
     {
-      g_warning ("Failed to determine local path");
+      g_warning ("Extract-to operation cancelled");
       return;
     }
 
