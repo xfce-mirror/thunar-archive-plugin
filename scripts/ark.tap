@@ -37,7 +37,8 @@ extract-here)
 	;;
 
 extract-to)
-	exec ark --batch --dialog --autosubfolder "$@"
+	ark --batch --autosubfolder --destination "$pwd" "$@"
+	[ $? -eq 0 ] && thunar "$pwd"
 	;;
 
 *)
