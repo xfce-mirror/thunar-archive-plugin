@@ -22,14 +22,13 @@ i18n = import('i18n')
 dependency_versions = {
   'glib': '>= 2.50.0',
   'gtk': '>= 3.22.0',
-  'thunarx': '>=0.4.0',
   'xfce4': '>= 4.18.0',
 }
 
 glib = dependency('glib-2.0', version: dependency_versions['glib'])
 gtk = dependency('gtk+-3.0', version: dependency_versions['gtk'])
 libxfce4util = dependency('libxfce4util-1.0', version: dependency_versions['xfce4'])
-thunarx = dependency('thunarx-3', version: dependency_versions['thunarx'])
+thunarx = dependency('thunarx-3', version: dependency_versions['xfce4'])
 
 feature_cflags = []
 
