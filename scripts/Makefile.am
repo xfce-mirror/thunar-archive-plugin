@@ -26,6 +26,7 @@ install-exec-hook:
 
 EXTRA_DIST =								\
 	$(wrapper_SCRIPTS)						\
-	template.tap
+	template.tap							\
+	meson.build
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

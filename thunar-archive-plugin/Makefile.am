@@ -35,4 +35,7 @@ thunar_archive_plugin_la_LDFLAGS =					\
 	-module								\
 	$(PLATFORM_LDFLAGS)
 
+EXTRA_DIST =								\
+	meson.build
+
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
