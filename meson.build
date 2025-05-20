@@ -1,7 +1,7 @@
 project(
   'thunar-archive-plugin',
   'c',
-version : '0.6.0',
+version : '0.6.0-dev',
   license : 'LGPL-2.0-only',
   meson_version : '>= 0.61.0',
   default_options : ['c_std=gnu11', 'buildtype=debugoptimized', 'warning_level=2']
