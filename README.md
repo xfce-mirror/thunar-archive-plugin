@@ -29,17 +29,17 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-archive-plugin/-/blob/m
 From source: 
 
     % cd thunar-archive-plugin
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf thunar-archive-plugin-<version>.tar.bz2
+    % tar xf thunar-archive-plugin-<version>.tar.xz
     % cd thunar-archive-plugin-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
