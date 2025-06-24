@@ -4,7 +4,7 @@
 # -
 # peazip.tap   -    Wrapper script to create and extract archive files
 #                   in Thunar, via the thunar-archive-plugin, using the
-#                   file-roller archive manager.
+#                   PeaZip archive manager.
 #
 # Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
 # Copyright (c) 2011 Jannis Pohlmann <jannis@xfce.org>
