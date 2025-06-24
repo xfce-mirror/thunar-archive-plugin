@@ -1,7 +1,7 @@
 plugin_install_dir = get_option('prefix') / get_option('libexecdir') / 'thunar-archive-plugin'
 
 install_data(
-  ['ark.tap', 'engrampa.tap', 'file-roller.tap'],
+  ['ark.tap', 'engrampa.tap', 'file-roller.tap', 'peazip.tap'],
   install_dir: plugin_install_dir,
   install_mode: 'rwxr-xr-x',
 )

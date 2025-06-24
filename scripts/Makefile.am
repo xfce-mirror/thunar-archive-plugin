@@ -5,6 +5,7 @@ wrapper_SCRIPTS= 						\
 	ark.tap								\
 	engrampa.tap						\
 	file-roller.tap
+	peazip.tap
 
 install-exec-hook:
 	$(mkinstalldirs) $(DESTDIR)$(wrapperdir)
