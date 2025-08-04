@@ -5,7 +5,7 @@
 # Translators:
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2018
 # Ioannis LM, 2022
-# Ioannis LM, 2022,2024
+# Ioannis LM, 2022,2024-2025
 # Stavros Giannouris <stavrosg@serverhive.com>, 2006
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Ioannis LM, 2022,2024\n"
+"Last-Translator: Ioannis LM, 2022,2024-2025\n"
 "Language-Team: Greek (http://app.transifex.com/xfce/thunar-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,7 +81,7 @@ msgstr[1] "Αποσυμπιέζει τα επιλεγμένα αρχεία"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Δημιουργία σ_υμπιεσμένου αρχείου..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
