@@ -20,40 +20,40 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
-msgstr "ئارخىپ باشقۇرغۇنى تاللا"
+msgstr "ئارخىپ باشقۇرغۇچنى تاللا"
 
 #: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
-msgstr ""
+msgstr "ۋاز كەچ(_C)"
 
 #: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
-msgstr ""
+msgstr "جەزملە(_O)"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:101
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "تۆۋەندىكى پروگراممىلارنىڭ ئىچىدىن\nئامراق ئارخىپ باشقۇرغۇنى تاللاڭ:"
+msgstr "تۆۋەندىكى پىروگراممىلارنىڭ ئىچىدىن\nئامراق ئارخىپ باشقۇرغۇچنى تاللاڭ:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
 #: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
-msgstr "مۇۋاپىق ئارخىپ باشقۇرغۇ تېپىلمىدى"
+msgstr "مۇۋاپىق ئارخىپ باشقۇرغۇچ تېپىلمىدى"
 
 #. execute the action associated with the menu item
 #. execute the action
 #: thunar-archive-plugin/tap-provider.c:273
 #: thunar-archive-plugin/tap-provider.c:329
 msgid "Failed to extract files"
-msgstr "ھۆججەتلەرنى يېيىش مەغلۇپ بولدى"
+msgstr "ھۆججەتنى يايالمىدى"
 
 #. execute the action associated with the menu item
 #: thunar-archive-plugin/tap-provider.c:370
 msgid "Failed to create archive"
-msgstr "ئارخىپ قۇرۇش مەغلۇپ بولدى"
+msgstr "ئارخىپ قۇرالمىدى"
 
 #: thunar-archive-plugin/tap-provider.c:424
 msgid "Extract _Here"
@@ -62,7 +62,7 @@ msgstr "بۇ يەرگە ياي(_H)"
 #: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] ""
+msgstr[0] "تاللانغان ئارخىپنى نۆۋەتتىكى مۇندەرىجە ئىچىگە يايىدۇ"
 msgstr[1] "ھازىرقى ئارخىپنى بۇ مۇندەرىجە ئىچىگە يايىدۇ"
 
 #: thunar-archive-plugin/tap-provider.c:444
@@ -72,18 +72,18 @@ msgstr "باشقا يەرگە ياي(_E)..."
 #: thunar-archive-plugin/tap-provider.c:446
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
-msgstr[0] ""
+msgstr[0] "تاللانغان ئارخىپنى يەش"
 msgstr[1] "تاللانغان ئارخىپنى يايىدۇ"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "ئارخىپ قۇر(_A)…"
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] ""
-msgstr[1] "تاللانغانلىرىنى ئىشلىتىپ ئارخىپ قۇرىدۇ"
+msgstr[0] "تاللانغانلىرىدىن ئارخىپ قۇر"
+msgstr[1] "تاللانغانلىرىدىن ئارخىپ قۇرىدۇ"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: thunar-archive-plugin/tap-provider.c:532
@@ -93,5 +93,5 @@ msgstr "بۇ يەرگە ياي(_E)"
 #: thunar-archive-plugin/tap-provider.c:534
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] ""
-msgstr[1] "تاللانغان ئارخىپلارنى بۇ يەرگە يايىدۇ"
+msgstr[0] "تاللانغان ئارخىپنى بۇ يەرگە يايىدۇ"
+msgstr[1] "تاللانغان ئارخىپنى بۇ يەرگە يايىدۇ"
