@@ -5,13 +5,14 @@
 # Translators:
 # Jarbas Araujo <jarbasaraujojr@yahoo.com.br>, 2006
 # Robin van der Vliet <info@robinvandervliet.com>, 2016
+# Warut Bunprasert <warut.b@disroot.org>, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Robin van der Vliet <info@robinvandervliet.com>, 2016\n"
+"Last-Translator: Warut Bunprasert <warut.b@disroot.org>, 2025\n"
 "Language-Team: Esperanto (http://app.transifex.com/xfce/thunar-plugins/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr "_Nuligi"
 
 #: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
-msgstr ""
+msgstr "_Bone"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:101
@@ -79,7 +80,7 @@ msgstr[1] "Eltiri la elektitajn dosierojn"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Krei _arkivon..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
