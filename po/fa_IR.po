@@ -4,14 +4,14 @@
 # 
 # Translators:
 # AmirRezaTM <amirrezatm@protonmail.com>, 2022
-# Goudarz Jafari <goudarz.jafari@gmail.com>, 2020
+# Goudarz Jafari <goudarz.jafari@gmail.com>, 2020,2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: AmirRezaTM <amirrezatm@protonmail.com>, 2022\n"
+"Last-Translator: Goudarz Jafari <goudarz.jafari@gmail.com>, 2020,2025\n"
 "Language-Team: Persian (Iran) (http://app.transifex.com/xfce/thunar-plugins/language/fa_IR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,7 +79,7 @@ msgstr[1] "استخراج آرشیو های انتخاب شده"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "ایجاد بایگانی..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
