@@ -35,7 +35,7 @@ typedef struct _TapProvider      TapProvider;
 #define TAP_IS_PROVIDER_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TAP_TYPE_PROVIDER))
 #define TAP_PROVIDER_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TAP_TYPE_PROVIDER, TapProviderClass))
 
-GType tap_provider_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType tap_provider_get_type      (void) G_GNUC_INTERNAL;
 void  tap_provider_register_type (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 G_END_DECLS;
