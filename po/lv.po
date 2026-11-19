@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Rihards Priedītis <rprieditis@gmail.com>, 2009
+# Rihards Priedītis <rprieditis@gmail.com>, 2007,2009,2026
 # Rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-04 12:47+0200\n"
 "PO-Revision-Date: 2013-07-03 18:08+0000\n"
-"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2009\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2007,2009,2026\n"
 "Language-Team: Latvian (http://app.transifex.com/xfce/thunar-plugins/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,28 +23,28 @@ msgstr ""
 #. prepare the dialog to query the preferred archiver for the user
 #: thunar-archive-plugin/tap-backend.c:79
 msgid "Select an archive manager"
-msgstr "Atlasiet arhīva pārvaldnieku"
+msgstr "Izvēlieties arhīvu pārvaldnieku"
 
 #: thunar-archive-plugin/tap-backend.c:82
 msgid "_Cancel"
-msgstr ""
+msgstr "A_tcelt"
 
 #: thunar-archive-plugin/tap-backend.c:83
 msgid "_OK"
-msgstr ""
+msgstr "_Labi"
 
 #. add the header label
 #: thunar-archive-plugin/tap-backend.c:101
 msgid ""
 "Please select your preferred archive manager\n"
 "from the list of available applications below:"
-msgstr "Lūdzu norādiet vēlamo arhīvu pārvaldnieku\nno pieejamo lietotņu saraksta:"
+msgstr "Lūdzu, izvēlieties vēlamo arhīvu pārvaldnieku\nno tālāk redzamā pieejamo lietotņu saraksta:"
 
 #. tell the user that we cannot handle the specified mime types
 #: thunar-archive-plugin/tap-backend.c:277
 #: thunar-archive-plugin/tap-backend.c:426
 msgid "No suitable archive manager found"
-msgstr "Netika atrasts piemērots arhīva pārvaldnieks"
+msgstr "Netika atrasts piemērots arhīvu pārvaldnieks"
 
 #. execute the action associated with the menu item
 #. execute the action
@@ -64,31 +65,31 @@ msgstr "A_tspiest šeit"
 #: thunar-archive-plugin/tap-provider.c:426
 msgid "Extract the selected archive in the current folder"
 msgid_plural "Extract the selected archives in the current folder"
-msgstr[0] "Atspiest atlasīto arhīvu esošajā mapē"
-msgstr[1] "Atspiest atlasītos arhīvus esošajā mapē"
-msgstr[2] "Atspiest atlasīto arhīvu esošajā mapē"
+msgstr[0] "Atspiest atlasīto arhīvu pašreizējā mapē"
+msgstr[1] "Atspiest atlasītos arhīvus pašreizējā mapē"
+msgstr[2] "Atspiest atlasītos arhīvus pašreizējā mapē"
 
 #: thunar-archive-plugin/tap-provider.c:444
 msgid "_Extract To..."
-msgstr "_Atspiest..."
+msgstr "_Atspiest uz..."
 
 #: thunar-archive-plugin/tap-provider.c:446
 msgid "Extract the selected archive"
 msgid_plural "Extract the selected archives"
 msgstr[0] "Atspiest atlasīto arhīvu"
 msgstr[1] "Atspiest atlasītos arhīvus"
-msgstr[2] "Atspiest atlasīto arhīvu"
+msgstr[2] "Atspiest atlasītos arhīvus"
 
 #: thunar-archive-plugin/tap-provider.c:464
 msgid "Create _Archive..."
-msgstr ""
+msgstr "Izveidot _arhīvu..."
 
 #: thunar-archive-plugin/tap-provider.c:466
 msgid "Create an archive with the selected object"
 msgid_plural "Create an archive with the selected objects"
-msgstr[0] "Izveidot arhīvu ar atlasīto vienumu"
-msgstr[1] "Izveidot arhīvu ar atlasītajiem vienumiem"
-msgstr[2] "Izveidot arhīvu ar atlasīto vienumu"
+msgstr[0] "Izveidot arhīvu no atlasītā objekta"
+msgstr[1] "Izveidot arhīvu no atlasītajiem objektiem"
+msgstr[2] "Izveidot arhīvu no atlasītajiem objektiem"
 
 #. TRANSLATORS: This is the label of the Drag'n'Drop "Extract here" menu item
 #: thunar-archive-plugin/tap-provider.c:532
@@ -98,6 +99,6 @@ msgstr "_Atspiest šeit"
 #: thunar-archive-plugin/tap-provider.c:534
 msgid "Extract the selected archive here"
 msgid_plural "Extract the selected archives here"
-msgstr[0] "Atspiest šeit atlasīto arhīvu"
-msgstr[1] "Atspiest šeit atlasītos arhīvus"
-msgstr[2] "Atspiest šeit atlasīto arhīvu"
+msgstr[0] "Atspiest atlasīto arhīvu šeit"
+msgstr[1] "Atspiest atlasītos arhīvus šeit"
+msgstr[2] "Atspiest atlasītos arhīvus šeit"
